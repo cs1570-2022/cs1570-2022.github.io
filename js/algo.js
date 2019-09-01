@@ -136,19 +136,21 @@ const courseInfoSection = {
 
 const courseTopic = {
     props: {
+        week: String,
         name: String,
         curPageThemeColor: String,
     },
     methods: {
         selectAndCopy: function() {
+            const topicNameElement = this.$el.querySelector('span.topic-name');
             document.execCommand('copy');
             if (document.selection) { // IE
                 const range = document.body.createTextRange();
-                range.moveToElementText(this.$el);
+                range.moveToElementText(topicNameElement);
                 range.select();
             } else if (window.getSelection) {
                 const range = document.createRange();
-                range.selectNode(this.$el);
+                range.selectNode(topicNameElement);
                 window.getSelection().removeAllRanges();
                 window.getSelection().addRange(range);
             }
@@ -168,7 +170,10 @@ const courseTopic = {
           @click.prevent="selectAndCopy"
           @copy.prevent="copyText"
         >
-            {{name}}
+            <span class="topic-week font-weight-light">{{week}}: </span>
+            <span class="topic-name">
+              {{name}}
+            </span>
         </li>
     `,
 };
@@ -183,16 +188,16 @@ const courseTopics = {
     data: function() {
         return {
             topics: [
-                'Week 1 (September 4-6): Big O Analysis',
-                'Week 2 (September 9-13): Algorithms with Numbers',
-                'Week 3 (September 160-20): Divide-and-Conquer',
-                'Week 4 (September 23-27): Decomposition of Graphs',
-                'Week 5 (September 30-October 4): Paths in Graphs',
-                'Week 6 (October 7-11): Greedy Algorithms',
-                'Week 7-8 (October 16-25): Dynamic Programming',
-                'Week 9-10 (October 28-November 8): Linear Programming',
-                'Week 11-13 (November 11-25): NP-Complete Problems',
-                'Week 14-15 (December 2-December 11): Coping with NP-Completeness',
+                ['Week 1 (September 4-6)', 'Big O Analysis'],
+                ['Week 2 (September 9-13)', 'Algorithms with Numbers'],
+                ['Week 3 (September 160-20)', 'Divide-and-Conquer'],
+                ['Week 4 (September 23-27)', 'Decomposition of Graphs'],
+                ['Week 5 (September 30-October 4)', 'Paths in Graphs'],
+                ['Week 6 (October 7-11)', 'Greedy Algorithms'],
+                ['Week 7-8 (October 16-25)', 'Dynamic Programming'],
+                ['Week 9-10 (October 28-November 8)', 'Linear Programming'],
+                ['Week 11-13 (November 11-25)', 'NP-Complete Problems'],
+                ['Week 14-15 (December 2-December 11)', 'Coping with NP-Completeness'],
             ]
         };
     },
@@ -207,8 +212,9 @@ const courseTopics = {
               style="border-left: solid 0.2rem"
             >
                 <course-topic
-                  v-for="(name, index) of topics"
-                  :name="name"
+                  v-for="(topic, index) of topics"
+                  :week="topic[0]"
+                  :name="topic[1]"
                   :key="index"
                   :cur-page-theme-color="curPageThemeColor"
                 >
