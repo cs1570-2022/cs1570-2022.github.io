@@ -75,7 +75,6 @@ Vue.component('page-content', {
     },
     template: `
         <main class="full-height">
-            <train-carriage></train-carriage>
         </main>
     `
 });

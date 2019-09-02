@@ -57,7 +57,7 @@ const courseDocumentsSection = {
                 <course-resource title="LaTeX">
                     <ul>
                         <li><page-link href="" text="Getting Started with LaTeX"></page-link></li>
-                      <li><page-link href="" text="LaTeX Template"></page-link></li>
+                        <li><page-link href="" text="LaTeX Template"></page-link></li>
                     </ul>
                 </course-resource>
             </div>

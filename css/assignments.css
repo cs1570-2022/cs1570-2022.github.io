@@ -1,0 +1,15 @@
+a,
+th {
+    color: #a1659e;
+}
+
+a:hover,
+a:active,
+td {
+    color: purple;
+}
+
+
+a:visited {
+    color: mediumpurple;
+}
