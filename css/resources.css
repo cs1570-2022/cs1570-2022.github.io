@@ -1,0 +1,13 @@
+a {
+    color: #ed9b65;
+}
+
+a:hover,
+a:active {
+    color: tomato;
+}
+
+
+a:visited {
+    color: coral;
+}

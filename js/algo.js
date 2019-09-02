@@ -1,34 +1,5 @@
-const sectionTitle = {
-    props: {
-        backgroundColor: String,
-        text: String,
-        iconClasses: Array,
-    },
-    data: function() {
-        return {
-            styleObject: {
-                color: this.backgroundColor,
-                width: '20%',
-                'font-size': 'xx-large',
-                'text-decoration': 'underline',
-                'text-decoration-style': 'wavy',
-                '-webkit-text-decoration-style': 'wavy',
-                '-moz-text-decoration-style': 'wavy'
-            },
-        };
-    },
-    template: `
-        <h2
-          class="text-capitalize text-nowrap font-weight-bold mx-5 mb-5"
-          :style="styleObject"
-        >
-            <i :class="iconClasses"></i>
-            <span class="ml-2">
-              {{text}}
-            </span>
-        </h2>
-    `
-};
+import { clickCopy, sectionTitle } from './page-section.js';
+
 
 const csPrereq = {
     props: {
@@ -62,14 +33,15 @@ const courseInfoSection = {
         curPageIconClasses: Array,
     },
     components: {
+        'cs-prereq': csPrereq,
         'section-title': sectionTitle,
-        'cs-prereq': csPrereq
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
+              text-decoration-style="wavy"
               text="course info"
             ></section-title>
             <div
@@ -140,40 +112,16 @@ const courseTopic = {
         name: String,
         curPageThemeColor: String,
     },
-    methods: {
-        selectAndCopy: function() {
-            const topicNameElement = this.$el.querySelector('span.topic-name');
-            document.execCommand('copy');
-            if (document.selection) { // IE
-                const range = document.body.createTextRange();
-                range.moveToElementText(topicNameElement);
-                range.select();
-            } else if (window.getSelection) {
-                const range = document.createRange();
-                range.selectNode(topicNameElement);
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-            }
-        },
-        copyText: function(event) {
-            if (event.clipboardData) {
-                event.clipboardData.setData('text/plain', this.name);
-                console.log('copied');
-            }
-        },
+    components: {
+        'click-copy': clickCopy,
     },
-
     template: `
         <li
           class="list-group-item list-group-item-action border-0 border-left"
           :style="{color: curPageThemeColor}"
-          @click.prevent="selectAndCopy"
-          @copy.prevent="copyText"
         >
             <span class="topic-week font-weight-light">{{week}}: </span>
-            <span class="topic-name">
-              {{name}}
-            </span>
+            <click-copy :text="name"></click-copy>
         </li>
     `,
 };
@@ -231,14 +179,15 @@ const courseMaterialSection = {
         curPageIconClasses: Array,
     },
     components: {
+        'course-topics': courseTopics,
         'section-title': sectionTitle,
-        'course-topics': courseTopics
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
+              text-decoration-style="wavy"
               text="course material"
             ></section-title>
             <div
@@ -290,30 +239,6 @@ const courseMaterialSection = {
         </section>
     `
 };
-
-Vue.component('page-background', {
-    template: `
-        <div
-          id="page-background"
-          class="container-fluid full-height"
-          style="
-            background-image: url(../imgs/anatoly-anikin-nAYl83cm9so-unsplash.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover">
-              <img
-                src="../imgs/title.png"
-                class="img-fluid"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                "
-        >
-        </div>
-    `
-});
 
 Vue.component('page-content', {
     props: {

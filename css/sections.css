@@ -1,0 +1,30 @@
+/* unvisited link */
+a:link {
+    color: unset;
+}
+
+/* visited link */
+a:visited {
+    color: darkslateblue;
+}
+
+/* mouse over link */
+a:hover {
+    color: bisque;
+}
+
+/* selected link */
+a:active {
+    color: bisque;
+}
+
+#fireworks {
+    cursor: crosshair;
+}
+
+.train-window {
+    width: 20%;
+    height: 50%;
+    border: solid lightgray 1rem;
+    border-radius: 10%;
+}

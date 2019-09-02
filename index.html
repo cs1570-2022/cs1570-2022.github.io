@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>CS157 | Algo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="Homepage for Brown CS157 (Design and Analysis of Algorithms)">
+    <meta name="keywords" content="Brown CS, course, CS157, algorithm">
+    <meta name="author" content="CS157 Course Staff">
+    <meta name="copyright" content="CS157 Course Staff">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial_scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- offline -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- <script defer src="/js/all.min.js"></script> -->
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/algo.css">
+</head>
+<body>
+    <noscript>
+        <p>
+            This page uses Javascript to render HTML components, please enable it to best view this page
+        </p>
+    </noscript>
+    <div id="app" class="h-100">
+        <page-navbar :primary-color="curPageThemeColor" :secondary-color="navbarBackgroundColor" navbar-background-color="rgba(163, 218, 243, 0.5)" :current-tab-text="currentTabText" :tabnum="tabnum" :stop-theme-colors="pageThemeColors" :page-filepaths="pageFilepaths" :label-texts="tabTexts" :icon-classes="iconClasses"></page-navbar>
+        <page-background background-image-url="/imgs/anatoly-anikin-nAYl83cm9so-unsplash.jpg"></page-background>
+        <page-content :cur-page-theme-color="curPageThemeColor" :cur-page-icon-classes="curPageIconClasses"></page-content>
+        <page-footer :cur-page-theme-color="curPageThemeColor" footer-background-color="rgba(163, 218, 243, 0.6)"></page-footer>
+    </div>
+    <!-- Vue -->
+    <!-- development version, includes helpful console warnings -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <!-- development offline fallback -->
+    <script>
+    window.Vue || document.write('<script src="/js/vue.js">\x3C/script>');
+    </script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <!-- production offline fallback -->
+    <!-- <script> -->
+    <!-- window.Vue || document.write('<script src="/js/vue.min.js">\x3C/script>'); -->
+    <!-- </script> -->
+    <!-- custom scripts -->
+    <!-- page specific script -->
+    <script type="module" src="/js/algo.js"></script>
+    <!-- shared vue instance -->
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

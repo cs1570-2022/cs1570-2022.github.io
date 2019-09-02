@@ -1,17 +1,17 @@
+import pageBackground from './page-background.js';
+import pageFooter from './page-footer.js';
+import pageNavbar from './page-navbar.js';
+
 new Vue({
     el: '#app',
-    components: {
-        'page-navbar': pageNavbar,
-        'page-footer': pageFooter,
-    },
     data: {
         pageThemeColors: [
-            'rgb(0, 158, 196)' /* しるべのクジラ */,
+            '#009ec4' /* しるべのクジラ */,
             'rgb(88, 54, 48)'/* サンセットバスストップ */,
-            'rgb(246, 250, 236)' /* 始発とカフカ */,
+            'midnightblue' /* 始発とカフカ */,
             'rgb(166, 211, 214)' /* DAYBREAK FRONTLINE */,
             'rgb(245, 223, 220)'/* palette */,
-            'rgb(249, 245, 225)' /* 渚 */
+            '#ed9b65' /* 渚 */
         ],
         navbarBackgroundColor: 'white',
         tabTexts: ['algo', 'lectures', 'sections', 'hours', 'staff', 'resources'],
@@ -23,6 +23,11 @@ new Vue({
         bicycleClasses: ['fas', 'fa-lg', 'fa-bicycle'],
         shuttleVanClasses: ['fas', 'fa-lg', 'fa-shuttle-van'],
         shipClasses: ['fas', 'fa-lg', 'fa-ship'],
+    },
+    components: {
+        'page-background': pageBackground,
+        'page-footer': pageFooter,
+        'page-navbar': pageNavbar,
     },
     computed: {
         currentTabText: function() {
