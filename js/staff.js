@@ -222,6 +222,7 @@ Vue.component('page-content', {
                         personalPhotoURL: 'staffs/rigel_personal.jpeg',
                         publicTransitPhotoURL: 'staffs/rigel_transit.jpg',
                         publicTransit: 'RIPTA Bus',
+                        photoStyle: {'background-position': '100% 50%'},
                         cslogin: 'rgalgana',
                     },
                     {
