@@ -1,3 +1,4 @@
+import pageClickCopy from './page-click-copy.js';
 import pageCountdownTime from './page-countdown-time.js';
 import pageLink from './page-link.js';
 import pageTable from './page-table.js';
@@ -13,6 +14,7 @@ const courseLecture = {
         now: Object,
     },
     components: {
+        'page-click-copy': pageClickCopy,
         'page-countdown-time': pageCountdownTime,
         'page-link': pageLink,
     },
@@ -31,11 +33,6 @@ const courseLecture = {
                 timeObj = moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
             }
             return timeObj;
-        },
-    },
-    computed: {
-        lectureName: function() {
-            return `Lecture ${this.index}: ${this.name}`;
         },
     },
     template: `

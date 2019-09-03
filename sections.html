@@ -28,11 +28,11 @@
             This page uses Javascript to render HTML components, please enable it to best view this page
         </p>
     </noscript>
-    <div id="app" class="full-height">
-        <page-navbar :primary-color="curPageThemeColor" :secondary-color="navbarBackgroundColor" navbar-background-color="rgba(21, 30, 65, 0.5)" :current-tab-text="currentTabText" :tabnum="tabnum" :stop-theme-colors="pageThemeColors" :page-filepaths="pageFilepaths" :label-texts="tabTexts" :icon-classes="iconClasses"></page-navbar>
+    <div id="app" class="h-100">
+        <page-navbar :primary-color="curPageThemeColor" :secondary-color="navbarBackgroundColor" navbar-background-color="rgba(158, 117, 96, 0.5)" :current-tab-text="currentTabText" :tabnum="tabnum" :stop-theme-colors="pageThemeColors" :page-filepaths="pageFilepaths" :label-texts="tabTexts" :icon-classes="iconClasses"></page-navbar>
         <page-background background-image-url="/imgs/balazs-busznyak-El5zuQAtfeo-unsplash.jpg"></page-background>
-        <page-content></page-content>
-        <page-footer :cur-page-theme-color="curPageThemeColor" footer-background-color="rgba(21, 30, 65, 0.5)"></page-footer>
+        <page-content :cur-page-theme-color="curPageThemeColor" :cur-page-icon-classes="curPageIconClasses"></page-content>
+        <page-footer :cur-page-theme-color="curPageThemeColor" footer-background-color="rgba(158, 117, 96, 0.6)"></page-footer>
     </div>
     <!-- Vue -->
     <!-- development version, includes helpful console warnings -->
@@ -47,6 +47,8 @@
     <!-- <script> -->
     <!-- window.Vue || document.write('<script src="/js/vue.min.js">\x3C/script>'); -->
     <!-- </script> -->
+    <!-- moment.js -->
+    <script src="/js/moment.js"></script>
     <!-- custom scripts -->
     <!-- page specific script -->
     <script type="module" src="/js/sections.js"></script>

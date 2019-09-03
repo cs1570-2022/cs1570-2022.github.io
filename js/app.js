@@ -8,7 +8,7 @@ new Vue({
         pageThemeColors: [
             '#009ec4' /* しるべのクジラ */,
             '#525c15'/* サンセットバスストップ */,
-            'midnightblue' /* 始発とカフカ */,
+            '#62251b' /* 始発とカフカ */,
             '#a1659e' /* palette */,
             '#0c85a7' /* DAYBREAK FRONTLINE */,
             'rgb(245, 223, 220)'/*  */,

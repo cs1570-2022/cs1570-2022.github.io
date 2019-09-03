@@ -1,21 +1,15 @@
-/* unvisited link */
-a:link {
-    color: unset;
+a {
+    color: #62251b;
 }
 
-/* visited link */
-a:visited {
-    color: darkslateblue;
-}
-
-/* mouse over link */
-a:hover {
-    color: bisque;
-}
-
-/* selected link */
+a:hover,
 a:active {
-    color: bisque;
+    color: brown;
+}
+
+
+a:visited {
+    color: saddlebrown;
 }
 
 #fireworks {
