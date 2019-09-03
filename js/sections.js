@@ -162,6 +162,7 @@ const courseSection = {
             </td>
             <td>
                 <page-link
+                  v-if="videoURL"
                   text="video"
                   :href="videoURL"
                 >
@@ -188,10 +189,10 @@ Vue.component('page-content', {
             sections: [
                 {
                     name: '',
-                    date: '09/05',
-                    tas: ['TBD', 'Zhengyi Peng'],
-                    material: [''],
-                    materialURL: [''],
+                    date: '09/09',
+                    tas: [],
+                    material: [],
+                    materialURL: [],
                     videoURL: ''
                 },
             ],
