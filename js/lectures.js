@@ -1,6 +1,5 @@
 import pageClickCopy from './page-click-copy.js';
 import pageCountdownTime from './page-countdown-time.js';
-import pageLink from './page-link.js';
 import pageLinks from './page-links.js';
 import pageTable from './page-table.js';
 import pageSectionTitle from './page-section.js';
@@ -74,7 +73,6 @@ Vue.component('page-content', {
     },
     components: {
         'course-lecture': courseLecture,
-        'page-link': pageLink,
         'page-table': pageTable,
         'page-section-title': pageSectionTitle,
     },
