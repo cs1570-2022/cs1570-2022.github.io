@@ -1,6 +1,7 @@
 import pageClickCopy from './page-click-copy.js';
 import pageCountdownTime from './page-countdown-time.js';
 import pageLink from './page-link.js';
+import pageLinks from './page-links.js';
 import pageTable from './page-table.js';
 import pageSectionTitle from './page-section.js';
 
@@ -9,14 +10,14 @@ const courseLecture = {
         index: Number,
         name: String,
         date: String,
-        readingName: String,
-        readingURL: String,
+        readingNames: Array,
+        readingURLs: Array,
         now: Object,
     },
     components: {
         'page-click-copy': pageClickCopy,
         'page-countdown-time': pageCountdownTime,
-        'page-link': pageLink,
+        'page-links': pageLinks,
     },
     data: function() {
         return {
@@ -55,11 +56,11 @@ const courseLecture = {
                 </page-countdown-time>
             </td>
             <td>
-                <page-link
-                  :text="readingName"
-                  :href="readingURL"
+                <page-links
+                  :name="readingNames"
+                  :urls="readingURLs"
                 >
-                </page-link>
+                </page-links>
             </td>
         </tr>
     `,
@@ -83,8 +84,8 @@ Vue.component('page-content', {
                 {
                     name: 'First Day, Big-Oh Notation',
                     date: '09/04',
-                    readingName: '',
-                    readingURL: '',
+                    readingNames: [],
+                    readingURLs: [],
                 },
             ],
             now: moment(),
