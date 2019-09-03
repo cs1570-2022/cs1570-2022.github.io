@@ -35,9 +35,9 @@ const courseDocumentsSection = {
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
-                <course-resource title="course missive">
+                <course-resource title="course syllabus">
                     <p>
-                      Please find the course missive <page-link href="" text="here"></page-link>
+                      Please find the course syllabus <page-link href="resources/csci1570_syllabus.pdf" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="collaboration policy">
