@@ -25,6 +25,7 @@ const csEmail = {
 const staffCard = {
     props: {
         cslogin: String,
+        curPageThemeColor: String,
         email: {
             type: String,
             default: null,
@@ -40,6 +41,12 @@ const staffCard = {
             default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
         },
         publicTransit: String,
+        photoStyle: {
+            type: Object,
+            default: function () {
+                return {'background-position': '50%, 50%'};
+            },
+        },
     },
     components: {
         'cs-email': csEmail,
@@ -53,8 +60,8 @@ const staffCard = {
         id: function() {
             return this.name.toLowerCase().replace(' ', '-');
         },
-        alt: function() {
-            return `${this.showPersonalPhoto ? 'staff': 'public transit'} photo of ${this.name}`;
+        photoURL: function() {
+            return `url(${this.showPersonalPhoto ? this.personalPhotoURL: this.publicTransitPhotoURL})`;
         },
     },
     template: `
@@ -71,12 +78,12 @@ const staffCard = {
             >
                 {{ publicTransit }}
             </div>
-            <img
-                :src="showPersonalPhoto ? personalPhotoURL: publicTransitPhotoURL"
+            <div
                 class="card-img-top"
-                style="width: 300px; height: 300px;"
-                :alt="alt"
+                :style="[{'background-image': photoURL}, photoStyle]"
+                style="background-size: cover; background-repeat: no-repeat; width: 300px; height: 300px;"
             >
+            </div>
             <div class="card-body d-flex flex-column justify-content-center">
                 <h5 class="card-title mb-0">
                     {{ this.name }}
@@ -124,6 +131,7 @@ const staffGroup = {
                   v-for="(member, index) of members"
                   :key="index"
                   v-bind="member"
+                  :cur-page-theme-color="curPageThemeColor"
                 >
                 </staff-card>
             </div>
@@ -168,6 +176,7 @@ Vue.component('page-content', {
                         note: 'Grad TA',
                         personalPhotoURL: 'staffs/archer_personal.jpg',
                         publicTransitPhotoURL: 'staffs/archer_transit.jpeg',
+                        photoStyle: {'background-position': '0%, 50%'},
                         publicTransit: '1,2,3 Subway',
                     },
                     {
@@ -191,6 +200,7 @@ Vue.component('page-content', {
                         name: 'Galadriel Brady',
                         personalPhotoURL: 'staffs/galadriel-personal.jpg',
                         publicTransitPhotoURL: 'staffs/galadriel_transit.png',
+                        photoStyle: {'background-position': '0 0'},
                         publicTransit: 'Berlin U-Bahn / U1',
                     },
                     {
