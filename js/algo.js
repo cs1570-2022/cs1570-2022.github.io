@@ -54,9 +54,9 @@ const courseInfoSection = {
                       </span>
                       <div>
                           <p id="class-time" class="d-flex flex-row justify-content-between mb-1">
-                              <span id="time-start">15:00PM</span>
+                              <span id="time-start">3:00PM</span>
                               <span id="time-duration" class="font-weight-light text-muted mx-1 px-4 border-bottom">1Hr 20Mins</span>
-                              <span id="time-end">16:20PM</span>
+                              <span id="time-end">4:20PM</span>
                           </p>
                           <p id="day-of-week-badges" class="d-flex flex-row justify-content-between">
                               <span id="time-monday" class="mx-2 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">M</span>
@@ -138,7 +138,7 @@ const courseTopics = {
             topics: [
                 ['Week 1 (September 4-6)', 'Big O Analysis'],
                 ['Week 2 (September 9-13)', 'Algorithms with Numbers'],
-                ['Week 3 (September 160-20)', 'Divide-and-Conquer'],
+                ['Week 3 (September 16-20)', 'Divide-and-Conquer'],
                 ['Week 4 (September 23-27)', 'Decomposition of Graphs'],
                 ['Week 5 (September 30-October 4)', 'Paths in Graphs'],
                 ['Week 6 (October 7-11)', 'Greedy Algorithms'],

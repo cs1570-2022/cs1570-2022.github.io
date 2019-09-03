@@ -4,8 +4,14 @@ import pageSectionTitle from './page-section.js';
 const staffCard = {
     props: {
         name: String,
-        personalPhotoURL: String,
-        publicTransitPhotoURL: String,
+        personalPhotoURL: {
+            type: String,
+            default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
+        },
+        publicTransitPhotoURL: {
+            type: String,
+            default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
+        },
     },
     data: function() {
         return {
@@ -17,7 +23,7 @@ const staffCard = {
             return this.name.toLowerCase().replace(' ', '-');
         },
         alt: function() {
-            return `${this.showPersonalPhoto ? 'staff': 'public trasit'} photo of ${this.name}`;
+            return `${this.showPersonalPhoto ? 'staff': 'public transit'} photo of ${this.name}`;
         },
     },
     template: `
@@ -29,7 +35,7 @@ const staffCard = {
           @mouseleave.passive="showPersonalPhoto = false"
         >
             <img
-                :src="publicTransitPhotoURL"
+                :src="showPersonalPhoto ? personalPhotoURL: publicTransitPhotoURL"
                 class="card-img-top"
                 :alt="alt"
             >
@@ -97,57 +103,57 @@ Vue.component('page-content', {
                 [
                     {
                         name: 'Philip Klein',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                 ],
                 [
                     {
                         name: 'Jason Zagorski',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Archer Wheeler',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                 ],
                 [
                     {
                         name: 'Da Huo',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Galadriel Brady',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Justin Cardozo',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Justin Zhang',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Rigel Galgana',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Yash Gotmare',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                     {
                         name: 'Zhengyi Peng',
-                        personalPhotoURL: '',
-                        publicTransitPhotoURL: '',
+                        // personalPhotoURL: '',
+                        // publicTransitPhotoURL: '',
                     },
                 ],
             ]
