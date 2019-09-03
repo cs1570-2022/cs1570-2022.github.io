@@ -72,6 +72,7 @@
 import pageClickCopy from './page-click-copy.js';
 import pageCountdownTime from './page-countdown-time.js';
 import pageLink from './page-link.js';
+import pageLinks from './page-links.js';
 import pageTable from './page-table.js';
 import pageSectionTitle from './page-section.js';
 
@@ -90,11 +91,17 @@ const courseSection = {
         'page-click-copy': pageClickCopy,
         'page-countdown-time': pageCountdownTime,
         'page-link': pageLink,
+        'page-links': pageLinks,
     },
     data: function() {
         return {
             outMoment: this.parseTime(this.date),
         };
+    },
+    computed: {
+        taURLs: function() {
+            return this.tas.map(this.getTAHref);
+        },
     },
     methods: {
         parseTime: function(timeStr) {
@@ -131,34 +138,18 @@ const courseSection = {
                 </page-countdown-time>
             </td>
             <td>
-                <ul class="list-inline">
-                    <li
-                      class="d-flex flex-column list-inline-item"
-                      v-for="(ta, index) of tas"
-                      :key="index"
-                    >
-                        <page-link
-                          :text="ta"
-                          :href="getTAHref(ta)"
-                        >
-                        </page-link>
-                    </li>
-                </ul>
+                <page-links
+                  :names="tas"
+                  :urls="taURLs"
+                >
+                </page-links>
             </td>
             <td>
-                <ul class="list-inline">
-                    <li
-                      class="d-flex flex-column list-inline-item"
-                      v-for="(materialName, index) of material"
-                      :key="index"
-                    >
-                        <page-link
-                          :text="materialName"
-                          :href="materialURL[index]"
-                        >
-                        </page-link>
-                    </li>
-                </ul>
+                <page-links
+                  :names="material"
+                  :urls="materialURL"
+                >
+                </page-links>
             </td>
             <td>
                 <page-link
@@ -180,7 +171,6 @@ Vue.component('page-content', {
     },
     components: {
         'course-section': courseSection,
-        'page-link': pageLink,
         'page-table': pageTable,
         'page-section-title': pageSectionTitle,
     },
