@@ -39,7 +39,7 @@ const courseLecture = {
         <tr>
             <th scope="row">
                 <span>
-                    Lecture {{index}}:
+                    {{index}}:
                 </span>
                 <page-click-copy
                   :text="name"
@@ -81,8 +81,8 @@ Vue.component('page-content', {
         return {
             lectures: [
                 {
-                    name: '',
-                    date: '09/05',
+                    name: 'First Day, Big-Oh Notation',
+                    date: '09/04',
                     readingName: '',
                     readingURL: '',
                 },
@@ -113,8 +113,7 @@ Vue.component('page-content', {
                 <div
                   class="mx-5 mb-5"
                   :style="{ color: curPageThemeColor}">
-                    <p>Lectures take place Monday, Wednesday, Friday from 15:00 to 16:20AM in Barus & Holley 166.</p>
-                    <p>Lecture Capture can be found <page-link text="here" href=""></page-link>.</p>
+                    <p>Lectures take place Monday, Wednesday, and Friday from 3:00 to 4:20PM in Friedman 108.</p>
                 </div>
                 <div
                   class="mx-5 px-5"

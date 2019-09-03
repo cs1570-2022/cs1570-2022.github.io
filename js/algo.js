@@ -70,7 +70,7 @@ const courseInfoSection = {
                           <i class="far fa-building fa-lg" title="location"></i>
                       </span>
                       <span id="class-location">
-                          Barus &amp; Holley 166
+                          Friedman 108
                       </span>
                   </div>
                   <div id="prereqs-container" class="d-flex flex-row">
