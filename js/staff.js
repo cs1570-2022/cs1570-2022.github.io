@@ -219,9 +219,9 @@ Vue.component('page-content', {
                     },
                     {
                         name: 'Rigel Galgana',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
-                        // publicTransit: '',
+                        personalPhotoURL: 'staffs/rigel_personal.jpeg',
+                        publicTransitPhotoURL: 'staffs/rigel_transit.jpg',
+                        publicTransit: 'RIPTA Bus',
                         cslogin: 'rgalgana',
                     },
                     {
