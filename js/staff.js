@@ -221,6 +221,7 @@ Vue.component('page-content', {
                         name: 'Rigel Galgana',
                         // personalPhotoURL: '',
                         // publicTransitPhotoURL: '',
+                        // publicTransit: '',
                         cslogin: 'rgalgana',
                     },
                     {
@@ -228,6 +229,7 @@ Vue.component('page-content', {
                         name: 'Yash Gotmare',
                         personalPhotoURL: 'staffs/yash_personal.png',
                         publicTransitPhotoURL: 'staffs/yash_transit.jpg',
+                        photoStyle: {'background-position': '0 50%'},
                         publicTransit: 'Boeing 787-10',
                     },
                     {

@@ -64,7 +64,7 @@ const largeNavbarStopLabel = {
         color: String,
     },
     template: `
-        <span class="font-weight-bold text-capitalize" :style="{ color: color }">{{text}}</span>
+        <a class="font-weight-bold text-capitalize" :style="{ color: color }">{{text}}</a>
     `
 };
 
