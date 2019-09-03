@@ -1,9 +1,36 @@
 import pageSectionTitle from './page-section.js';
 
 
+const csEmail = {
+    props: {
+        cslogin: String,
+        email: {
+            type: String,
+            default: null,
+        },
+    },
+    computed: {
+        mailto: function() {
+            return `mailto:${this.email === null ? this.cslogin + '@cs.brown.edu' : this.email}`;
+        },
+    },
+    template: `
+      <a :href="mailto">
+          {{cslogin}}
+          <i class="fas fa-envelope"></i>
+      </a>
+    `
+};
+
 const staffCard = {
     props: {
+        cslogin: String,
+        email: {
+            type: String,
+            default: null,
+        },
         name: String,
+        note: String,
         personalPhotoURL: {
             type: String,
             default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
@@ -12,6 +39,10 @@ const staffCard = {
             type: String,
             default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
         },
+        publicTransit: String,
+    },
+    components: {
+        'cs-email': csEmail,
     },
     data: function() {
         return {
@@ -29,20 +60,36 @@ const staffCard = {
     template: `
         <div
           :id="id"
-          class="card text-center mx-5"
-          style="width: 20%"
+          class="card text-center m-4"
+          :style="{'border-color': curPageThemeColor}"
           @mouseenter.passive="showPersonalPhoto = true"
           @mouseleave.passive="showPersonalPhoto = false"
         >
+            <div
+              class="card-header text-muted font-weight-light"
+              style="font-size: medium"
+            >
+                {{ publicTransit }}
+            </div>
             <img
                 :src="showPersonalPhoto ? personalPhotoURL: publicTransitPhotoURL"
                 class="card-img-top"
+                style="width: 300px; height: 300px;"
                 :alt="alt"
             >
-            <div class="card-body">
-                <h5 class="card-title">
+            <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title mb-0">
                     {{ this.name }}
                 </h5>
+                <p class="card-text mb-0">
+                    <cs-email
+                      :cslogin="cslogin"
+                      :email="email"
+                    ></cs-email>
+                </p>
+                <p class="card-text mb-0">
+                    {{note}}
+                </p>
             </div>
         </div>
     `
@@ -55,9 +102,6 @@ const staffGroup = {
         curPageIconClasses: Array,
         title: String,
         members: Array,
-        staffNames: Array,
-        staffPersonalPhotos: Array,
-        staffPublicTransitPhotos: Array,
     },
     components: {
         'page-section-title': pageSectionTitle,
@@ -102,58 +146,86 @@ Vue.component('page-content', {
             groups: [
                 [
                     {
+                        cslogin: 'pklein',
+                        email: 'philip@brown.edu',
                         name: 'Philip Klein',
                         personalPhotoURL: 'staff/prof_klein.jpg',
                         publicTransitPhotoURL: 'staff/prof_klein_transit.jpg',
+                        publicTransit: 'BART',
                     },
                 ],
                 [
                     {
+                        cslogin: 'jzagorsk',
                         name: 'Jason Zagorski',
                         personalPhotoURL: 'staff/jason_personal.png',
                         publicTransitPhotoURL: 'staff/jason_transit.jpg',
+                        publicTransit: 'Long Island Rail Road',
                     },
                     {
+                        cslogin: 'awheele9',
                         name: 'Archer Wheeler',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        note: 'Grad TA',
+                        personalPhotoURL: 'staff/archer_personal.jpg',
+                        publicTransitPhotoURL: 'staff/archer_transit.jpeg',
+                        publicTransit: '1,2,3 Subway',
+                    },
+                    {
+                        name: 'Aaron Zhang',
+                        personalPhotoURL: 'staff/aaron_personal.jpg',
+                        publicTransitPhotoURL: 'staff/aaron_transit.jpg',
+                        publicTransit: 'Thomas the Tank Engine',
+                        cslogin: 'azhang28'
                     },
                 ],
                 [
                     {
+                        cslogin: 'dhuo',
                         name: 'Da Huo',
                         personalPhotoURL: 'staff/da-personal.jpg',
                         publicTransitPhotoURL: 'staff/da_transit.jpg',
+                        publicTransit: 'NJ Transit',
                     },
                     {
+                        cslogin: 'gbrady1',
                         name: 'Galadriel Brady',
                         personalPhotoURL: 'staff/galadriel-personal.jpg',
                         publicTransitPhotoURL: 'staff/galadriel_transit.png',
+                        publicTransit: 'Berlin U-Bahn / U1',
                     },
                     {
+                        cslogin: 'jcardozo',
                         name: 'Justin Cardozo',
                         personalPhotoURL: 'staff/justin_cardozo.jpg',
                         publicTransitPhotoURL: 'staff/justin_c_transit.jpg',
+                        publicTransit: 'Caltrain',
                     },
                     {
+                        cslogin: 'jzhang80',
                         name: 'Justin Zhang',
                         personalPhotoURL: 'staff/justin_zhang.jpg',
                         publicTransitPhotoURL: 'staff/justin_z_transit.jpg',
+                        publicTransit: 'GS bridge',
                     },
                     {
                         name: 'Rigel Galgana',
                         // personalPhotoURL: '',
                         // publicTransitPhotoURL: '',
+                        cslogin: 'rgalgana',
                     },
                     {
+                        cslogin: 'sgotmare',
                         name: 'Yash Gotmare',
                         personalPhotoURL: 'staff/yash_personal.png',
                         publicTransitPhotoURL: 'staff/yash_transit.jpg',
+                        publicTransit: 'Boeing 787-10',
                     },
                     {
+                        cslogin: 'zpeng3',
                         name: 'Zhengyi Peng',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/zhengyi_personal.jpeg',
+                        publicTransitPhotoURL: 'staff/zhengyi_transit.jpg',
+                        publicTransit: '复兴号 (Fuxing Hao)',
                     },
                 ],
             ]
