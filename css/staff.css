@@ -1,0 +1,12 @@
+a {
+    color: #d20453;
+}
+
+a:hover,
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: palevioletred;
+}

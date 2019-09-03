@@ -7,11 +7,11 @@ new Vue({
     data: {
         pageThemeColors: [
             '#009ec4' /* しるべのクジラ */,
-            '#525c15'/* サンセットバスストップ */,
+            '#525c15'/*  */,
             '#62251b' /* 始発とカフカ */,
             '#a1659e' /* palette */,
             '#0c85a7' /* DAYBREAK FRONTLINE */,
-            'rgb(245, 223, 220)'/*  */,
+            '#d20453'/* サンセットバスストップ */,
             '#ed9b65' /* 渚 */
         ],
         navbarBackgroundColor: 'white',

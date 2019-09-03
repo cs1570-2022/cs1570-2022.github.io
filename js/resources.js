@@ -26,9 +26,10 @@ const courseDocumentsSection = {
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <page-section-title
-              :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text="course documents"
+              :style-object="{'color': curPageThemeColor}"
+              :text-style-object="{'text-decoration': 'line-through dashed', 'border-top': 'solid medium', 'border-bottom': 'solid medium'}"
             ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
@@ -76,10 +77,12 @@ const externalResourcesSection = {
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <page-section-title
-              :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text="external resources"
-            ></page-section-title>
+              :style-object="{'color': curPageThemeColor}"
+              :text-style-object="{'text-decoration': 'line-through dashed', 'border-top': 'solid medium', 'border-bottom': 'solid medium'}"
+            >
+            </page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"

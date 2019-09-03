@@ -40,10 +40,9 @@ const courseInfoSection = {
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <page-section-title
-              :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
-              text-decoration-style="wavy"
               text="course info"
+              :style-object="{'color': curPageThemeColor, 'text-decoration-line': 'underline', 'text-decoration-style': 'wavy'}"
             ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
@@ -186,10 +185,9 @@ const courseMaterialSection = {
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
             <page-section-title
-              :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
-              text-decoration-style="wavy"
               text="course material"
+              :style-object="{'color': curPageThemeColor, 'text-decoration-line': 'underline', 'text-decoration-style': 'wavy'}"
             ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"

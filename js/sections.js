@@ -213,10 +213,10 @@ Vue.component('page-content', {
         <main>
             <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
                 <page-section-title
-                  :background-color="curPageThemeColor"
                   :icon-classes="curPageIconClasses"
-                  text-decoration-style="solid"
                   text="course sections"
+                  :style-object="{'color': curPageThemeColor}"
+                  :text-style-object="{'text-decoration': 'underline solid','border-bottom': 'solid medium'}"
                 ></page-section-title>
                 <div
                   class="mx-5 px-5"
