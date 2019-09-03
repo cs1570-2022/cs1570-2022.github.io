@@ -130,3 +130,6 @@ assets
 
 .tern-project
 .eslintrc.js
+
+package-lock.json
+package.json
