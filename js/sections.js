@@ -105,14 +105,7 @@ const courseSection = {
     },
     methods: {
         parseTime: function(timeStr) {
-            let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD']);
-            if (timeObj.isValid()) {
-                timeObj.hour(18);
-                timeObj.minute(0);
-            } else {
-                timeObj = moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
-            }
-            return timeObj;
+            return moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
         },
         getTAHref: function(ta) {
             return `staff.html#${ta.toLowerCase().replace(' ', '-')}`;
@@ -202,7 +195,7 @@ Vue.component('page-content', {
     },
     template: `
         <main>
-            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
+            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
                 <page-section-title
                   :icon-classes="curPageIconClasses"
                   text="course sections"

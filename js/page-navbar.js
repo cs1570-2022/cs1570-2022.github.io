@@ -147,7 +147,7 @@ const collapsedNavbarIcon = {
     },
     template: `
         <div
-            class="mr-4"
+            class="mr-2"
             @click="expandNavbar"
         >
             <i
@@ -192,7 +192,7 @@ const collapsedNavbarStop = {
     },
     template: `
         <span
-          class="collapsed-navbar-stop badge mr-3 text-capitalize"
+          class="collapsed-navbar-stop badge mr-2 text-capitalize"
           :class="classArray"
           :style="styleObject"
           @click.stop.prevent="navigate"

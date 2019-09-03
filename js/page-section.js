@@ -7,12 +7,13 @@ const pageSectionTitle = {
     },
     template: `
         <h2
-          class="text-capitalize text-nowrap font-weight-bold mx-5 mb-5 w-25"
+          class="text-capitalize text-nowrap font-weight-bold mx-4 mx-sm-5 mb-4 mb-sm-5 w-25"
           style="font-size: xx-large"
           :style="styleObject"
         >
             <i class="mr-2" :class="iconClasses"></i>
             <span
+              class="d-block d-sm-inline-block"
               :style="textStyleObject"
             >
               {{text}}

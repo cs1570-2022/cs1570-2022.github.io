@@ -38,14 +38,14 @@ const courseInfoSection = {
         'page-section-title': pageSectionTitle,
     },
     template: `
-        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
+        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
             <page-section-title
               :icon-classes="curPageIconClasses"
               text="course info"
               :style-object="{'color': curPageThemeColor, 'text-decoration-line': 'underline', 'text-decoration-style': 'wavy'}"
             ></page-section-title>
             <div
-              class="flex-fill d-flex flex-column ml-5"
+              class="flex-fill d-flex flex-column ml-4 ml-sm-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
                 <div id="time-container" class="d-flex flex-row mb-4">
@@ -55,13 +55,14 @@ const courseInfoSection = {
                       <div>
                           <p id="class-time" class="d-flex flex-row justify-content-between mb-1">
                               <span id="time-start">3:00PM</span>
-                              <span id="time-duration" class="font-weight-light text-muted mx-1 px-4 border-bottom">1Hr 20Mins</span>
+                              <span id="time-duration" class="d-none d-sm-inline-block font-weight-light text-muted mx-1 px-4 border-bottom">1Hr 20Mins</span>
+                              <span class="d-sm-inline-block d-sm-none mx-2">--</span>
                               <span id="time-end">4:20PM</span>
                           </p>
-                          <p id="day-of-week-badges" class="d-flex flex-row justify-content-between">
-                              <span id="time-monday" class="mx-2 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">M</span>
-                              <span id="time-wednesday" class="mx-2 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">W</span>
-                              <span id="time-friday" class="mx-2 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">F</span>
+                          <p id="day-of-week-badges" class="d-flex flex-column flex-sm-row justify-content-between">
+                              <span id="time-monday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">M</span>
+                              <span id="time-wednesday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">W</span>
+                              <span id="time-friday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">F</span>
                           </p>
                       </div>
                   </div>
@@ -78,25 +79,29 @@ const courseInfoSection = {
                           <i class="fas fa-clipboard-list fa-lg" title="prerequisites"></i>
                       </span>
                       <div class="d-flex flex-column">
-                            <div>
-                                <span>
+                            <div class="d-flex flex-row">
+                                <span class="text-nowrap">
                                     One of
                                 </span>
-                                <cs-prereq course-num="0160" :background-color="curPageThemeColor"></cs-prereq>
-                                <cs-prereq course-num="0180" :background-color="curPageThemeColor"></cs-prereq>
-                                <cs-prereq course-num="0190" :background-color="curPageThemeColor"></cs-prereq>
+                                <div>
+                                    <cs-prereq course-num="0160" :background-color="curPageThemeColor"></cs-prereq>
+                                    <cs-prereq course-num="0180" :background-color="curPageThemeColor"></cs-prereq>
+                                    <cs-prereq course-num="0190" :background-color="curPageThemeColor"></cs-prereq>
+                                </div>
                             </div>
                             <i class="fas fa-plus fa-lg align-self-center my-2"></i>
-                            <div>
-                                <span>
+                            <div class="d-flex flex-row">
+                                <span class="text-nowrap">
                                     One of
                                 </span>
-                                <cs-prereq course-num="0220" :background-color="curPageThemeColor"></cs-prereq>
-                                <cs-prereq course-num="1010" :background-color="curPageThemeColor"></cs-prereq>
-                                <cs-prereq course-num="1450" :background-color="curPageThemeColor"></cs-prereq>
-                                <a id="prereq-math0750" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 0750</a>
-                                <a id="prereq-math1010" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/next-semester">MATH 1010</a>
-                                <a id="prereq-math1530" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 1530</a>
+                                <div>
+                                    <cs-prereq course-num="0220" :background-color="curPageThemeColor"></cs-prereq>
+                                    <cs-prereq course-num="1010" :background-color="curPageThemeColor"></cs-prereq>
+                                    <cs-prereq course-num="1450" :background-color="curPageThemeColor"></cs-prereq>
+                                    <a id="prereq-math0750" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 0750</a>
+                                    <a id="prereq-math1010" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/next-semester">MATH 1010</a>
+                                    <a id="prereq-math1530" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 1530</a>
+                                </div>
                             </div>
                         </div>
                   </div>
@@ -156,7 +161,7 @@ const courseTopics = {
             </p>
             <ul
               id="topics-list"
-              class="list-group list-group-flush ml-5"
+              class="list-group list-group-flush ml-4 ml-sm-5"
               style="border-left: solid 0.2rem"
             >
                 <course-topic
@@ -183,14 +188,14 @@ const courseMaterialSection = {
         'page-section-title': pageSectionTitle,
     },
     template: `
-        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
+        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
             <page-section-title
               :icon-classes="curPageIconClasses"
               text="course material"
               :style-object="{'color': curPageThemeColor, 'text-decoration-line': 'underline', 'text-decoration-style': 'wavy'}"
             ></page-section-title>
             <div
-              class="flex-fill d-flex flex-column ml-5"
+              class="flex-fill d-flex flex-column ml-4 ml-sm-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
                 <div class="d-flex flex-row mb-4">
@@ -207,7 +212,7 @@ const courseMaterialSection = {
                                     by Dasgupta, Papadimitriou, and Vazirani
                                 </span>
                             </span>
-                            <ul class="list-inline ml-4">
+                            <ul class="list-inline ml-2">
                                 <a
                                   href="https://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402"
                                   title="Buy from Amazon" target="_blank"
