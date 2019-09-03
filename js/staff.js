@@ -29,7 +29,7 @@ const staffCard = {
     template: `
         <div
           :id="id"
-          class="card text-center m-5"
+          class="card text-center mx-5"
           style="width: 20%"
           @mouseenter.passive="showPersonalPhoto = true"
           @mouseleave.passive="showPersonalPhoto = false"
@@ -103,15 +103,15 @@ Vue.component('page-content', {
                 [
                     {
                         name: 'Philip Klein',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/prof_klein.jpg',
+                        publicTransitPhotoURL: 'staff/prof_klein_transit.jpg',
                     },
                 ],
                 [
                     {
                         name: 'Jason Zagorski',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/jason_personal.png',
+                        publicTransitPhotoURL: 'staff/jason_transit.jpg',
                     },
                     {
                         name: 'Archer Wheeler',
@@ -122,23 +122,23 @@ Vue.component('page-content', {
                 [
                     {
                         name: 'Da Huo',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/da-personal.jpg',
+                        publicTransitPhotoURL: 'staff/da_transit.jpg',
                     },
                     {
                         name: 'Galadriel Brady',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/galadriel-personal.jpg',
+                        publicTransitPhotoURL: 'staff/galadriel_transit.png',
                     },
                     {
                         name: 'Justin Cardozo',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/justin_cardozo.jpg',
+                        publicTransitPhotoURL: 'staff/justin_c_transit.jpg',
                     },
                     {
                         name: 'Justin Zhang',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/justin_zhang.jpg',
+                        publicTransitPhotoURL: 'staff/justin_z_transit.jpg',
                     },
                     {
                         name: 'Rigel Galgana',
@@ -147,8 +147,8 @@ Vue.component('page-content', {
                     },
                     {
                         name: 'Yash Gotmare',
-                        // personalPhotoURL: '',
-                        // publicTransitPhotoURL: '',
+                        personalPhotoURL: 'staff/yash_personal.png',
+                        publicTransitPhotoURL: 'staff/yash_transit.jpg',
                     },
                     {
                         name: 'Zhengyi Peng',

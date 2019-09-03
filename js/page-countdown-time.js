@@ -3,7 +3,6 @@ import pageClickCopy from './page-click-copy.js';
 
 const pageCountdownTime = {
     props: {
-        name: String,
         time: Object,
         showCountdownStatus: {
             type: Boolean,
@@ -21,12 +20,8 @@ const pageCountdownTime = {
         timeFromNow: function() {
             return this.time.diff(this.now);
         },
-        namePastTense: function() {
-            return this.name.endsWith('e') ? `${this.name}d` : `${this.name}ed`;
-        },
         timeFromNowDisplayed: function() {
-            const text = this.timeFromNow < 0 ? this.namePastTense : `will ${this.name}`;
-            return `${text} ${this.time.from(this.now)}`;
+            return this.time.from(this.now);
         },
         statusClasses: function() {
             if (this.timeFromNow < 0) {
