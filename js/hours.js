@@ -1,4 +1,4 @@
-import { sectionTitle } from './page-section.js';
+import pageSectionTitle from './page-section.js';
 
 
 Vue.component('page-content', {
@@ -7,7 +7,7 @@ Vue.component('page-content', {
         curPageIconClasses: Array,
     },
     components: {
-        'section-title': sectionTitle,
+        'page-section-title': pageSectionTitle,
     },
     mounted: function() {
         const element = this.$el;
@@ -19,11 +19,11 @@ Vue.component('page-content', {
     template: `
         <main>
             <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
-                <section-title
+                <page-section-title
                   :background-color="curPageThemeColor"
                   :icon-classes="curPageIconClasses"
                   text="course calendar"
-                ></section-title>
+                ></page-section-title>
                 <div
                   class="flex-fill d-flex flex-column ml-5"
                   :style="{ color: curPageThemeColor }"

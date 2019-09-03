@@ -1,61 +1,24 @@
 import pageCountdownTime from './page-countdown-time.js';
 import pageLink from './page-link.js';
-import pageSectionTitle from './page-section.js';
 import pageTable from './page-table.js';
+import pageSectionTitle from './page-section.js';
 
-
-const hiddenLink = {
+const courseLecture = {
     props: {
-        now: Object,
-        hide: {
-            type: Boolean,
-            default: null
-        },
-        hideUntil: {
-            type: Object,
-            default: null,
-        },
+        index: Number,
         name: String,
-        href: String,
-    },
-    computed: {
-        willHide: function() {
-            if (this.hide === null) {
-                return this.hide || this.hideUntil === null || this.hideUntil.isAfter(this.now);
-            } else {
-                return this.hide;
-            }
-        },
-    },
-    template: `
-        <span v-if="willHide">{{name}}</span>
-        <page-link
-          v-else
-          :href="href"
-          :text="name">
-        </page-link>
-    `
-};
-
-
-const courseAssignment = {
-    props: {
-        name: String,
-        handoutURL: String,
-        out: String,
-        due: String,
-        solutionURL: String,
+        date: String,
+        readingName: String,
+        readingURL: String,
         now: Object,
     },
     components: {
-        'hidden-link': hiddenLink,
         'page-countdown-time': pageCountdownTime,
         'page-link': pageLink,
     },
     data: function() {
         return {
-            outMoment: this.parseTime(this.out),
-            dueMoment: this.parseTime(this.due),
+            outMoment: this.parseTime(this.date),
         };
     },
     methods: {
@@ -70,46 +33,41 @@ const courseAssignment = {
             return timeObj;
         },
     },
+    computed: {
+        lectureName: function() {
+            return `Lecture ${this.index}: ${this.name}`;
+        },
+    },
     template: `
         <tr>
             <th scope="row">
-                <hidden-link
-                  :name="name"
-                  :href="handoutURL"
-                  :hideUntil="outMoment"
-                  :now="now"
+                <span>
+                    Lecture {{index}}:
+                </span>
+                <page-click-copy
+                  :text="name"
                 >
-                </hidden-link>
+                </page-click-copy>
             </th>
             <td>
                 <page-countdown-time
-                  name="out"
+                  name="deliver"
                   :time="outMoment"
                   :now="now"
                 >
                 </page-countdown-time>
             </td>
             <td>
-                <page-countdown-time
-                  name="due"
-                  :time="dueMoment"
-                  :now="now"
+                <page-link
+                  :text="readingName"
+                  :href="readingURL"
                 >
-                </page-countdown-time>
-            </td>
-            <td>
-                <hidden-link
-                  name="Solution"
-                  :href="solutionURL"
-                  :hide="true"
-                  :hideUntil="dueMoment"
-                  :now="now"
-                >
-                </hidden-link>
+                </page-link>
             </td>
         </tr>
     `,
 };
+
 
 Vue.component('page-content', {
     props: {
@@ -117,23 +75,23 @@ Vue.component('page-content', {
         curPageIconClasses: Array,
     },
     components: {
-        'course-assignment': courseAssignment,
+        'course-lecture': courseLecture,
+        'page-link': pageLink,
         'page-table': pageTable,
         'page-section-title': pageSectionTitle,
     },
     data: function() {
         return {
-            assignments: [
+            lectures: [
                 {
-                    name: 'Assignment 0',
-                    handoutURL: '',
-                    out: '09/05',
-                    due: '09/06',
-                    solutionURL: '',
+                    name: '',
+                    date: '09/05',
+                    readingName: '',
+                    readingURL: '',
                 },
             ],
             now: moment(),
-            tableheads: ['assignment #', 'out', 'due', 'solution'],
+            tableheads: ['lecture #', 'date', 'reading'],
         };
     },
     created: function() {
@@ -152,9 +110,15 @@ Vue.component('page-content', {
                 <page-section-title
                   :background-color="curPageThemeColor"
                   :icon-classes="curPageIconClasses"
-                  text-decoration-style="dashed"
-                  text="course assignments"
+                  text-decoration-style="solid"
+                  text="course lectures"
                 ></page-section-title>
+                <div
+                  class="mx-5 mb-5"
+                  :style="{ color: curPageThemeColor}">
+                    <p>Lectures take place Monday, Wednesday, Friday from 15:00 to 16:20AM in Barus & Holley 166.</p>
+                    <p>Lecture Capture can be found <page-link text="here" href=""></page-link>.</p>
+                </div>
                 <div
                   class="mx-5 px-5"
                   :style="{ color: curPageThemeColor}"
@@ -163,13 +127,14 @@ Vue.component('page-content', {
                       :tableheads="tableheads"
                       tableheadBackground="rgba(111, 82, 142, 0.2)"
                     >
-                        <course-assignment
-                          v-for="(assignment, index) of assignments"
+                        <course-lecture
+                          v-for="(lecture, index) of lectures"
                           :key="index"
-                          v-bind="assignment"
+                          v-bind="lecture"
+                          :index="index + 1"
                           :now="now"
                         >
-                        </course-assignment>
+                        </course-lecture>
                     </page-table>
                 </div>
             </section>

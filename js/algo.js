@@ -1,4 +1,5 @@
-import { clickCopy, sectionTitle } from './page-section.js';
+import pageClickCopy from './page-click-copy.js';
+import pageSectionTitle from './page-section.js';
 
 
 const csPrereq = {
@@ -34,16 +35,16 @@ const courseInfoSection = {
     },
     components: {
         'cs-prereq': csPrereq,
-        'section-title': sectionTitle,
+        'page-section-title': pageSectionTitle,
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
-            <section-title
+            <page-section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text-decoration-style="wavy"
               text="course info"
-            ></section-title>
+            ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
@@ -113,7 +114,7 @@ const courseTopic = {
         curPageThemeColor: String,
     },
     components: {
-        'click-copy': clickCopy,
+        'page-click-copy': pageClickCopy,
     },
     template: `
         <li
@@ -121,7 +122,7 @@ const courseTopic = {
           :style="{color: curPageThemeColor}"
         >
             <span class="topic-week font-weight-light">{{week}}: </span>
-            <click-copy :text="name"></click-copy>
+            <page-click-copy :text="name"></page-click-copy>
         </li>
     `,
 };
@@ -180,16 +181,16 @@ const courseMaterialSection = {
     },
     components: {
         'course-topics': courseTopics,
-        'section-title': sectionTitle,
+        'page-section-title': pageSectionTitle,
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
-            <section-title
+            <page-section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text-decoration-style="wavy"
               text="course material"
-            ></section-title>
+            ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"

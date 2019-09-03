@@ -319,7 +319,10 @@ const pageNavbar = {
     template: `
         <nav
           class="navbar navbar-expand-md fixed-top"
-          :style="{'background-color': backgroundColor, 'height': '100px'}">
+          :style="{'background-color': backgroundColor, 'height': '100px'}"
+          @mouseenter.passive="changeBackgroundOpacity(1)"
+          @mouseleave.passive="changeBackgroundOpacity(initialOpacity)"
+        >
             <collapsed-navbar
               :icon-classes="iconClasses[tabnum]"
               :primary-color="primaryColor"

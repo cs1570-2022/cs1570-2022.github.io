@@ -1,5 +1,5 @@
 import pageLink from './page-link.js';
-import { sectionTitle } from './page-section.js';
+import pageSectionTitle from './page-section.js';
 
 const courseResource = {
     props: {
@@ -21,15 +21,15 @@ const courseDocumentsSection = {
     components: {
         'course-resource': courseResource,
         'page-link': pageLink,
-        'section-title': sectionTitle,
+        'page-section-title': pageSectionTitle,
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
-            <section-title
+            <page-section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text="course documents"
-            ></section-title>
+            ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
@@ -71,15 +71,15 @@ const externalResourcesSection = {
         curPageIconClasses: Array,
     },
     components: {
-        'section-title': sectionTitle,
+        'page-section-title': pageSectionTitle,
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
-            <section-title
+            <page-section-title
               :background-color="curPageThemeColor"
               :icon-classes="curPageIconClasses"
               text="external resources"
-            ></section-title>
+            ></page-section-title>
             <div
               class="flex-fill d-flex flex-column ml-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
