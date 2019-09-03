@@ -15,6 +15,10 @@ const hiddenLink = {
             type: Object,
             default: null,
         },
+        hidePlaceholder: {
+            type: Boolean,
+            default: false,
+        },
         name: String,
         href: String,
     },
@@ -26,9 +30,12 @@ const hiddenLink = {
                 return this.hide;
             }
         },
+        content: function() {
+            return this.hidePlaceholder ? '' : this.name;
+        },
     },
     template: `
-        <span v-if="willHide">{{name}}</span>
+        <span v-if="willHide">{{content}}</span>
         <page-link
           v-else
           :href="href"
@@ -76,7 +83,7 @@ const courseAssignment = {
                 <hidden-link
                   :name="name"
                   :href="handoutURL"
-                  :hideUntil="outMoment"
+                  :hide-until="outMoment"
                   :now="now"
                 >
                 </hidden-link>
@@ -102,7 +109,8 @@ const courseAssignment = {
                   name="Solution"
                   :href="solutionURL"
                   :hide="true"
-                  :hideUntil="dueMoment"
+                  :hide-until="dueMoment"
+                  :hide-placeholder="true"
                   :now="now"
                 >
                 </hidden-link>
@@ -127,8 +135,8 @@ Vue.component('page-content', {
                 {
                     name: 'Assignment 0',
                     handoutURL: '',
-                    out: '09/05',
-                    due: '09/06',
+                    out: '09/06',
+                    due: '09/13',
                     solutionURL: '',
                 },
             ],

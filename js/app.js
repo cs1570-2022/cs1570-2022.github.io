@@ -15,7 +15,7 @@ new Vue({
             '#ed9b65' /* 渚 */
         ],
         navbarBackgroundColor: 'white',
-        tabTexts: ['algo', 'lectures', 'sections', 'assignments', 'hours', 'staff', 'resources'],
+        tabTexts: ['algorithms', 'lectures', 'sections', 'assignments', 'hours', 'staff', 'resources'],
         pageFilepaths: ['index.html', 'lectures.html', 'sections.html', 'assignments.html', 'hours.html', 'staff.html', 'resources.html'],
         busClasses: ['fas', 'fa-lg', 'fa-bus'],
         planeClasses: ['fas', 'fa-lg', 'fa-plane'],
