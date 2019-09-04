@@ -37,28 +37,28 @@ const courseDocumentsSection = {
             >
                 <course-resource title="course syllabus">
                     <p>
-                      Please find the course syllabus <page-link href="resources/csci1570_syllabus.pdf" text="here"></page-link>
+                      Please find the course syllabus <page-link title="course syllabus" href="resources/csci1570_syllabus.pdf" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="collaboration policy">
                     <p>
-                      In order to participate in the class, you will need to complete the collaboration policy <page-link href="" text="here"></page-link>
+                      In order to participate in the class, you will need to complete the collaboration policy <page-link title="ccollaboration policy" href="" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="piazza">
                     <p>
-                      Our course piazza page can be found <page-link href="" text="here"></page-link>
+                      Our course piazza page can be found <page-link title="piazza" href="" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="style guidelines">
                     <p>
-                       In addition to being graded on correctness of your solutions, each problem you submit will also receive a style score. You can find rubric and example <page-link href="" text="here"></page-link>
+                       In addition to being graded on correctness of your solutions, each problem you submit will also receive a style score. You can find rubric and example <page-link title="style guidelines" href="" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="LaTeX">
                     <ul>
-                        <li><page-link href="" text="Getting Started with LaTeX"></page-link></li>
-                        <li><page-link href="" text="LaTeX Template"></page-link></li>
+                        <li><page-link href="" text="Getting Started with LaTeX" title="getting started with latex"></page-link></li>
+                        <li><page-link href="" text="LaTeX Template" title="latex template"></page-link></li>
                     </ul>
                 </course-resource>
             </div>
