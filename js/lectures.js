@@ -92,19 +92,19 @@ Vue.component('page-content', {
                     readingURLs: [],
                 },
                 {
-                    name: 'Big-Oh Notation',
+                    name: 'Algorithms with Numbers',
                     date: '09/09',
                     readingNames: [],
                     readingURLs: [],
                 },
                 {
-                    name: 'Big-Oh Notation',
+                    name: 'Algorithms with Numbers',
                     date: '09/11',
                     readingNames: [],
                     readingURLs: [],
                 },
                 {
-                    name: 'Big-Oh Notation',
+                    name: 'Algorithms with Numbers',
                     date: '09/13',
                     readingNames: [],
                     readingURLs: [],
