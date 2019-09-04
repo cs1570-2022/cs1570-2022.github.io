@@ -36,8 +36,8 @@ Vue.component('page-content', {
                         <li>When working in groups, put the question number on your board so that new students can join more easily.</li>
                     </ul>
                     <p>Refer to the calendar below for the most up-to-date lecture and office hour schedule.</p>
-                    <iframe src="https://calendar.google.com/calendar/embed?src=brown.edu_aa78acu9c33pessfasfggfvvo0%40group.calendar.google.com&ctz=America%2FNew_York" class="d-none d-sm-block align-self-center" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
-                    <iframe src="https://calendar.google.com/calendar/embed?src=brown.edu_aa78acu9c33pessfasfggfvvo0%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA" class="d-block d-sm-none align-self-center" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                    <iframe title="course calendar" src="https://calendar.google.com/calendar/embed?src=brown.edu_aa78acu9c33pessfasfggfvvo0%40group.calendar.google.com&ctz=America%2FNew_York" class="d-none d-sm-block align-self-center" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+                    <iframe title="course calendar" src="https://calendar.google.com/calendar/embed?src=brown.edu_aa78acu9c33pessfasfggfvvo0%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA" class="d-block d-sm-none align-self-center" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
                 </div>
             </section>
         </main>
