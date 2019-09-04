@@ -37,7 +37,7 @@ const courseDocumentsSection = {
             >
                 <course-resource title="course syllabus">
                     <p>
-                      Please find the course syllabus <page-link title="course syllabus" href="resources/csci1570_syllabus.pdf" text="here"></page-link>
+                      Please find the course syllabus <page-link title="course syllabus" href="resources/syllabus.pdf" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="collaboration policy">
