@@ -6,7 +6,7 @@ const courseResource = {
         title: String,
     },
     template: `
-      <div class="d-flex flex-column mb-4" style="color: #f1b995">
+      <div class="d-flex flex-column mb-4" style="color: #f57131">
           <h3 class="text-capitalize">{{title}}</h3>
           <slot></slot>
       </div>
