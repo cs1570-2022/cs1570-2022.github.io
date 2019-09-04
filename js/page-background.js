@@ -7,10 +7,12 @@ const pageBackground = {
             default: true,
         },
     },
-    computed: {
-        url: function() {
-            return `url(${this.backgroundImageUrl})`;
-        },
+    data: function() {
+        return {
+            fallbackURL: `url(${this.backgroundImageUrl})`,
+            webpURL: `url(${this.backgroundImageUrl.substring(0, this.backgroundImageUrl.lastIndexOf('.'))}.webp)`,
+            useWebp: Boolean(Modernizr.webp),
+        };
     },
     template: `
         <div
@@ -21,20 +23,23 @@ const pageBackground = {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover"
-          :style="{'background-image': url}"
+          :style="{'background-image': useWebp ? webpURL: fallbackURL}"
         >
-              <img
-                v-if="showTitle"
-                src="imgs/title.png"
-                alt="course title"
-                class="img-fluid"
-                style="
-                  position: absolute;
-                  top: 40%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                "
-        >
+            <picture>
+                <source srcset="imgs/title.webp" type="image/webp">
+                <source srcset="imgs/title.png" type="image/png">
+                <img
+                  src="imgs/title.png"
+                  alt="course title"
+                  class="img-fluid"
+                  style="
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  "
+                >
+            </picture>
         </div>
     `
 };
