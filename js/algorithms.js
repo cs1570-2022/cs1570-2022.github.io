@@ -19,6 +19,7 @@ const csPrereq = {
         <a
           :id="id"
           class="px-4 mx-2 second-prereq badge text-white"
+          rel="noreferrer"
           target="_blank"
           :href="href"
           :style="{'background-color': backgroundColor}"
@@ -98,9 +99,9 @@ const courseInfoSection = {
                                     <cs-prereq course-num="0220" :background-color="curPageThemeColor"></cs-prereq>
                                     <cs-prereq course-num="1010" :background-color="curPageThemeColor"></cs-prereq>
                                     <cs-prereq course-num="1450" :background-color="curPageThemeColor"></cs-prereq>
-                                    <a id="prereq-math0750" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 0750</a>
-                                    <a id="prereq-math1010" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/next-semester">MATH 1010</a>
-                                    <a id="prereq-math1530" class="px-4 mx-2 second-prereq badge badge-info" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 1530</a>
+                                    <a id="prereq-math0750" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 0750</a>
+                                    <a id="prereq-math1010" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/next-semester">MATH 1010</a>
+                                    <a id="prereq-math1530" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 1530</a>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +217,9 @@ const courseMaterialSection = {
                                 <li class="list-inline-item">
                                     <a
                                       href="https://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402"
-                                      title="Buy from Amazon" target="_blank"
+                                      title="Buy from Amazon"
+                                      rel="noreferrer"
+                                      target="_blank"
                                       class="mx-2 font-weight-light"
                                        style="font-size: smaller"
                                     >
@@ -227,7 +230,9 @@ const courseMaterialSection = {
                                 <li class="list-inline-item">
                                     <a
                                       href="http://insite.browntextbook.com/SelectCourses.aspx?src=2&amp;TYPE=2&amp;stoid=144&amp;trm=Fall%2019&amp;cid=16135"
-                                      title="Buy from Brown Bookstore" target="_blank"
+                                      title="Buy from Brown Bookstore"
+                                      rel="noreferrer"
+                                      target="_blank"
                                       class="mx-2 font-weight-light"
                                        style="font-size: smaller"
                                     >
