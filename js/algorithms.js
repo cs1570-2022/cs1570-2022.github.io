@@ -213,24 +213,28 @@ const courseMaterialSection = {
                                 </span>
                             </span>
                             <ul class="list-inline ml-2">
-                                <a
-                                  href="https://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402"
-                                  title="Buy from Amazon" target="_blank"
-                                  class="mx-2 font-weight-light list-inline-item"
-                                   style="font-size: smaller"
-                                >
-                                    <i class="fab fa-amazon"></i>
-                                    Buy from Amazon
-                                </a>
-                                <a
-                                  href="http://insite.browntextbook.com/SelectCourses.aspx?src=2&amp;TYPE=2&amp;stoid=144&amp;trm=Fall%2019&amp;cid=16135"
-                                  title="Buy from Brown Bookstore" target="_blank"
-                                  class="mx-2 font-weight-light list-inline-item"
-                                   style="font-size: smaller"
-                                >
-                                    <i class="fas fa-store"></i>
-                                    Buy from Brown Bookstore
-                                </a>
+                                <li class="list-inline-item">
+                                    <a
+                                      href="https://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402"
+                                      title="Buy from Amazon" target="_blank"
+                                      class="mx-2 font-weight-light"
+                                       style="font-size: smaller"
+                                    >
+                                        <i class="fab fa-amazon"></i>
+                                        Buy from Amazon
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a
+                                      href="http://insite.browntextbook.com/SelectCourses.aspx?src=2&amp;TYPE=2&amp;stoid=144&amp;trm=Fall%2019&amp;cid=16135"
+                                      title="Buy from Brown Bookstore" target="_blank"
+                                      class="mx-2 font-weight-light"
+                                       style="font-size: smaller"
+                                    >
+                                        <i class="fas fa-store"></i>
+                                        Buy from Brown Bookstore
+                                  </a>
+                                </li>
                             </ul>
                         </div>
                     </span>
