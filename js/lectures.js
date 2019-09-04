@@ -145,6 +145,7 @@ Vue.component('page-content', {
                     <page-table
                       :tableheads="tableheads"
                       tableheadBackground="rgba(111, 82, 142, 0.2)"
+                      :style="{ color: curPageThemeColor}"
                     >
                         <course-lecture
                           v-for="(lecture, index) of lectures"

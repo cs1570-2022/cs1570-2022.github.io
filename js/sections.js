@@ -216,6 +216,7 @@ Vue.component('page-content', {
                     <page-table
                       :tableheads="tableheads"
                       tableheadBackground="rgba(111, 82, 142, 0.2)"
+                      :style="{ color: curPageThemeColor}"
                     >
                         <course-section
                           v-for="(section, index) of sections"
