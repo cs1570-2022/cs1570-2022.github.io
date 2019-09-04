@@ -11,6 +11,7 @@ const pageLink = {
     template: `
         <a
           :href="href"
+          rel="noreferrer"
           :target="target"
         >
             {{text}}

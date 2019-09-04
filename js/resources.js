@@ -47,7 +47,7 @@ const courseDocumentsSection = {
                 </course-resource>
                 <course-resource title="piazza">
                     <p>
-                      Our course piazza page can be found <page-link title="piazza" href="" text="here"></page-link>
+                      Our course piazza page can be found <page-link title="piazza" href="https://piazza.com/brown/fall2019/cs157" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="style guidelines">
