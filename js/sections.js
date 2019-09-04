@@ -105,7 +105,14 @@ const courseSection = {
     },
     methods: {
         parseTime: function(timeStr) {
-            return moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
+            let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD'], true);
+            if (timeObj.isValid()) {
+                timeObj.hour(18);
+                timeObj.minute(0);
+            } else {
+                timeObj = moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
+            }
+            return timeObj;
         },
         getTAHref: function(ta) {
             return `staff.html#${ta.toLowerCase().replace(' ', '-')}`;
@@ -170,14 +177,14 @@ Vue.component('page-content', {
     data: function() {
         return {
             sections: [
-                {
-                    name: '',
-                    date: '09/09',
-                    tas: [],
-                    material: [],
-                    materialURL: [],
-                    videoURL: ''
-                },
+                // {
+                //     name: '',
+                //     date: '09/09',
+                //     tas: [],
+                //     material: [],
+                //     materialURL: [],
+                //     videoURL: ''
+                // },
             ],
             now: moment(),
             tableheads: ['section #', 'date', 'TAs', 'material', 'video'],
