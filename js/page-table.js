@@ -4,7 +4,7 @@ const pageTable = {
         tableheadBackground: String,
     },
     template: `
-          <table class="table table-borderless table-hover table-striped">
+          <table class="table table-borderless table-hover table-responsive-sm table-striped">
               <thead :style="{ 'background-color': tableheadBackground }">
                   <tr>
                       <th

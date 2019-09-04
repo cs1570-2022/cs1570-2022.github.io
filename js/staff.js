@@ -115,7 +115,7 @@ const staffGroup = {
         'staff-card': staffCard,
     },
     template: `
-        <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
+        <section class="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
             <page-section-title
               :icon-classes="curPageIconClasses"
               :text="title"
@@ -236,7 +236,7 @@ Vue.component('page-content', {
                     {
                         cslogin: 'zpeng3',
                         name: 'Zhengyi Peng',
-                        personalPhotoURL: 'staffs/zhengyi_personal.jpeg',
+                        personalPhotoURL: 'staffs/zhengyi_personal.jpg',
                         publicTransitPhotoURL: 'staffs/zhengyi_transit.jpg',
                         publicTransit: '复兴号 (Fuxing Hao)',
                     },

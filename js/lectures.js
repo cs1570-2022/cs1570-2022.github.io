@@ -102,7 +102,7 @@ Vue.component('page-content', {
     },
     template: `
         <main>
-            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
+            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
                 <page-section-title
                   :icon-classes="curPageIconClasses"
                   text="course lectures"
@@ -110,12 +110,12 @@ Vue.component('page-content', {
                   :text-style-object="{'border-bottom': 'solid thick'}"
                 ></page-section-title>
                 <div
-                  class="mx-5 mb-5"
+                  class="mx-4 mx-sm-5 mb-4 mb-sm-5"
                   :style="{ color: curPageThemeColor}">
                     <p>Lectures take place Monday, Wednesday, and Friday from 3:00 to 4:20PM in Friedman 108.</p>
                 </div>
                 <div
-                  class="mx-5 px-5"
+                  class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
                     <page-table

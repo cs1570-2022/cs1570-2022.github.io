@@ -24,7 +24,7 @@ const courseDocumentsSection = {
         'page-section-title': pageSectionTitle,
     },
     template: `
-        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
+        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
             <page-section-title
               :icon-classes="curPageIconClasses"
               text="course documents"
@@ -32,7 +32,7 @@ const courseDocumentsSection = {
               :text-style-object="{'text-decoration': 'line-through dashed', 'border-top': 'solid medium', 'border-bottom': 'solid medium'}"
             ></page-section-title>
             <div
-              class="flex-fill d-flex flex-column ml-5"
+              class="mx-4 mx-sm-5 px-0 px-lg-5 flex-fill d-flex flex-column"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
                 <course-resource title="course syllabus">
@@ -75,7 +75,7 @@ const externalResourcesSection = {
         'page-section-title': pageSectionTitle,
     },
     template: `
-        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-5">
+        <section class="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
             <page-section-title
               :icon-classes="curPageIconClasses"
               text="external resources"
@@ -84,7 +84,7 @@ const externalResourcesSection = {
             >
             </page-section-title>
             <div
-              class="flex-fill d-flex flex-column ml-5"
+              class="mx-4 mx-sm-5 px-0 px-lg-5 flex-fill d-flex flex-column"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
             </div>

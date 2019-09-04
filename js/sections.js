@@ -203,7 +203,7 @@ Vue.component('page-content', {
                   :text-style-object="{'text-decoration': 'underline solid','border-bottom': 'solid medium'}"
                 ></page-section-title>
                 <div
-                  class="mx-5 px-5"
+                  class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
                     <page-table

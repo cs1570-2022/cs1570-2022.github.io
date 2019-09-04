@@ -156,7 +156,7 @@ Vue.component('page-content', {
     },
     template: `
         <main>
-            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-5">
+            <section class="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
                 <page-section-title
                   :icon-classes="curPageIconClasses"
                   text="course assignments"
@@ -164,7 +164,7 @@ Vue.component('page-content', {
                   :text-style-object="{'border-bottom': 'dotted medium'}"
                 ></page-section-title>
                 <div
-                  class="mx-5 px-5"
+                  class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
                     <page-table
