@@ -26,6 +26,7 @@ const pageBackground = {
               <img
                 v-if="showTitle"
                 src="imgs/title.png"
+                alt="course title"
                 class="img-fluid"
                 style="
                   position: absolute;
