@@ -70,6 +70,7 @@ const staffCard = {
           class="card text-center m-4"
           :style="{'border-color': curPageThemeColor}"
           @mouseenter.passive="showPersonalPhoto = true"
+          @click.passive="showPersonalPhoto = !showPersonalPhoto"
           @mouseleave.passive="showPersonalPhoto = false"
         >
             <div
