@@ -54,6 +54,9 @@ const staffCard = {
     data: function() {
         return {
             showPersonalPhoto: false,
+            personalPhotoWebpURL: this.getWebpURL(this.personalPhotoURL),
+            publicTransitPhotoWebpURL: this.getWebpURL(this.publicTransitPhotoURL),
+            useWebp: Boolean(Modernizr.webp),
         };
     },
     computed: {
@@ -61,7 +64,12 @@ const staffCard = {
             return this.name.toLowerCase().replace(' ', '-');
         },
         photoURL: function() {
-            return `url(${this.showPersonalPhoto ? this.personalPhotoURL: this.publicTransitPhotoURL})`;
+            return `url(${this.showPersonalPhoto ? (this.useWebp ? this.personalPhotoWebpURL : this.personalPhotoURL): (this.useWebp ? this.publicTransitPhotoWebpURL : this.publicTransitPhotoURL)})`;
+        },
+    },
+    methods: {
+        getWebpURL: function(url) {
+            return `${url.substring(0, url.lastIndexOf('.'))}.webp`;
         },
     },
     template: `
