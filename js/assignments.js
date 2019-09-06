@@ -22,6 +22,9 @@ const hiddenLink = {
         name: String,
         href: String,
     },
+    components: {
+        'page-link': pageLink,
+    },
     computed: {
         willHide: function() {
             if (this.hide === null) {
