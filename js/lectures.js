@@ -56,7 +56,7 @@ const courseLecture = {
             </td>
             <td>
                 <page-links
-                  :name="readingNames"
+                  :names="readingNames"
                   :urls="readingURLs"
                 >
                 </page-links>
