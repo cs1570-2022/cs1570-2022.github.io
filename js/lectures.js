@@ -111,7 +111,7 @@ Vue.component('page-content', {
                 },
             ],
             now: moment(),
-            tableheads: ['lecture #', 'date', 'reading'],
+            tableheads: ['lecture #', 'date', 'material'],
         };
     },
     created: function() {
