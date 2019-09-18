@@ -9,6 +9,8 @@ const courseLecture = {
         index: Number,
         name: String,
         date: String,
+        problemNames: Array,
+        problemURLs: Array,
         readingNames: Array,
         readingURLs: Array,
         now: Object,
@@ -56,6 +58,13 @@ const courseLecture = {
             </td>
             <td>
                 <page-links
+                  :names="problemNames"
+                  :urls="problemURLs"
+                >
+                </page-links>
+            </td>
+            <td>
+                <page-links
                   :names="readingNames"
                   :urls="readingURLs"
                 >
@@ -84,34 +93,44 @@ Vue.component('page-content', {
                     date: '09/04',
                     readingNames: [],
                     readingURLs: [],
+                    problemNames: [],
+                    problemURLs: [],
                 },
                 {
                     name: 'Big-Oh Notation',
                     date: '09/06',
                     readingNames: [],
                     readingURLs: [],
+                    problemNames: [],
+                    problemURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/09',
                     readingNames: [],
                     readingURLs: [],
+                    problemNames: [],
+                    problemURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/11',
                     readingNames: [],
                     readingURLs: [],
+                    problemNames: [],
+                    problemURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/13',
                     readingNames: [],
                     readingURLs: [],
+                    problemNames: [],
+                    problemURLs: [],
                 },
             ],
             now: moment(),
-            tableheads: ['lecture #', 'date', 'material'],
+            tableheads: ['lecture #', 'date', 'in-class problem', 'material'],
         };
     },
     created: function() {
