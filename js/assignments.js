@@ -108,15 +108,11 @@ const courseAssignment = {
                 </page-countdown-time>
             </td>
             <td>
-                <hidden-link
-                  name="Solution"
+                <page-link
+                  v-if="solutionURL"
+                  text="Solution">
                   :href="solutionURL"
-                  :hide="true"
-                  :hide-until="dueMoment"
-                  :hide-placeholder="true"
-                  :now="now"
-                >
-                </hidden-link>
+                </page-link>
             </td>
         </tr>
     `,
