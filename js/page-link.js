@@ -5,7 +5,7 @@ const pageLink = {
             type: String,
             default: '_self',
         },
-        href:String,
+        href: String,
         text: String,
     },
     template: `

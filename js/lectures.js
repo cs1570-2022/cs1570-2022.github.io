@@ -9,8 +9,8 @@ const courseLecture = {
         index: Number,
         name: String,
         date: String,
-        problemNames: Array,
-        problemURLs: Array,
+        noteNames: Array,
+        noteURLs: Array,
         readingNames: Array,
         readingURLs: Array,
         now: Object,
@@ -20,19 +20,26 @@ const courseLecture = {
         'page-countdown-time': pageCountdownTime,
         'page-links': pageLinks,
     },
-    data: function() {
+    data: function () {
         return {
             outMoment: this.parseTime(this.date),
         };
     },
     methods: {
-        parseTime: function(timeStr) {
+        parseTime: function (timeStr) {
             let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD'], true);
             if (timeObj.isValid()) {
                 timeObj.hour(15);
                 timeObj.minute(0);
             } else {
-                timeObj = moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
+                timeObj = moment(timeStr, [
+                    'MM/DD HH:mm',
+                    'MM/DD hh:mm a',
+                    'MM/DD hh a',
+                    'YYYY/MM/DD HH:mm',
+                    'YYYY/MM/DD hh:mm a',
+                    'YYYY/MM/DD hh a',
+                ]);
             }
             return timeObj;
         },
@@ -58,8 +65,8 @@ const courseLecture = {
             </td>
             <td>
                 <page-links
-                  :names="problemNames"
-                  :urls="problemURLs"
+                  :names="noteNames"
+                  :urls="noteURLs"
                 >
                 </page-links>
             </td>
@@ -74,7 +81,6 @@ const courseLecture = {
     `,
 };
 
-
 Vue.component('page-content', {
     props: {
         curPageThemeColor: String,
@@ -85,7 +91,7 @@ Vue.component('page-content', {
         'page-table': pageTable,
         'page-section-title': pageSectionTitle,
     },
-    data: function() {
+    data: function () {
         return {
             lectures: [
                 {
@@ -93,55 +99,59 @@ Vue.component('page-content', {
                     date: '09/04',
                     readingNames: [],
                     readingURLs: [],
-                    problemNames: [],
-                    problemURLs: [],
+                    noteNames: [],
+                    noteURLs: [],
                 },
                 {
                     name: 'Big-Oh Notation',
                     date: '09/06',
-                    readingNames: [],
+                    readingNames: ['3.6, 3.7'],
                     readingURLs: [],
-                    problemNames: [],
-                    problemURLs: [],
+                    noteNames: ['Slides'],
+                    noteURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/09',
                     readingNames: [],
                     readingURLs: [],
-                    problemNames: [],
-                    problemURLs: [],
+                    noteNames: [],
+                    noteURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/11',
                     readingNames: [],
                     readingURLs: [],
-                    problemNames: [],
-                    problemURLs: [],
+                    noteNames: [],
+                    noteURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
                     date: '09/13',
                     readingNames: [],
                     readingURLs: [],
-                    problemNames: [],
-                    problemURLs: [],
+                    noteNames: [],
+                    noteURLs: [],
                 },
             ],
             now: moment(),
-            tableheads: ['lecture #', 'date', 'in-class problem', 'material'],
+            tableheads: ['lecture #', 'date', 'notes', 'readings'],
         };
     },
-    created: function() {
-        setInterval(() => this.now = moment(), 1000);
+    created: function () {
+        setInterval(() => (this.now = moment()), 1000);
     },
-    mounted: function() {
+    mounted: function () {
         const element = this.$el;
-        document.addEventListener('DOMContentLoaded', function() {
-            element.scrollIntoView(true);
-            window.scrollBy(0, -150);
-        }, false);
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () {
+                element.scrollIntoView(true);
+                window.scrollBy(0, -150);
+            },
+            false
+        );
     },
     template: `
         <main>
@@ -155,7 +165,7 @@ Vue.component('page-content', {
                 <div
                   class="mx-4 mx-sm-5 mb-4 mb-sm-5"
                   :style="{ color: curPageThemeColor}">
-                    <p>Lectures take place Monday, Wednesday, and Friday from 3:00 to 4:20PM in Friedman 108.</p>
+                    <p>Lectures are on Tuesday and Thursday from 2:30 to 3:50PM.</p>
                 </div>
                 <div
                   class="mx-4 mx-sm-5 px-0 px-lg-5"
@@ -178,5 +188,5 @@ Vue.component('page-content', {
                 </div>
             </section>
         </main>
-    `
+    `,
 });
