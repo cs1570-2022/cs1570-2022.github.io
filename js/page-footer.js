@@ -5,7 +5,7 @@ const email = {
         email: String,
     },
     computed: {
-        mailto: function() {
+        mailto: function () {
             return `mailto:${this.email}`;
         },
     },
@@ -14,9 +14,8 @@ const email = {
           {{email}}
           <i class="fas fa-envelope"></i>
       </a>
-    `
+    `,
 };
-
 
 const pageFooter = {
     name: 'page-footer',
@@ -25,10 +24,10 @@ const pageFooter = {
         footerBackgroundColor: String,
     },
     components: {
-        'email': email,
+        email: email,
         'page-link': pageLink,
     },
-    data: function() {
+    data: function () {
         return {
             TAEmail: 'cs1570tas@lists.brown.edu',
             HTAEmail: 'cs1570headtas@lists.brown.edu',
@@ -60,12 +59,13 @@ const pageFooter = {
               </p>
               <p>
                 CS1570 &bull;
-                Fall 2019 &bull;
-                <page-link href="http://cs.brown.edu/people/pklein/" text="Philip Klein"></page-link> &bull;
+                Fall 2020 &bull;
+                <page-link href="https://lorenzoat-brown.000webhostapp.com/index.html" text="Lorenzo De Stefani"></page-link> &bull;
+                <page-link href="http://cs.brown.edu/people/rtamassi/" text="Roberto Tamassia"></page-link> &bull;
                 <page-link href="https://cs.brown.edu" text="Brown University Computer Science"></page-link>
               </p>
         </footer>
-    `
+    `,
 };
 
 export default pageFooter;
