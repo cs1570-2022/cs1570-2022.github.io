@@ -1,17 +1,16 @@
 import pageClickCopy from './page-click-copy.js';
 import pageSectionTitle from './page-section.js';
 
-
 const csPrereq = {
     props: {
         courseNum: String,
-        backgroundColor: String
+        backgroundColor: String,
     },
     computed: {
-        id: function() {
+        id: function () {
             return `prereq-csci${this.courseNum}`;
         },
-        href: function() {
+        href: function () {
             return `https://cs.brown.edu/courses/csci${this.courseNum}`;
         },
     },
@@ -26,7 +25,7 @@ const csPrereq = {
         >
               CSCI {{courseNum}}
         </a>
-    `
+    `,
 };
 
 const courseInfoSection = {
@@ -55,15 +54,14 @@ const courseInfoSection = {
                       </span>
                       <div>
                           <p id="class-time" class="d-flex flex-row justify-content-between mb-1">
-                              <span id="time-start">3:00PM</span>
-                              <span id="time-duration" class="d-none d-sm-inline-block font-weight-light text-muted mx-1 px-4 border-bottom">1Hr 20Mins</span>
+                              <span id="time-start">2:30PM</span>
                               <span class="d-sm-inline-block d-sm-none mx-2">--</span>
-                              <span id="time-end">4:20PM</span>
+                              <span id="time-end">3:50PM</span>
+                              <span id="time-duration" class="d-none d-sm-inline-block font-weight-light text-muted mx-1 px-4 border-bottom">1Hr 20Mins</span>
                           </p>
-                          <p id="day-of-week-badges" class="d-flex flex-column flex-sm-row justify-content-between">
-                              <span id="time-monday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">M</span>
-                              <span id="time-wednesday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">W</span>
-                              <span id="time-friday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">F</span>
+                          <p id="day-of-week-badges" class="d-flex flex-column flex-sm-row ">
+                              <span id="time-tuesday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">T</span>
+                              <span id="time-thursday" class="mx-2 mb-2 mb-sm-0 px-4 day-of-week badge badge-pill text-white" :style="{'background-color': curPageThemeColor}">Th</span>
                           </p>
                       </div>
                   </div>
@@ -111,7 +109,6 @@ const courseInfoSection = {
     `,
 };
 
-
 const courseTopic = {
     props: {
         week: String,
@@ -137,22 +134,22 @@ const courseTopics = {
         curPageThemeColor: String,
     },
     components: {
-        'course-topic': courseTopic
+        'course-topic': courseTopic,
     },
-    data: function() {
+    data: function () {
         return {
             topics: [
-                ['Week 1 (September 4-6)', 'Big O Analysis'],
-                ['Week 2 (September 9-13)', 'Algorithms with Numbers'],
-                ['Week 3 (September 16-20)', 'Divide-and-Conquer'],
-                ['Week 4 (September 23-27)', 'Decomposition of Graphs'],
-                ['Week 5 (September 30-October 4)', 'Paths in Graphs'],
-                ['Week 6 (October 7-11)', 'Greedy Algorithms'],
-                ['Week 7-8 (October 16-25)', 'Dynamic Programming'],
-                ['Week 9-10 (October 28-November 8)', 'Linear Programming'],
-                ['Week 11-13 (November 11-25)', 'NP-Complete Problems'],
-                ['Week 14-15 (December 2-December 11)', 'Coping with NP-Completeness'],
-            ]
+                ['Week 1', 'Algorithm Analysis'],
+                ['Week 2', 'Data Structures'],
+                ['Week 3', 'Algorithms for Sorting and Searching'],
+                ['Week 4', 'Greedy Algorithms'],
+                ['Week 5', 'Dynamic Programming'],
+                ['Week 6', 'Divide-and-Conquer'],
+                ['Week 7', 'Graph Algorithms'],
+                ['Week 8', 'Computational Geometry'],
+                ['Week 9', 'External Memory'],
+                ['Week 10', 'Online Algorithms'],
+            ],
         };
     },
     template: `
@@ -175,9 +172,8 @@ const courseTopics = {
                 </course-topic>
             </ul>
         </div>
-    `
+    `,
 };
-
 
 const courseMaterialSection = {
     props: {
@@ -208,15 +204,15 @@ const courseMaterialSection = {
                           id="textbook-container"
                           class="d-flex flex-column">
                             <span>
-                                Algorithms
+                                Algorithm Design and Applications
                                 <span class="text-muted font-weight-light" style="font-size: small">
-                                    by Dasgupta, Papadimitriou, and Vazirani
+                                    by Goodrich and Tamassia
                                 </span>
                             </span>
                             <ul class="list-inline ml-2">
                                 <li class="list-inline-item">
                                     <a
-                                      href="https://www.amazon.com/Algorithms-Sanjoy-Dasgupta/dp/0073523402"
+                                      href="https://www.amazon.com/Algorithm-Design-Applications-Michael-Goodrich/dp/1118335910"
                                       title="Buy from Amazon"
                                       rel="noreferrer"
                                       target="_blank"
@@ -229,7 +225,7 @@ const courseMaterialSection = {
                                 </li>
                                 <li class="list-inline-item">
                                     <a
-                                      href="http://insite.browntextbook.com/SelectCourses.aspx?src=2&amp;TYPE=2&amp;stoid=144&amp;trm=Fall%2019&amp;cid=16135"
+                                      href="https://insite.browntextbook.com/CourseMaterials?Ids=10751730"
                                       title="Buy from Brown Bookstore"
                                       rel="noreferrer"
                                       target="_blank"
@@ -250,7 +246,7 @@ const courseMaterialSection = {
                 </course-topics>
             </div>
         </section>
-    `
+    `,
 };
 
 Vue.component('page-content', {
@@ -275,5 +271,5 @@ Vue.component('page-content', {
             >
             </course-material-section>
         </main>
-    `
+    `,
 });
