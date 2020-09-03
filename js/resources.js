@@ -37,7 +37,7 @@ const courseDocumentsSection = {
             >
                 <course-resource title="course syllabus">
                     <p>
-                      Please find the course syllabus <page-link title="course syllabus" href="resources/syllabus.pdf" text="here"></page-link>
+                      Please find the course syllabus <page-link title="course syllabus" href="content/resources/syllabus.pdf" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="collaboration policy">
@@ -52,8 +52,8 @@ const courseDocumentsSection = {
                 </course-resource>
                 <course-resource title="LaTeX">
                     <ul>
-                        <li><page-link href="https://cs.brown.edu/courses/cs157/content/docs/CS157LatexLinks.pdf" text="Getting Started with LaTeX" title="getting started with latex"></page-link></li>
-                        <li><page-link href="resources/template.tex" text="LaTeX Template" title="latex template"></page-link></li>
+                        <li><page-link href="content/resources/CS157LatexLinks.pdf" text="Getting Started with LaTeX" title="getting started with latex"></page-link></li>
+                        <li><page-link href="content/resources/template.tex" text="LaTeX Template" title="latex template"></page-link></li>
                     </ul>
                 </course-resource>
             </div>

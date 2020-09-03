@@ -1,74 +1,78 @@
 import pageSectionTitle from './page-section.js';
 
-
-const csEmail = {
-    props: {
-        cslogin: String,
-        email: {
-            type: String,
-            default: null,
-        },
-    },
-    computed: {
-        mailto: function() {
-            return `mailto:${this.email === null ? this.cslogin + '@cs.brown.edu' : this.email}`;
-        },
-    },
-    template: `
-      <a :href="mailto">
-          {{cslogin}}
-          <i class="fas fa-envelope"></i>
-      </a>
-    `
-};
+// const csEmail = {
+//     props: {
+//         cslogin: String,
+//         email: {
+//             type: String,
+//             default: null,
+//         },
+//     },
+//     computed: {
+//         mailto: function () {
+//             return `mailto:${
+//                 this.email === null
+//                     ? this.cslogin + '@cs.brown.edu'
+//                     : this.email
+//             }`;
+//         },
+//     },
+//     template: `
+//       <a :href="mailto">
+//           {{cslogin}}
+//           <i class="fas fa-envelope"></i>
+//       </a>
+//     `,
+// };
 
 const staffCard = {
     props: {
         cslogin: String,
         curPageThemeColor: String,
-        email: {
-            type: String,
-            default: null,
-        },
         name: String,
         note: String,
         personalPhotoURL: {
             type: String,
-            default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
+            default: 'content/staff/default.png',
         },
-        publicTransitPhotoURL: {
+        themePhotoURL: {
             type: String,
-            default: 'imgs/jack-anstey-XVoyX7l9ocY-unsplash.jpg'
+            default: 'content/staff/default.png',
         },
-        publicTransit: String,
+        theme: String,
         photoStyle: {
             type: Object,
             default: function () {
-                return {'background-position': '50%, 50%'};
+                return { 'background-position': '50%, 50%' };
             },
         },
     },
-    components: {
-        'cs-email': csEmail,
-    },
-    data: function() {
+    data: function () {
         return {
             showPersonalPhoto: false,
             personalPhotoWebpURL: this.getWebpURL(this.personalPhotoURL),
-            publicTransitPhotoWebpURL: this.getWebpURL(this.publicTransitPhotoURL),
+            themePhotoWebpURL: this.getWebpURL(this.themePhotoURL),
             useWebp: Boolean(Modernizr.webp),
         };
     },
     computed: {
-        id: function() {
+        id: function () {
             return this.name.toLowerCase().replace(' ', '-');
         },
-        photoURL: function() {
-            return `url(${this.showPersonalPhoto ? (this.useWebp ? this.personalPhotoWebpURL : this.personalPhotoURL): (this.useWebp ? this.publicTransitPhotoWebpURL : this.publicTransitPhotoURL)})`;
+        photoURL: function () {
+            return `url(${
+                this.showPersonalPhoto
+                    ? this.useWebp
+                        ? this.personalPhotoWebpURL
+                        : this.personalPhotoURL
+                    : this.useWebp
+                    ? this.themePhotoWebpURL
+                    : this.themePhotoURL
+            })`;
         },
     },
     methods: {
-        getWebpURL: function(url) {
+        getWebpURL: function (url) {
             return `${url.substring(0, url.lastIndexOf('.'))}.webp`;
         },
     },
@@ -85,7 +89,7 @@ const staffCard = {
               class="card-header text-muted font-weight-light"
               style="font-size: medium"
             >
-                {{ publicTransit }}
+                {{ theme }}
             </div>
             <div
                 class="card-img-top"
@@ -98,19 +102,15 @@ const staffCard = {
                     {{ this.name }}
                 </h5>
                 <p class="card-text mb-0">
-                    <cs-email
-                      :cslogin="cslogin"
-                      :email="email"
-                    ></cs-email>
+                    {{note}}
                 </p>
                 <p class="card-text mb-0">
-                    {{note}}
+                    {{cslogin}}
                 </p>
             </div>
         </div>
-    `
+    `,
 };
-
 
 const staffGroup = {
     props: {
@@ -148,7 +148,6 @@ const staffGroup = {
     `,
 };
 
-
 Vue.component('page-content', {
     props: {
         curPageThemeColor: String,
@@ -157,108 +156,143 @@ Vue.component('page-content', {
     components: {
         'staff-group': staffGroup,
     },
-    data: function() {
+    data: function () {
         return {
-            titles: ['the professor', 'the HTAs', 'the UTAs'],
+            titles: ['the professors', 'the HTAs', 'the UTAs'],
             groups: [
                 [
                     {
-                        cslogin: 'pklein',
-                        email: 'philip@brown.edu',
-                        name: 'Philip Klein',
-                        personalPhotoURL: 'staffs/prof_klein.jpg',
-                        publicTransitPhotoURL: 'staffs/prof_klein_transit.jpg',
-                        publicTransit: 'BART',
+                        cslogin: 'ld9',
+                        name: 'Lorenzo De Stefani',
+                        personalPhotoURL: 'content/staff/lorenzo_personal.png',
+                        themePhotoURL: undefined,
+                        theme: '',
+                    },
+                    {
+                        cslogin: 'rt',
+                        name: 'Roberto Tamassia',
+                        personalPhotoURL: 'content/staff/roberto_personal.jpg',
+                        themePhotoURL: undefined,
+                        theme: '',
                     },
                 ],
                 [
-                    {
-                        cslogin: 'jzagorsk',
-                        name: 'Jason Zagorski',
-                        personalPhotoURL: 'staffs/jason_personal.png',
-                        publicTransitPhotoURL: 'staffs/jason_transit.jpg',
-                        publicTransit: 'Long Island Rail Road',
-                    },
                     {
                         cslogin: 'awheele9',
                         name: 'Archer Wheeler',
                         note: 'Grad TA',
-                        personalPhotoURL: 'staffs/archer_personal.jpg',
-                        publicTransitPhotoURL: 'staffs/archer_transit.jpeg',
-                        photoStyle: {'background-position': '0%, 50%'},
-                        publicTransit: '1,2,3 Subway',
+                        personalPhotoURL: 'content/staff/archer_personal.jpg',
+                        themePhotoURL: undefined,
+                        // photoStyle: { 'background-position': '0%, 50%' },
+                        theme: '',
                     },
                     {
-                        name: 'Aaron Zhang',
-                        personalPhotoURL: 'staffs/aaron_personal.jpg',
-                        publicTransitPhotoURL: 'staffs/aaron_transit.jpg',
-                        publicTransit: 'Thomas the Tank Engine',
-                        cslogin: 'azhang28'
+                        cslogin: 'evelasq2',
+                        name: 'Evan Velasquez',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: '',
                     },
                 ],
                 [
                     {
-                        cslogin: 'dhuo',
-                        name: 'Da Huo',
-                        personalPhotoURL: 'staffs/da-personal.jpg',
-                        publicTransitPhotoURL: 'staffs/da_transit.jpg',
-                        publicTransit: 'NJ Transit',
+                        cslogin: 'bvallian',
+                        name: 'Beenish Valliani',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        cslogin: 'gbrady1',
-                        name: 'Galadriel Brady',
-                        personalPhotoURL: 'staffs/galadriel-personal.jpg',
-                        publicTransitPhotoURL: 'staffs/galadriel_transit.png',
-                        photoStyle: {'background-position': '0 0'},
-                        publicTransit: 'Berlin U-Bahn / U1',
+                        cslogin: 'cwilli22',
+                        name: 'Cori Williams',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        cslogin: 'jcardozo',
-                        name: 'Justin Cardozo',
-                        personalPhotoURL: 'staffs/justin_cardozo.jpg',
-                        publicTransitPhotoURL: 'staffs/justin_c_transit.jpg',
-                        publicTransit: 'Caltrain',
+                        cslogin: 'hpham2',
+                        name: 'Huy Pham',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        cslogin: 'jzhang80',
-                        name: 'Justin Zhang',
-                        personalPhotoURL: 'staffs/justin_zhang.jpg',
-                        publicTransitPhotoURL: 'staffs/justin_z_transit.jpg',
-                        publicTransit: 'GS bridge',
+                        cslogin: 'ndo3',
+                        name: 'Nam Do',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        name: 'Rigel Galgana',
-                        personalPhotoURL: 'staffs/rigel_personal.jpeg',
-                        publicTransitPhotoURL: 'staffs/rigel_transit.jpg',
-                        publicTransit: 'RIPTA Bus',
-                        photoStyle: {'background-position': '100% 50%'},
-                        cslogin: 'rgalgana',
+                        cslogin: 'odai',
+                        name: 'Omer Dai',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        cslogin: 'sgotmare',
-                        name: 'Yash Gotmare',
-                        personalPhotoURL: 'staffs/yash_personal.png',
-                        publicTransitPhotoURL: 'staffs/yash_transit.jpg',
-                        photoStyle: {'background-position': '0 50%'},
-                        publicTransit: 'Boeing 787-10',
+                        cslogin: 'pdasgup1',
+                        name: 'Prithu Dasgupta',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
                     {
-                        cslogin: 'zpeng3',
-                        name: 'Zhengyi Peng',
-                        personalPhotoURL: 'staffs/zhengyi_personal.jpg',
-                        publicTransitPhotoURL: 'staffs/zhengyi_transit.jpg',
-                        publicTransit: '复兴号 (Fuxing Hao)',
+                        cslogin: 'rbattula',
+                        name: 'Rajyashri Battula',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
                     },
+                    {
+                        cslogin: 'rbriden',
+                        name: 'Ross Briden',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
+                    },
+                    {
+                        cslogin: 'slamy',
+                        name: 'Sebastien Lamy',
+                        personalPhotoURL: undefined,
+                        themePhotoURL: undefined,
+                        theme: undefined,
+                    },
+                    // {
+                    //     cslogin: 'bvallian',
+                    //     name: 'Beenish Valliani',
+                    //     personalPhotoURL: undefined,
+                    //     themePhotoURL: undefined,
+                    //     theme: undefined,
+                    // },
+                    // {
+                    //     cslogin: 'bvallian',
+                    //     name: 'Beenish Valliani',
+                    //     personalPhotoURL: undefined,
+                    //     themePhotoURL: undefined,
+                    //     theme: undefined,
+                    // },
+                    // {
+                    //     cslogin: 'bvallian',
+                    //     name: 'Beenish Valliani',
+                    //     personalPhotoURL: undefined,
+                    //     themePhotoURL: undefined,
+                    //     theme: undefined,
+                    // },
                 ],
-            ]
+            ],
         };
     },
-    mounted: function() {
+    mounted: function () {
         const element = this.$el;
-        document.addEventListener('DOMContentLoaded', function() {
-            element.scrollIntoView(true);
-            window.scrollBy(0, -150);
-        }, false);
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () {
+                element.scrollIntoView(true);
+                window.scrollBy(0, -150);
+            },
+            false
+        );
     },
     template: `
         <main>
@@ -272,5 +306,5 @@ Vue.component('page-content', {
             >
             </staff-group>
         </main>
-    `
+    `,
 });

@@ -13,6 +13,8 @@ const courseLecture = {
         noteURLs: Array,
         readingNames: Array,
         readingURLs: Array,
+        recordingNames: Array,
+        recordingURLs: Array,
         now: Object,
     },
     components: {
@@ -77,6 +79,13 @@ const courseLecture = {
                 >
                 </page-links>
             </td>
+            <td>
+                <page-links
+                  :names="recordingNames"
+                  :urls="recordingURLs"
+                >
+                </page-links>
+            </td>
         </tr>
     `,
 };
@@ -101,6 +110,8 @@ Vue.component('page-content', {
                     readingURLs: [],
                     noteNames: [],
                     noteURLs: [],
+                    recordingNames: [],
+                    recordingURLs: [],
                 },
                 {
                     name: 'Big-Oh Notation',
@@ -109,6 +120,8 @@ Vue.component('page-content', {
                     readingURLs: [],
                     noteNames: ['Slides'],
                     noteURLs: [],
+                    recordingNames: [],
+                    recordingURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
@@ -117,6 +130,8 @@ Vue.component('page-content', {
                     readingURLs: [],
                     noteNames: [],
                     noteURLs: [],
+                    recordingNames: [],
+                    recordingURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
@@ -125,6 +140,8 @@ Vue.component('page-content', {
                     readingURLs: [],
                     noteNames: [],
                     noteURLs: [],
+                    recordingNames: [],
+                    recordingURLs: [],
                 },
                 {
                     name: 'Algorithms with Numbers',
@@ -133,10 +150,12 @@ Vue.component('page-content', {
                     readingURLs: [],
                     noteNames: [],
                     noteURLs: [],
+                    recordingNames: [],
+                    recordingURLs: [],
                 },
             ],
             now: moment(),
-            tableheads: ['lecture #', 'date', 'notes', 'readings'],
+            tableheads: ['lecture #', 'date', 'notes', 'readings', 'recording'],
         };
     },
     created: function () {
