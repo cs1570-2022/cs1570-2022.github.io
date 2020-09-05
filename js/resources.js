@@ -6,7 +6,7 @@ const courseResource = {
         title: String,
     },
     template: `
-      <div class="d-flex flex-column mb-4" style="color: #f57131">
+      <div class="d-flex flex-column mb-4" style="color: #77bf77">
           <h3 class="text-capitalize">{{title}}</h3>
           <slot></slot>
       </div>
@@ -29,7 +29,7 @@ const courseDocumentsSection = {
               :icon-classes="curPageIconClasses"
               text="course documents"
               :style-object="{'color': curPageThemeColor}"
-              :text-style-object="{'text-decoration': 'line-through dashed', 'border-top': 'solid medium', 'border-bottom': 'solid medium'}"
+              :text-style-object="{'border-bottom': 'solid thick'}"
             ></page-section-title>
             <div
               class="mx-4 mx-sm-5 px-0 px-lg-5 flex-fill d-flex flex-column"
@@ -47,7 +47,7 @@ const courseDocumentsSection = {
                 </course-resource>
                 <course-resource title="piazza">
                     <p>
-                      Our course piazza page can be found <page-link title="piazza" href="https://piazza.com/brown/fall2019/cs157" text="here"></page-link>
+                      Our course piazza page can be found <page-link title="piazza" href="https://piazza.com/class/kek343o2vf03f8" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="LaTeX">
@@ -82,7 +82,7 @@ const externalResourcesSection = {
               :icon-classes="curPageIconClasses"
               text="external resources"
               :style-object="{'color': curPageThemeColor}"
-              :text-style-object="{'text-decoration': 'line-through dashed', 'border-top': 'solid medium', 'border-bottom': 'solid medium'}"
+              :text-style-object="{'border-bottom': 'solid thick'}"
             >
             </page-section-title>
             <div

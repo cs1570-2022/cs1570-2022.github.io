@@ -53,7 +53,7 @@ const largeNavbarStopCircle = {
                 v-if="!isCurrentStop"
                 v-show="hovering"
                 :style="{ color: stopThemeColor }"
-                class="fas fa-sync-alt fa-xs"></i>
+                class="fas fa-coffee fa-xs"></i>
           </div>
     `
 };
@@ -169,20 +169,28 @@ const collapsedNavbarStop = {
     },
     data: function() {
         return {
-            onlyInitial: true,
+            onlyInitial: false,
             styleObject: {
                 color: this.color,
                 'background-color': this.backgroundColor,
-                cursor: 'pointer'
+                cursor: 'pointer',
+                height: '20%',
+                width: '90%',
+                margin: '10px',
+                fontSize: '20px',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                lineHeight: '250%'
             },
         };
     },
     computed: {
         displayedText: function() {
-            return this.onlyInitial ? this.text.charAt(0) : this.text;
+            // return this.onlyInitial ? this.text.charAt(0) : this.text;
+            return this.text;
         },
         classArray: function() {
-            return [this.onlyInitial ? 'rounded-circle' : 'badge-pill'];
+            return ['badge-pill'];
         },
     },
     methods: {
@@ -207,7 +215,7 @@ const collapsedNavbar = {
         iconClasses: Array,
         primaryColor: String,
         secondaryColor: String,
-        stopThemeColors: Array,
+        stopThemeColors: "white",
         pageFilepaths: Array,
         labelTexts: Array,
     },
@@ -218,8 +226,8 @@ const collapsedNavbar = {
     },
     computed: {
         navbarStopsContainerClassArray: function() {
-            return this.isExpanded ? ['d-flex', 'flex-row', 'justify-content-between', 'align-items-start'] : [];
-        },
+            return this.isExpanded ? ['d-flex', 'flex-column', 'justify-content-between', 'align-items-start'] : [];
+        }
     },
     components: {
         'collapsed-navbar-icon': collapsedNavbarIcon,
@@ -237,13 +245,14 @@ const collapsedNavbar = {
               <div
                 v-show="isExpanded"
                 :class="navbarStopsContainerClassArray"
+                :style="{'background-color':'black', padding: '10px', height: '600px', width: '300px'}"
                 >
                   <collapsed-navbar-stop
                     v-for="(labelText, index) of labelTexts"
                     :key="index"
                     :text="labelText"
                     :color="secondaryColor"
-                    :background-color="stopThemeColors[index]"
+                    :background-color="stopThemeColors"
                     :page-filepath="pageFilepaths[index]"
                   >
                   </collapsed-navbar-stop>
@@ -272,7 +281,8 @@ const pageNavbar = {
     },
     data: function() {
         const lastCommaIndex = this.navbarBackgroundColor.lastIndexOf(',');
-        const initialOpacity = parseFloat(this.navbarBackgroundColor.substring(lastCommaIndex + 1, this.navbarBackgroundColor.length - 1));
+        // const initialOpacity = parseFloat(this.navbarBackgroundColor.substring(lastCommaIndex + 1, this.navbarBackgroundColor.length - 1));
+        const initialOpacity = 1;
         return {
             initialOpacity: initialOpacity,
             backgroundColor: this.navbarBackgroundColor
@@ -319,7 +329,7 @@ const pageNavbar = {
     template: `
         <nav
           class="navbar navbar-expand-md fixed-top"
-          :style="{'background-color': backgroundColor, 'height': '100px'}"
+          :style="{'background-color': '#027800', 'height': '100px'}"
           @mouseenter.passive="changeBackgroundOpacity(1)"
           @mouseleave.passive="changeBackgroundOpacity(initialOpacity)"
         >
@@ -337,7 +347,7 @@ const pageNavbar = {
                       id="navbar-stop-connecting-line"
                       class="rounded-pill d-inline-block position-absolute"
                       style="height: 9px;"
-                      :style="{'background-color': primaryColor}"
+                      :style="{'background-color': 'white'}"
                     >
                     </div>
                     <large-navbar-stop
@@ -345,7 +355,7 @@ const pageNavbar = {
                       :key="index"
                       :primary-color="primaryColor"
                       :secondary-color="secondaryColor"
-                      :stop-theme-color="stopThemeColors[index]"
+                      :stop-theme-color="stopThemeColors"
                       :page-filepath="pageFilepaths[index]"
                       :icon-classes="iconClasses[index]"
                       :label-text="labelText"

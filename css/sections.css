@@ -1,24 +1,14 @@
-a {
-    color: #62251b;
+a,
+th {
+    color: green;
 }
 
 a:hover,
-a:active {
-    color: brown;
+a:active,
+td {
+    color: darkgoldenrod;
 }
-
 
 a:visited {
-    color: saddlebrown;
-}
-
-#fireworks {
-    cursor: crosshair;
-}
-
-.train-window {
-    width: 20%;
-    height: 50%;
-    border: solid lightgray 1rem;
-    border-radius: 10%;
+    color: #5387b5;
 }

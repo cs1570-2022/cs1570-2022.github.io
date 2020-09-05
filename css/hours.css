@@ -1,13 +1,14 @@
-a {
-    color: #0c85a7;
+a,
+th {
+    color: green;
 }
 
 a:hover,
-a:active {
-    color: teal;
+a:active,
+td {
+    color: darkgoldenrod;
 }
 
-
 a:visited {
-    color: lightseagreen;
+    color: #5387b5;
 }

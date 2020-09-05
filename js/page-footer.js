@@ -36,7 +36,7 @@ const pageFooter = {
     template: `
         <footer
           class="footer py-4 text-center"
-          :style="{'color': curPageThemeColor, 'background-color': footerBackgroundColor}">
+          :style="{'color': '#77bf77', 'background-color': '#111211'}">
               <p class="mb-0">
                   <i class="fas fa-copyright"></i>
                   <page-link href="staff.html" text="CSCI1570 Course Staff"></page-link>

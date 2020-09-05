@@ -1,15 +1,14 @@
 a,
 th {
-    color: #a1659e;
+    color: green;
 }
 
 a:hover,
 a:active,
 td {
-    color: purple;
+    color: black;
 }
 
-
 a:visited {
-    color: mediumpurple;
+    color: #5387b5;
 }

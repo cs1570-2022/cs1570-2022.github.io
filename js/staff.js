@@ -129,7 +129,7 @@ const staffGroup = {
               :icon-classes="curPageIconClasses"
               :text="title"
               :style-object="{'color': curPageThemeColor}"
-              :text-style-object="{'text-decoration': 'overline dashed','border-top': 'solid medium', 'padding-top': '0.05rem'}"
+              :text-style-object="{'border-bottom': 'solid thick'}"
             >
             </page-section-title>
             <div
@@ -165,7 +165,7 @@ Vue.component('page-content', {
                         cslogin: 'ld9',
                         name: 'Lorenzo De Stefani',
                         personalPhotoURL: 'content/staff/lorenzo_personal.png',
-                        themePhotoURL: undefined,
+                        themePhotoURL: 'content/staff/lorenzo-utensil.jpg',
                         theme: '',
                     },
                     {
@@ -182,15 +182,15 @@ Vue.component('page-content', {
                         name: 'Archer Wheeler',
                         note: 'Grad TA',
                         personalPhotoURL: 'content/staff/archer_personal.jpg',
-                        themePhotoURL: undefined,
+                        themePhotoURL: 'content/staff/archer_spoon.png',
                         // photoStyle: { 'background-position': '0%, 50%' },
                         theme: '',
                     },
                     {
                         cslogin: 'evelasq2',
                         name: 'Evan Velasquez',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Evan-Velasquez-evelasq2.JPG',
+                        themePhotoURL: 'content/staff/Evan-Velasquez-utensil.jpg',
                         theme: '',
                     },
                 ],
@@ -199,86 +199,85 @@ Vue.component('page-content', {
                         cslogin: 'bvallian',
                         name: 'Beenish Valliani',
                         personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        themePhotoURL: 'content/staff/Beenish-Valliani-bvallian-utensil.jpg',
                         theme: undefined,
                     },
                     {
                         cslogin: 'cwilli22',
                         name: 'Cori Williams',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/cori-williams-cwilli22.JPG',
+                        themePhotoURL: 'content/staff/Cori-Williams-cwilli22-utensil.png',
                         theme: undefined,
+                    },
+                    {
+                        cslogin: 'qhuang27',
+                        name: '(Hugo) Qiaonan Huang',
+                        personalPhotoURL: 'content/staff/Hugo-Qiaonan-Huang.JPG',
+                        themePhotoURL: 'content/staff/Qiaonan-Huang-utensil.jpg'
                     },
                     {
                         cslogin: 'hpham2',
                         name: 'Huy Pham',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Huy-Pham-hpham2.jpeg',
+                        themePhotoURL: 'content/staff/Huy-Pham-hpham2-utensil.jpg',
                         theme: undefined,
+                    },
+                    {
+                        cslogin: 'jhlavink',
+                        name: 'Joseph Hlavinka',
+                        personalPhotoURL: 'content/staff/joe-cropped.jpg',
+                        themePhotoURL: 'content/staff/Joe-Hlavinka-Utensil.jpg',
+                        theme: undefined
                     },
                     {
                         cslogin: 'ndo3',
                         name: 'Nam Do',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Nam-Do-ndo3.jpg',
+                        themePhotoURL: 'content/staff/Nam-Do-ndo3-utensil.jpg',
                         theme: undefined,
+                    },
+                    {
+                        cslogin: 'neisele',
+                        name: 'Nick Eisele',
+                        personalPhotoURL: 'content/staff/nick-eisele-neisele.jpg',
+                        themePhotoURL: 'content/staff/nick-eisele-neisele-utensil.jpeg',
+                        theme: undefined
                     },
                     {
                         cslogin: 'odai',
                         name: 'Omer Dai',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Ömer-Dai-odai-.jpg',
+                        themePhotoURL: 'content/staff/Ömer-Dai-utensil.jpg',
                         theme: undefined,
                     },
                     {
                         cslogin: 'pdasgup1',
                         name: 'Prithu Dasgupta',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Prithu-Dasgupta-pdasgup1.JPG',
+                        themePhotoURL: 'content/staff/Prithu-Dasgupta-pdasgup1-utensil.jpg',
                         theme: undefined,
                     },
                     {
                         cslogin: 'rbattula',
                         name: 'Rajyashri Battula',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Rajyashri-Battula.jpg',
+                        themePhotoURL: 'content/staff/Rajyashri-Battula-cooking-utensil.jpeg',
                         theme: undefined,
                     },
                     {
                         cslogin: 'rbriden',
                         name: 'Ross Briden',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Ross-Briden-rbriden.jpg',
+                        themePhotoURL: 'content/staff/Ross-Briden-rbriden-utensil.jpeg',
                         theme: undefined,
                     },
                     {
                         cslogin: 'slamy',
                         name: 'Sebastien Lamy',
-                        personalPhotoURL: undefined,
-                        themePhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Sebastien-Lamy-staff-photo.jpg',
+                        themePhotoURL: 'content/staff/Sebastien-Lamy-utensil.jpg',
                         theme: undefined,
-                    },
-                    // {
-                    //     cslogin: 'bvallian',
-                    //     name: 'Beenish Valliani',
-                    //     personalPhotoURL: undefined,
-                    //     themePhotoURL: undefined,
-                    //     theme: undefined,
-                    // },
-                    // {
-                    //     cslogin: 'bvallian',
-                    //     name: 'Beenish Valliani',
-                    //     personalPhotoURL: undefined,
-                    //     themePhotoURL: undefined,
-                    //     theme: undefined,
-                    // },
-                    // {
-                    //     cslogin: 'bvallian',
-                    //     name: 'Beenish Valliani',
-                    //     personalPhotoURL: undefined,
-                    //     themePhotoURL: undefined,
-                    //     theme: undefined,
-                    // },
+                    }
                 ],
             ],
         };

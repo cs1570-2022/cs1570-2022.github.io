@@ -160,7 +160,7 @@ Vue.component('page-content', {
                   :icon-classes="curPageIconClasses"
                   text="course assignments"
                   :style-object="{'color': curPageThemeColor}"
-                  :text-style-object="{'border-bottom': 'dotted medium'}"
+                  :text-style-object="{'border-bottom': 'solid thick'}"
                 ></page-section-title>
                 <div
                   class="mx-4 mx-sm-5 px-0 px-lg-5"
