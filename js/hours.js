@@ -31,9 +31,9 @@ Vue.component('page-content', {
                 >
                     <h3>Notes For TA Hours:</h3>
                     <ul>
-                        <li>TA hours are generally held in <b>CIT 219</b>.</li>
-                        <li>Write your name on the front board to join the queue.</li>
-                        <li>When working in groups, put the question number on your board so that new students can join more easily.</li>
+                        <li>TA hours are generally held on <b>Zoom</b>. To join, please sign up on <b>SignMeUp</b>. TAs' Zoom links can be found on the course calendar below / on SignMeUp.</li>
+                        <li>Some TA hours are one-on-one, while some other are open to all students to join. The information of the format of each set of hours could be found on the course calendar.</li>
+                        <li>When you sign up for TA hours (SignMeUp), please mention the question number in your ticket so we can coordinate helping multiple students with the same question at the same time.</li>
                     </ul>
                     <p>Refer to the calendar below for the most up-to-date lecture and office hour schedule.</p>
                     <iframe title="course calendar" src="https://calendar.google.com/calendar/embed?src=c_07kai7gfgm5hillhk9lq0qikcg%40group.calendar.google.com&ctz=America%2FNew_York" class="d-none d-sm-block align-self-center" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>

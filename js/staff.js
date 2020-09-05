@@ -198,7 +198,7 @@ Vue.component('page-content', {
                     {
                         cslogin: 'bvallian',
                         name: 'Beenish Valliani',
-                        personalPhotoURL: undefined,
+                        personalPhotoURL: 'content/staff/Beenish-Valliani-bvallian.jpg',
                         themePhotoURL: 'content/staff/Beenish-Valliani-bvallian-utensil.jpg',
                         theme: undefined,
                     },

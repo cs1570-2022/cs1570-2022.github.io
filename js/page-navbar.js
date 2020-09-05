@@ -245,7 +245,7 @@ const collapsedNavbar = {
               <div
                 v-show="isExpanded"
                 :class="navbarStopsContainerClassArray"
-                :style="{'background-color':'black', padding: '10px', height: '600px', width: '300px'}"
+                :style="{'background-color':'#027800', padding: '10px', height: '600px', width: '400px', 'border': '5px solid black'}"
                 >
                   <collapsed-navbar-stop
                     v-for="(labelText, index) of labelTexts"
