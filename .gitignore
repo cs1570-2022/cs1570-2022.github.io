@@ -133,3 +133,6 @@ assets
 
 package-lock.json
 package.json
+
+# old websites folder
+old/
