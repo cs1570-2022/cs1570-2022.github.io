@@ -7,10 +7,13 @@ const pageBackground = {
             default: true,
         },
     },
-    data: function() {
+    data: function () {
         return {
             fallbackURL: `url(${this.backgroundImageUrl})`,
-            webpURL: `url(${this.backgroundImageUrl.substring(0, this.backgroundImageUrl.lastIndexOf('.'))}.webp)`,
+            webpURL: `url(${this.backgroundImageUrl.substring(
+                0,
+                this.backgroundImageUrl.lastIndexOf('.')
+            )}.webp)`,
             useWebp: Boolean(Modernizr.webp),
         };
     },
@@ -41,7 +44,7 @@ const pageBackground = {
                 >
             </picture>
         </div>
-    `
+    `,
 };
 
 export default pageBackground;

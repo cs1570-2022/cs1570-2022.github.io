@@ -3,13 +3,12 @@ import pageLink from './page-link.js';
 import pageSectionTitle from './page-section.js';
 import pageTable from './page-table.js';
 
-
 const hiddenLink = {
     props: {
         now: Object,
         hide: {
             type: Boolean,
-            default: null
+            default: null,
         },
         hideUntil: {
             type: Object,
@@ -26,14 +25,18 @@ const hiddenLink = {
         'page-link': pageLink,
     },
     computed: {
-        willHide: function() {
+        willHide: function () {
             if (this.hide === null) {
-                return this.hide || this.hideUntil === null || this.hideUntil.isAfter(this.now);
+                return (
+                    this.hide ||
+                    this.hideUntil === null ||
+                    this.hideUntil.isAfter(this.now)
+                );
             } else {
                 return this.hide;
             }
         },
-        content: function() {
+        content: function () {
             return this.hidePlaceholder ? '' : this.name;
         },
     },
@@ -44,9 +47,8 @@ const hiddenLink = {
           :href="href"
           :text="name">
         </page-link>
-    `
+    `,
 };
-
 
 const courseAssignment = {
     props: {
@@ -62,20 +64,27 @@ const courseAssignment = {
         'page-countdown-time': pageCountdownTime,
         'page-link': pageLink,
     },
-    data: function() {
+    data: function () {
         return {
             outMoment: this.parseTime(this.out),
             dueMoment: this.parseTime(this.due),
         };
     },
     methods: {
-        parseTime: function(timeStr) {
+        parseTime: function (timeStr) {
             let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD'], true);
             if (timeObj.isValid()) {
                 timeObj.hour(18);
                 timeObj.minute(0);
             } else {
-                timeObj = moment(timeStr, ['MM/DD HH:mm', 'MM/DD hh:mm a', 'MM/DD hh a', 'YYYY/MM/DD HH:mm', 'YYYY/MM/DD hh:mm a', 'YYYY/MM/DD hh a']);
+                timeObj = moment(timeStr, [
+                    'MM/DD HH:mm',
+                    'MM/DD hh:mm a',
+                    'MM/DD hh a',
+                    'YYYY/MM/DD HH:mm',
+                    'YYYY/MM/DD hh:mm a',
+                    'YYYY/MM/DD hh a',
+                ]);
             }
             return timeObj;
         },
@@ -128,30 +137,34 @@ Vue.component('page-content', {
         'page-table': pageTable,
         'page-section-title': pageSectionTitle,
     },
-    data: function() {
+    data: function () {
         return {
             assignments: [
-                {
-                    name: 'Assignment 0',
-                    handoutURL: '',
-                    out: '09/06',
-                    due: '09/13',
-                    solutionURL: '',
-                },
+                // {
+                //     name: 'Assignment 0',
+                //     handoutURL: '',
+                //     out: '09/06',
+                //     due: '09/13',
+                //     solutionURL: '',
+                // },
             ],
             now: moment(),
             tableheads: ['assignment #', 'out', 'due', 'solution'],
         };
     },
-    created: function() {
-        setInterval(() => this.now = moment(), 1000);
+    created: function () {
+        setInterval(() => (this.now = moment()), 1000);
     },
-    mounted: function() {
+    mounted: function () {
         const element = this.$el;
-        document.addEventListener('DOMContentLoaded', function() {
-            element.scrollIntoView(true);
-            window.scrollBy(0, -150);
-        }, false);
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () {
+                element.scrollIntoView(true);
+                window.scrollBy(0, -150);
+            },
+            false
+        );
     },
     template: `
         <main>
@@ -182,5 +195,5 @@ Vue.component('page-content', {
                 </div>
             </section>
         </main>
-    `
+    `,
 });

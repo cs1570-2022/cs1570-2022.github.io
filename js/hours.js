@@ -1,6 +1,5 @@
 import pageSectionTitle from './page-section.js';
 
-
 Vue.component('page-content', {
     props: {
         curPageThemeColor: String,
@@ -9,12 +8,16 @@ Vue.component('page-content', {
     components: {
         'page-section-title': pageSectionTitle,
     },
-    mounted: function() {
+    mounted: function () {
         const element = this.$el;
-        document.addEventListener('DOMContentLoaded', function() {
-            element.scrollIntoView(true);
-            window.scrollBy(0, -150);
-        }, false);
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () {
+                element.scrollIntoView(true);
+                window.scrollBy(0, -150);
+            },
+            false
+        );
     },
     template: `
         <main>
@@ -37,9 +40,8 @@ Vue.component('page-content', {
                     </ul>
                     <p>Refer to the calendar below for the most up-to-date lecture and office hour schedule.</p>
                     <iframe title="course calendar" src="https://calendar.google.com/calendar/embed?src=c_07kai7gfgm5hillhk9lq0qikcg%40group.calendar.google.com&ctz=America%2FNew_York" class="d-none d-sm-block align-self-center" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
-                    <iframe title="course calendar" src="https://calendar.google.com/calendar/embed?src=c_07kai7gfgm5hillhk9lq0qikcg%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA" class="d-block d-sm-none align-self-center" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
                 </div>
             </section>
         </main>
-    `
+    `,
 });

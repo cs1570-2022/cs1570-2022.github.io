@@ -50,10 +50,18 @@ const courseInfoSection = {
             >
                 <div id="anonymous-feedback-container" class="mb-4">
                     <span class="mr-4">
-                        <i class="far fa-file fa-lg" title="feedback form"></i>
+                        <i class="far fa-comment fa-lg" title="feedback form"></i>
                     </span>
                     <span id="anoynmous-feedback-form-info">
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUUCNh2vFytaypbcsMOM-3zXcFM1GhEFo4acSrQps1Hx9XSQ/viewform" target="_blank">Anonymous Feedback Form</a>
+                    </span>
+                </div>
+                <div id="piazza-container" class="mb-4">
+                    <span class="mr-4">
+                        <i class="far fa-question fa-lg" title="feedback form"></i>
+                    </span>
+                    <span id="piazza-info">
+                        <a href="https://piazza.com/class/kek343o2vf03f8" target="_blank">Piazza</a>
                     </span>
                 </div>
                 <div id="time-container" class="d-flex flex-row mb-4">
