@@ -56,9 +56,17 @@ const courseInfoSection = {
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUUCNh2vFytaypbcsMOM-3zXcFM1GhEFo4acSrQps1Hx9XSQ/viewform" target="_blank">Anonymous Feedback Form</a>
                     </span>
                 </div>
+                <div id="extension-container" class="mb-4">
+                    <span class="mr-4">
+                        <i class="far fa-exclamation fa-lg" title="extension form"></i>
+                    </span>
+                    <span id="extension-info">
+                        <a href="https://forms.gle/TzQrTJU4Uwt1H2yh8" target="_blank">Extension Request Form</a>
+                    </span>
+                </div>
                 <div id="piazza-container" class="mb-4">
                     <span class="mr-4">
-                        <i class="far fa-question fa-lg" title="feedback form"></i>
+                        <i class="far fa-question fa-lg" title="piazza form"></i>
                     </span>
                     <span id="piazza-info">
                         <a href="https://piazza.com/class/kek343o2vf03f8" target="_blank">Piazza</a>
