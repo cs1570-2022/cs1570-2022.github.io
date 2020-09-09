@@ -94,7 +94,7 @@ const courseInfoSection = {
                           <i class="far fa-building fa-lg" title="location"></i>
                       </span>
                       <span id="class-location">
-                          Friedman 108
+                          Zoom
                       </span>
                   </div>
                   <div id="prereqs-container" class="d-flex flex-row">
@@ -163,16 +163,16 @@ const courseTopics = {
     data: function () {
         return {
             topics: [
-                ['Week 1', 'Algorithm Analysis'],
-                ['Week 2', 'Data Structures'],
-                ['Week 3', 'Algorithms for Sorting and Searching'],
-                ['Week 4', 'Greedy Algorithms'],
-                ['Week 5', 'Dynamic Programming'],
-                ['Week 6', 'Divide-and-Conquer'],
-                ['Week 7', 'Graph Algorithms'],
-                ['Week 8', 'Computational Geometry'],
-                ['Week 9', 'External Memory'],
-                ['Week 10', 'Online Algorithms'],
+                ['1', 'Algorithm Analysis'],
+                ['2', 'Data Structures'],
+                ['3', 'Algorithms for Sorting and Searching'],
+                ['4', 'Greedy Algorithms'],
+                ['5', 'Dynamic Programming'],
+                ['6', 'Divide-and-Conquer'],
+                ['7', 'Graph Algorithms'],
+                ['8', 'Computational Geometry'],
+                ['9', 'External Memory'],
+                ['10', 'Online Algorithms'],
             ],
         };
     },
