@@ -31,8 +31,8 @@ const courseLecture = {
         parseTime: function (timeStr) {
             let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD'], true);
             if (timeObj.isValid()) {
-                timeObj.hour(15);
-                timeObj.minute(0);
+                timeObj.hour(14);
+                timeObj.minute(30);
             } else {
                 timeObj = moment(timeStr, [
                     'MM/DD HH:mm',
