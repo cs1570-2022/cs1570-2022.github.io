@@ -172,7 +172,7 @@ Vue.component('page-content', {
                         cslogin: 'rt',
                         name: 'Roberto Tamassia',
                         personalPhotoURL: 'content/staff/roberto_personal.jpg',
-                        themePhotoURL: undefined,
+                        themePhotoURL: 'content/staff/roberto-lol.jpg',
                         theme: '',
                     },
                 ],
@@ -246,8 +246,8 @@ Vue.component('page-content', {
                     {
                         cslogin: 'odai',
                         name: 'Omer Dai',
-                        personalPhotoURL: 'content/staff/Ömer-Dai-odai-.jpg',
-                        themePhotoURL: 'content/staff/Ömer-Dai-utensil.jpg',
+                        personalPhotoURL: 'content/staff/Omer-Dai-odai-.jpg',
+                        themePhotoURL: 'content/staff/Omer-Dai-utensil.jpg',
                         theme: undefined,
                     },
                     {
