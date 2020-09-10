@@ -108,8 +108,11 @@ Vue.component('page-content', {
                     date: '09/10',
                     readingNames: [],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['Intro', 'Math Review'],
+                    noteURLs: [
+                        'content/lectures/Lecture-0a-Intro.pdf',
+                        'content/lectures/Lecture-0b-Math Review.pdf',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
@@ -144,7 +147,7 @@ Vue.component('page-content', {
                     recordingURLs: [],
                 },
                 {
-                    name: 'Algorithms for Soring and Searching 1',
+                    name: 'Algorithms for Sorting and Searching 1',
                     date: '09/24',
                     readingNames: ['5.4, 8.1, 8.2'],
                     readingURLs: [],
@@ -154,7 +157,7 @@ Vue.component('page-content', {
                     recordingURLs: [],
                 },
                 {
-                    name: 'Algorithms for Soring and Searching 2',
+                    name: 'Algorithms for Sorting and Searching 2',
                     date: '09/24',
                     readingNames: ['8.3, 9.1, 9.2'],
                     readingURLs: [],
@@ -165,7 +168,13 @@ Vue.component('page-content', {
                 },
             ],
             now: moment(),
-            tableheads: ['lecture #', 'date', 'notes', 'readings', 'recording'],
+            tableheads: [
+                'lecture #',
+                'date',
+                'slides',
+                'readings',
+                'recording',
+            ],
         };
     },
     created: function () {
