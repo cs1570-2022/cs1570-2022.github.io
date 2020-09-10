@@ -31,8 +31,8 @@ const courseLecture = {
         parseTime: function (timeStr) {
             let timeObj = moment(timeStr, ['MM/DD', 'YYYY/MM/DD'], true);
             if (timeObj.isValid()) {
-                timeObj.hour(15);
-                timeObj.minute(0);
+                timeObj.hour(14);
+                timeObj.minute(30);
             } else {
                 timeObj = moment(timeStr, [
                     'MM/DD HH:mm',
@@ -162,7 +162,7 @@ Vue.component('page-content', {
                     noteURLs: [],
                     recordingNames: [],
                     recordingURLs: [],
-                }
+                },
             ],
             now: moment(),
             tableheads: ['lecture #', 'date', 'notes', 'readings', 'recording'],
@@ -194,7 +194,7 @@ Vue.component('page-content', {
                 <div
                   class="mx-4 mx-sm-5 mb-4 mb-sm-5"
                   :style="{ color: curPageThemeColor}">
-                    <p>Lectures are on Tuesday and Thursday from 2:30 to 3:50PM.</p>
+                    <p>Lectures are on Tuesday and Thursday from 2:30 to 3:50PM. The Zoom link for lectures can be found on the course Canvas and Piazza</p>
                 </div>
                 <div
                   class="mx-4 mx-sm-5 px-0 px-lg-5"

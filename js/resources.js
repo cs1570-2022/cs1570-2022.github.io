@@ -76,7 +76,7 @@ const externalResourcesSection = {
     components: {
         'page-section-title': pageSectionTitle,
         'course-resource': courseResource,
-        'page-link': pageLink
+        'page-link': pageLink,
     },
     template: `
         <section class="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
@@ -111,6 +111,46 @@ const externalResourcesSection = {
     `,
 };
 
+const otherSection = {
+    props: {
+        curPageThemeColor: String,
+        curPageIconClasses: Array,
+    },
+    components: {
+        'page-section-title': pageSectionTitle,
+        'course-resource': courseResource,
+        'page-link': pageLink,
+    },
+    template: `
+        <section class="container-fluid flex-wrap flex-row my-5 px-0 px-sm-5">
+            <page-section-title
+              :icon-classes="curPageIconClasses"
+              text="other"
+              :style-object="{'color': curPageThemeColor}"
+              :text-style-object="{'border-bottom': 'solid thick'}"
+            >
+            </page-section-title>
+            <div
+              class="mx-4 mx-sm-5 px-0 px-lg-5 flex-fill d-flex flex-column"
+              :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
+            >
+                <course-resource title="Image Credits">
+                <p>All images are from Unsplash. Unsplash's license can be found
+                    <page-link title="mosaic-resource-link" href="https://unsplash.com/license" text="here"></page-link></p>
+                        <li>Algorithms - cover photo by Jason Jarrach</li>
+                        <li>Lectures - cover photo by Maarten van den Heuvel</li>
+                        <li>Sections - cover photo by Max Delsid</li>
+                        <li>Assignments - cover photo by Jorge Zapata</li>
+                        <li>Hours - cover photo by Sorin Gheorghita</li>
+                        <li>Staff - cover photo by Fabrizio Magoni</li>
+                        <li>Resources - cover photo by Calum Lewis</li>
+                    </ul>
+                </course-resource>
+            </div>
+        </section>
+    `,
+};
+
 Vue.component('page-content', {
     props: {
         curPageThemeColor: String,
@@ -119,6 +159,7 @@ Vue.component('page-content', {
     components: {
         'course-documents-section': courseDocumentsSection,
         'external-resources-section': externalResourcesSection,
+        'other-section': otherSection,
     },
     mounted: function () {
         const element = this.$el;
@@ -143,6 +184,11 @@ Vue.component('page-content', {
                 :cur-page-icon-classes="curPageIconClasses"
             >
             </external-resources-section>
+            <other-section
+                :cur-page-theme-color="curPageThemeColor"
+                :cur-page-icon-classes="curPageIconClasses"
+            >
+            </other-section>
         </main>
     `,
 });
