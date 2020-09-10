@@ -205,7 +205,7 @@ const collapsedNavbarStop = {
           :style="styleObject"
           @click.stop.prevent="navigate"
           @mouseenter.stop.passive="onlyInitial = false"
-          @mouseleave.stop.passive="onlyInitial = true"
+          @mouseleave.stop.passive="onlyInitial = false"
         >{{displayedText}}</span>
     `
 };
@@ -245,7 +245,7 @@ const collapsedNavbar = {
               <div
                 v-show="isExpanded"
                 :class="navbarStopsContainerClassArray"
-                :style="{'background-color':'#027800', padding: '10px', height: '600px', width: '400px', 'border': '5px solid black'}"
+                :style="{'background-color':'#027800', padding: '10px', height: '600px', width: '300px', 'border': '5px solid black'}"
                 >
                   <collapsed-navbar-stop
                     v-for="(labelText, index) of labelTexts"
