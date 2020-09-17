@@ -131,8 +131,11 @@ Vue.component('page-content', {
                     date: '09/17',
                     readingNames: ['5.3, 3.1, 3.2, 4.1, 4.4'],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['Heaps', 'BSTs'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/1clCareXCVUC4LKXQBtIjfDEODQHtusXH/view?usp=sharing',
+                        'https://drive.google.com/file/d/16aGeF9jgD0HgoITtJgwmiJesoswaS2rb/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
