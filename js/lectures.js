@@ -144,7 +144,7 @@ Vue.component('page-content', {
                     date: '09/22',
                     readingNames: ['6.1, 6.2, 6.3, 6.4, A-19.5'],
                     readingURLs: [],
-                    noteNames: ['WAVL Trees Slides', 'Hash Tables Slides'],
+                    noteNames: ['WAVL Trees', 'Hash Tables'],
                     noteURLs: ['https://drive.google.com/file/d/14Ani5I4lOP1jYpnCwR9ih124GZw2JsyE/view?usp=sharing',
                         'https://drive.google.com/file/d/1qd7LitYkVlyqKaz6faZ1DVJ6X8i9CBn6/view?usp=sharing'],
                     recordingNames: [],
