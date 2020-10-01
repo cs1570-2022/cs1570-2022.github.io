@@ -172,7 +172,9 @@ Vue.component('page-content', {
                     readingNames: ['8.3, 9.1, 9.2'],
                     readingURLs: [],
                     noteNames: ['Quicksort and Selection'],
-                    noteURLs: ['https://drive.google.com/file/d/16ZKLeTpBw1RMSrvemAXQS4xq7ugnPnyz/view?usp=sharing'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/16ZKLeTpBw1RMSrvemAXQS4xq7ugnPnyz/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
@@ -181,8 +183,10 @@ Vue.component('page-content', {
                     date: '10/01',
                     readingNames: [],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['Greedy Algorithms'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/1KfQRWNOaQbU_m_R0N4RizybpkyKKD_z6/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
