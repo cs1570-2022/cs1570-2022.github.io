@@ -154,6 +154,13 @@ Vue.component('page-content', {
                     due: '10/01 2:30pm',
                     solutionURL: '',
                 },
+                {
+                    name: 'Homework 2',
+                    handoutURL: 'content/homeworks/hw2.pdf',
+                    out: '10/1',
+                    due: '10/15 2:30pm',
+                    solutionURL: '',
+                },
             ],
             now: moment(),
             tableheads: ['assignment #', 'out', 'due', 'solution'],
