@@ -195,8 +195,10 @@ Vue.component('page-content', {
                     date: '10/06',
                     readingNames: [],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['Dynamic Programming'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/1iqFkSnbOKP_JElTj_9zlh-mliKCVqNsZ/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
