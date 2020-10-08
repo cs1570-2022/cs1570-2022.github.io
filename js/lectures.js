@@ -207,8 +207,10 @@ Vue.component('page-content', {
                     date: '10/08',
                     readingNames: [],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['Divide & Conquer 1'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/1DQO9ahkAma0srpT0zOB1vnW4gYNWjWfl/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
