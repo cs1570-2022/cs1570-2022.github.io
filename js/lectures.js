@@ -219,8 +219,10 @@ Vue.component('page-content', {
                     date: '10/13',
                     readingNames: [],
                     readingURLs: [],
-                    noteNames: [],
-                    noteURLs: [],
+                    noteNames: ['FFT'],
+                    noteURLs: [
+                        'https://drive.google.com/file/d/17gj2Jw55LsGv5iSDnDNzlyqDCT8xXfjl/view?usp=sharing',
+                    ],
                     recordingNames: [],
                     recordingURLs: [],
                 },
