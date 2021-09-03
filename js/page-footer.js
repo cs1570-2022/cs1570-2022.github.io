@@ -59,9 +59,8 @@ const pageFooter = {
               </p>
               <p>
                 CS1570 &bull;
-                Fall 2020 &bull;
+                Fall 2021 &bull;
                 <page-link href="https://lorenzoat-brown.000webhostapp.com/index.html" text="Lorenzo De Stefani"></page-link> &bull;
-                <page-link href="http://cs.brown.edu/people/rtamassi/" text="Roberto Tamassia"></page-link> &bull;
                 <page-link href="https://cs.brown.edu" text="Brown University Computer Science"></page-link>
               </p>
         </footer>
