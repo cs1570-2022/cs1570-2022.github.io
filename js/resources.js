@@ -106,7 +106,7 @@ const externalResourcesSection = {
                     </ul>
                 </course-resource>
                 <course-resource title="Brown CS Health and Wellness">
-                    <p>If you need accommodation for your physical and mental health, please feel free to reach out to Professor De Stefani - we want to support you as much as we can in the most comfortable way for you. It is important to note that TAs should not be handling health and accomodations information, so inquiries should be directed towards the professors only.</p>
+                    <p>If you need accommodation for your physical and mental health, please feel free to reach out to Professor De Stefani - we want to support you as much as we can in the most comfortable way for you. It is important to note that TAs should not be handling health and accomodations information, so inquiries should be directed towards the professor only.</p>
                     <ul>
                         <li>Resources for Physical/Mental Health, Accessibility and Accommodations can be found <page-link title="hw-resource-link" href="https://cs.brown.edu/media/filer_public/03/0a/030a6a2e-7a61-4c30-98c1-dce87b9d9899/brown_cs_health_and_wellness_resources.pdf" text="here"></page-link>.</li>
                     </ul>
