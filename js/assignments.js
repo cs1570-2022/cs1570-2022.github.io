@@ -140,13 +140,13 @@ Vue.component('page-content', {
     data: function () {
         return {
             assignments: [
-                {
-                    name: 'Collaboration Policy',
-                    handoutURL: 'https://forms.gle/tp6gJN2E12HUyAuu5',
-                    out: '09/9',
-                    due: '09/22 2:30pm',
-                    solutionURL: '',
-                },
+                // {
+                //     name: 'Collaboration Policy',
+                //     handoutURL: 'https://forms.gle/tp6gJN2E12HUyAuu5',
+                //     out: '09/9',
+                //     due: '09/22 2:30pm',
+                //     solutionURL: '',
+                // },
                 // {
                 //     name: 'Homework 1',
                 //     handoutURL: 'content/homeworks/hw1.pdf',
@@ -163,7 +163,7 @@ Vue.component('page-content', {
                 // },
             ],
             now: moment(),
-            tableheads: ['assignment #', 'handout', 'out', 'due', 'solution'],
+            tableheads: ['assignment #', 'out', 'due', 'solution'],
         };
     },
     created: function () {
