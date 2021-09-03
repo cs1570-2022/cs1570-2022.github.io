@@ -42,12 +42,17 @@ const courseDocumentsSection = {
                 </course-resource>
                 <course-resource title="collaboration policy">
                     <p>
-                        The collaboration policy can be found in the syllabus under the "Collaboration" section.
+                      The collaboration policy can be found in the syllabus under the "Collaboration" section.
                     </p>
                 </course-resource>
-                <course-resource title="piazza">
+                <course-resource title="gradescope">
                     <p>
-                      Our course piazza page can be found <page-link title="piazza" href="https://piazza.com/class/kek343o2vf03f8" text="here"></page-link>
+                      Instructions on how to set up Gradescope can be found <page-link title="gradescope" href="content/resources/gradescopeGuide.pdf" text="here"></page-link>
+                    </p>
+                </course-resource>
+                <course-resource title="ed">
+                    <p>
+                      Our course Ed page can be found <page-link title="ed" href="https://edstem.org/us/courses/12570/discussion/" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="LaTeX">
