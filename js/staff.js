@@ -161,7 +161,7 @@ Vue.component('page-content', {
                     {
                         name: 'Lorenzo De Stefani',
                         personalPhotoURL: 'content/staff/lorenzo_personal.png',
-                        themePhotoURL: 'content/staff/lorenzo-utensil.jpg',
+                        themePhotoURL: 'content/staff/lorenzo-food.jpg',
                         theme: '',
                     },
                 ],
