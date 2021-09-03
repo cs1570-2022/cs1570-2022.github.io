@@ -186,21 +186,19 @@ Vue.component('page-content', {
                         themePhotoURL: 'content/staff/James-Cai-food.jpg',
                         theme: undefined,
                     },
-                    // {
-                    //     cslogin: '',
-                    //     name: 'Pezanne Khambatta',
-                    //     note: 'Grad TA'
-                    //     personalPhotoURL: 'content/staff/Pezanne-Khambatta.jpg',
-                    //     themePhotoURL: 'content/staff/Pezanne-Khambatta-food.jpg',
-                    //     theme: undefined,
-                    // },
-                    // {
-                    //     cslogin: '',
-                    //     name: 'Robert Wang',
-                    //     personalPhotoURL: 'content/staff/Robert-Wang.jpg',
-                    //     themePhotoURL: 'content/staff/Robert-Wang-food.jpg',
-                    //     theme: undefined,
-                    // },
+                    {
+                        name: 'Pezanne Khambatta',
+                        note: 'Grad TA',
+                        personalPhotoURL: 'content/staff/Pezanne-Khambatta.jpg',
+                        themePhotoURL: 'content/staff/Pezanne-Khambatta-food.jpg',
+                        theme: undefined,
+                    },
+                    {
+                        name: 'Robert Wang',
+                        personalPhotoURL: 'content/staff/Robert-Wang.jpg',
+                        themePhotoURL: 'content/staff/Robert-Wang-food.jpg',
+                        theme: undefined,
+                    },
                     {
                         name: 'Charlotte Whatley',
                         personalPhotoURL: 'content/staff/Charlotte-Whatley.jpg',
