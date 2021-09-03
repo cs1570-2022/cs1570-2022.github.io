@@ -212,7 +212,7 @@ Vue.component('page-content', {
                         cslogin: 'jhlavink',
                         name: 'Joseph Hlavinka',
                         personalPhotoURL: 'content/staff/joe-cropped.jpg',
-                        themePhotoURL: 'content/staff/Joe-Hlavinka-food.jpg',
+                        themePhotoURL: 'content/staff/Joe-Hlavinka-Utensil.jpg',
                         theme: undefined
                     },
                 ],
