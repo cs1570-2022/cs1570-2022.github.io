@@ -168,13 +168,6 @@ Vue.component('page-content', {
                         themePhotoURL: 'content/staff/lorenzo-utensil.jpg',
                         theme: '',
                     },
-                    {
-                        cslogin: 'rt',
-                        name: 'Roberto Tamassia',
-                        personalPhotoURL: 'content/staff/roberto_personal.jpg',
-                        themePhotoURL: 'content/staff/roberto-lol.jpg',
-                        theme: '',
-                    },
                 ],
                 [
                     {
@@ -193,6 +186,13 @@ Vue.component('page-content', {
                         themePhotoURL: 'content/staff/Evan-Velasquez-utensil.jpg',
                         theme: '',
                     },
+                    // {
+                    //     cslogin: 'adai10',
+                    //     name: 'Anna Dai',
+                    //     personalPhotoURL: 'content/staff/Anna-Dai.jpg',
+                    //     themePhotoURL: 'content/staff/Anna-Dai-food.jpg',
+                    //     theme: '',
+                    // },
                 ],
                 [
                     {
@@ -277,7 +277,49 @@ Vue.component('page-content', {
                         personalPhotoURL: 'content/staff/Sebastien-Lamy-staff-photo.jpg',
                         themePhotoURL: 'content/staff/Sebastien-Lamy-utensil.jpg',
                         theme: undefined,
-                    }
+                    },
+                    // {
+                    //     cslogin: '',
+                    //     name: 'Andy Delworth',
+                    //     personalPhotoURL: 'content/staff/Andy-Delworth.jpg',
+                    //     themePhotoURL: 'content/staff/Andy-Delworth-food.jpg',
+                    //     theme: '',
+                    // },
+                    // {
+                    //     cslogin: '',
+                    //     name: 'James Cai',
+                    //     personalPhotoURL: 'content/staff/James-Cai.jpg',
+                    //     themePhotoURL: 'content/staff/James-Cai-food.jpg',
+                    //     theme: '',
+                    // },
+                    // {
+                    //     cslogin: '',
+                    //     name: 'Pezanne Khambatta',
+                    //     personalPhotoURL: 'content/staff/Pezanne-Khambatta.jpg',
+                    //     themePhotoURL: 'content/staff/Pezanne-Khambatta-food.jpg',
+                    //     theme: '',
+                    // },
+                    // {
+                    //     cslogin: '',
+                    //     name: 'Robert Wang',
+                    //     personalPhotoURL: 'content/staff/Robert-Wang.jpg',
+                    //     themePhotoURL: 'content/staff/Robert-Wang-food.jpg',
+                    //     theme: '',
+                    // },
+                    // {
+                    //     cslogin: '',
+                    //     name: 'Charlotte Whatley',
+                    //     personalPhotoURL: 'content/staff/Charlotte-Whatley.jpg',
+                    //     themePhotoURL: 'content/staff/Charlotte-Whatley-food.jpg',
+                    //     theme: '',
+                    // },
+                    // {
+                    //     cslogin: 'jhlavink',
+                    //     name: 'Joseph Hlavinka',
+                    //     personalPhotoURL: 'content/staff/joe-cropped.jpg',
+                    //     themePhotoURL: 'content/staff/Joe-Hlavinka-food.jpg',
+                    //     theme: undefined
+                    // },
                 ],
             ],
         };
