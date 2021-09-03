@@ -53,7 +53,7 @@ const courseInfoSection = {
                         <i class="far fa-comment fa-lg" title="feedback form"></i>
                     </span>
                     <span id="anoynmous-feedback-form-info">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUUCNh2vFytaypbcsMOM-3zXcFM1GhEFo4acSrQps1Hx9XSQ/viewform" target="_blank">Anonymous Feedback Form</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKHMRTsAwfGcSTrbGEFco27WQS0OWQvHxCzWVAmEyCsrTK_w/viewform?usp=sf_link" target="_blank">Anonymous Feedback Form</a>
                     </span>
                 </div>
                 <div id="extension-container" class="mb-4">
@@ -61,15 +61,15 @@ const courseInfoSection = {
                         <i class="far fa-exclamation fa-lg" title="extension form"></i>
                     </span>
                     <span id="extension-info">
-                        <a href="https://forms.gle/TzQrTJU4Uwt1H2yh8" target="_blank">Extension Request Form</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTu8aaxkdJI5DDSwwff9DM_upC06V16dur1u6QgqswwxPwA/viewform?usp=sf_link" target="_blank">Extension Request Form</a>
                     </span>
                 </div>
-                <div id="piazza-container" class="mb-4">
+                <div id="ed-container" class="mb-4">
                     <span class="mr-4">
-                        <i class="far fa-question fa-lg" title="piazza form"></i>
+                        <i class="far fa-question fa-lg" title="ed"></i>
                     </span>
                     <span id="piazza-info">
-                        <a href="https://piazza.com/class/kek343o2vf03f8" target="_blank">Piazza</a>
+                        <a href="https://edstem.org/us/courses/12570/discussion/" target="_blank">Ed Platform</a>
                     </span>
                 </div>
                 <div id="time-container" class="d-flex flex-row mb-4">
@@ -163,16 +163,17 @@ const courseTopics = {
     data: function () {
         return {
             topics: [
-                ['1', 'Algorithm Analysis'],
+                ['1', 'Methodologies for Algorithms Analysis'],
                 ['2', 'Data Structures'],
-                ['3', 'Algorithms for Sorting and Searching'],
+                ['3', 'Sorting and Searching'],
                 ['4', 'Greedy Algorithms'],
                 ['5', 'Dynamic Programming'],
-                ['6', 'Divide-and-Conquer'],
+                ['6', 'Divide & Conquer'],
                 ['7', 'Graph Algorithms'],
-                ['8', 'Computational Geometry'],
-                ['9', 'External Memory'],
-                ['10', 'Online Algorithms'],
+                ['8', 'Text Analysis and Pattern Matching'],
+                ['9', 'Geometric Algorithms'],
+                ['10', 'Algorithms for External Memory'],
+                ['11', 'Online Algorithms'],
             ],
         };
     },
