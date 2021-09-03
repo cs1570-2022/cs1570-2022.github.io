@@ -147,23 +147,23 @@ Vue.component('page-content', {
                     due: '09/22 2:30pm',
                     solutionURL: '',
                 },
-                {
-                    name: 'Homework 1',
-                    handoutURL: 'content/homeworks/hw1.pdf',
-                    out: '09/17',
-                    due: '10/01 2:30pm',
-                    solutionURL: '',
-                },
-                {
-                    name: 'Homework 2',
-                    handoutURL: 'content/homeworks/hw2.pdf',
-                    out: '10/1',
-                    due: '10/15 2:30pm',
-                    solutionURL: '',
-                },
+                // {
+                //     name: 'Homework 1',
+                //     handoutURL: 'content/homeworks/hw1.pdf',
+                //     out: '09/17',
+                //     due: '10/01 2:30pm',
+                //     solutionURL: '',
+                // },
+                // {
+                //     name: 'Homework 2',
+                //     handoutURL: 'content/homeworks/hw2.pdf',
+                //     out: '10/1',
+                //     due: '10/15 2:30pm',
+                //     solutionURL: '',
+                // },
             ],
             now: moment(),
-            tableheads: ['assignment #', 'out', 'due', 'solution'],
+            tableheads: ['assignment #', 'handout', 'out', 'due', 'solution'],
         };
     },
     created: function () {
@@ -193,12 +193,12 @@ Vue.component('page-content', {
                   class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
-                    <p>All assignments must be typeset using LateX and must be submitted on Gradescope (course code: MN6YDR)</p>
+                    <p>All assignments must be typeset using LateX and must be submitted on Gradescope (course code: D5G63D0)</p>
                     <p>Each student is given 4 late day passes to extend the submission deadlines of homeworks and midterms.
                     However, no more than 2 passes may be applied to a given deadline.
                     </p>
                     <p>Additional late day passes may be granted by the instructors in consideration of extenuating circumstances (e.g., illness).
-                     Requests should be submitted to the instructors at least 24 hours before a deadline via <a href="https://forms.gle/TzQrTJU4Uwt1H2yh8" target="_blank">this</a> Google form</p>
+                     Requests should be submitted to the instructors at least 24 hours before a deadline via <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTu8aaxkdJI5DDSwwff9DM_upC06V16dur1u6QgqswwxPwA/viewform" target="_blank">this</a> Google form</p>
                     <page-table
                       :tableheads="tableheads"
                       tableheadBackground="rgba(111, 82, 142, 0.2)"
