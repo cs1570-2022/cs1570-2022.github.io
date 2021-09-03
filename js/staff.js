@@ -104,9 +104,6 @@ const staffCard = {
                 <p class="card-text mb-0">
                     {{note}}
                 </p>
-                <p class="card-text mb-0">
-                    {{cslogin}}
-                </p>
             </div>
         </div>
     `,
@@ -162,7 +159,6 @@ Vue.component('page-content', {
             groups: [
                 [
                     {
-                        cslogin: 'ld9',
                         name: 'Lorenzo De Stefani',
                         personalPhotoURL: 'content/staff/lorenzo_personal.png',
                         themePhotoURL: 'content/staff/lorenzo-utensil.jpg',
@@ -171,155 +167,54 @@ Vue.component('page-content', {
                 ],
                 [
                     {
-                        cslogin: 'awheele9',
-                        name: 'Archer Wheeler',
-                        note: 'Grad TA',
-                        personalPhotoURL: 'content/staff/archer_personal.jpg',
-                        themePhotoURL: 'content/staff/archer_spoon.png',
-                        // photoStyle: { 'background-position': '0%, 50%' },
+                        name: 'Anna Dai',
+                        personalPhotoURL: 'content/staff/Anna-Dai.jpg',
+                        themePhotoURL: 'content/staff/Anna-Dai-food.jpg',
                         theme: '',
                     },
-                    {
-                        cslogin: 'evelasq2',
-                        name: 'Evan Velasquez',
-                        personalPhotoURL: 'content/staff/Evan-Velasquez-evelasq2.JPG',
-                        themePhotoURL: 'content/staff/Evan-Velasquez-utensil.jpg',
-                        theme: '',
-                    },
-                    // {
-                    //     cslogin: 'adai10',
-                    //     name: 'Anna Dai',
-                    //     personalPhotoURL: 'content/staff/Anna-Dai.jpg',
-                    //     themePhotoURL: 'content/staff/Anna-Dai-food.jpg',
-                    //     theme: '',
-                    // },
                 ],
                 [
                     {
-                        cslogin: 'bvallian',
-                        name: 'Beenish Valliani',
-                        personalPhotoURL: 'content/staff/Beenish-Valliani-bvallian.jpg',
-                        themePhotoURL: 'content/staff/Beenish-Valliani-bvallian-utensil.jpg',
+                        name: 'Andy Delworth',
+                        personalPhotoURL: 'content/staff/Andy-Delworth.jpg',
+                        themePhotoURL: 'content/staff/Andy-Delworth-food.jpg',
                         theme: undefined,
                     },
-                    {
-                        cslogin: 'cwilli22',
-                        name: 'Cori Williams',
-                        personalPhotoURL: 'content/staff/cori-williams-cwilli22.JPG',
-                        themePhotoURL: 'content/staff/Cori-Williams-cwilli22-utensil.png',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'qhuang27',
-                        name: '(Hugo) Qiaonan Huang',
-                        personalPhotoURL: 'content/staff/Hugo-Qiaonan-Huang.JPG',
-                        themePhotoURL: 'content/staff/Qiaonan-Huang-utensil.jpg'
-                    },
-                    {
-                        cslogin: 'hpham2',
-                        name: 'Huy Pham',
-                        personalPhotoURL: 'content/staff/Huy-Pham-hpham2.jpeg',
-                        themePhotoURL: 'content/staff/Huy-Pham-hpham2-utensil.jpg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'jhlavink',
-                        name: 'Joseph Hlavinka',
-                        personalPhotoURL: 'content/staff/joe-cropped.jpg',
-                        themePhotoURL: 'content/staff/Joe-Hlavinka-Utensil.jpg',
-                        theme: undefined
-                    },
-                    {
-                        cslogin: 'ndo3',
-                        name: 'Nam Do',
-                        personalPhotoURL: 'content/staff/Nam-Do-ndo3.jpg',
-                        themePhotoURL: 'content/staff/Nam-Do-ndo3-utensil.jpg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'neisele',
-                        name: 'Nick Eisele',
-                        personalPhotoURL: 'content/staff/nick-eisele-neisele.jpg',
-                        themePhotoURL: 'content/staff/nick-eisele-neisele-utensil.jpeg',
-                        theme: undefined
-                    },
-                    {
-                        cslogin: 'odai',
-                        name: 'Omer Dai',
-                        personalPhotoURL: 'content/staff/Omer-Dai-odai-.jpg',
-                        themePhotoURL: 'content/staff/Omer-Dai-utensil.jpg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'pdasgup1',
-                        name: 'Prithu Dasgupta',
-                        personalPhotoURL: 'content/staff/Prithu-Dasgupta-pdasgup1.JPG',
-                        themePhotoURL: 'content/staff/Prithu-Dasgupta-pdasgup1-utensil.jpg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'rbattula',
-                        name: 'Rajyashri Battula',
-                        personalPhotoURL: 'content/staff/Rajyashri-Battula.jpg',
-                        themePhotoURL: 'content/staff/Rajyashri-Battula-cooking-utensil.jpeg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'rbriden',
-                        name: 'Ross Briden',
-                        personalPhotoURL: 'content/staff/Ross-Briden-rbriden.jpg',
-                        themePhotoURL: 'content/staff/Ross-Briden-rbriden-utensil.jpeg',
-                        theme: undefined,
-                    },
-                    {
-                        cslogin: 'slamy',
-                        name: 'Sebastien Lamy',
-                        personalPhotoURL: 'content/staff/Sebastien-Lamy-staff-photo.jpg',
-                        themePhotoURL: 'content/staff/Sebastien-Lamy-utensil.jpg',
-                        theme: undefined,
-                    },
-                    // {
-                    //     cslogin: '',
-                    //     name: 'Andy Delworth',
-                    //     personalPhotoURL: 'content/staff/Andy-Delworth.jpg',
-                    //     themePhotoURL: 'content/staff/Andy-Delworth-food.jpg',
-                    //     theme: '',
-                    // },
                     // {
                     //     cslogin: '',
                     //     name: 'James Cai',
                     //     personalPhotoURL: 'content/staff/James-Cai.jpg',
                     //     themePhotoURL: 'content/staff/James-Cai-food.jpg',
-                    //     theme: '',
+                    //     theme: undefined,
                     // },
                     // {
                     //     cslogin: '',
                     //     name: 'Pezanne Khambatta',
+                    //     note: 'Grad TA'
                     //     personalPhotoURL: 'content/staff/Pezanne-Khambatta.jpg',
                     //     themePhotoURL: 'content/staff/Pezanne-Khambatta-food.jpg',
-                    //     theme: '',
+                    //     theme: undefined,
                     // },
                     // {
                     //     cslogin: '',
                     //     name: 'Robert Wang',
                     //     personalPhotoURL: 'content/staff/Robert-Wang.jpg',
                     //     themePhotoURL: 'content/staff/Robert-Wang-food.jpg',
-                    //     theme: '',
+                    //     theme: undefined,
                     // },
-                    // {
-                    //     cslogin: '',
-                    //     name: 'Charlotte Whatley',
-                    //     personalPhotoURL: 'content/staff/Charlotte-Whatley.jpg',
-                    //     themePhotoURL: 'content/staff/Charlotte-Whatley-food.jpg',
-                    //     theme: '',
-                    // },
-                    // {
-                    //     cslogin: 'jhlavink',
-                    //     name: 'Joseph Hlavinka',
-                    //     personalPhotoURL: 'content/staff/joe-cropped.jpg',
-                    //     themePhotoURL: 'content/staff/Joe-Hlavinka-food.jpg',
-                    //     theme: undefined
-                    // },
+                    {
+                        name: 'Charlotte Whatley',
+                        personalPhotoURL: 'content/staff/Charlotte-Whatley.jpg',
+                        themePhotoURL: 'content/staff/Charlotte-Whatley-food.jpg',
+                        theme: undefined,
+                    },
+                    {
+                        cslogin: 'jhlavink',
+                        name: 'Joseph Hlavinka',
+                        personalPhotoURL: 'content/staff/joe-cropped.jpg',
+                        themePhotoURL: 'content/staff/Joe-Hlavinka-food.jpg',
+                        theme: undefined
+                    },
                 ],
             ],
         };
