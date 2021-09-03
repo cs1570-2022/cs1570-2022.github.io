@@ -180,13 +180,12 @@ Vue.component('page-content', {
                         themePhotoURL: 'content/staff/Andy-Delworth-food.jpg',
                         theme: undefined,
                     },
-                    // {
-                    //     cslogin: '',
-                    //     name: 'James Cai',
-                    //     personalPhotoURL: 'content/staff/James-Cai.jpg',
-                    //     themePhotoURL: 'content/staff/James-Cai-food.jpg',
-                    //     theme: undefined,
-                    // },
+                    {
+                        name: 'James Cai',
+                        personalPhotoURL: 'content/staff/James-Cai.jpg',
+                        themePhotoURL: 'content/staff/James-Cai-food.jpg',
+                        theme: undefined,
+                    },
                     // {
                     //     cslogin: '',
                     //     name: 'Pezanne Khambatta',
