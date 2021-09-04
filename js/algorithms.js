@@ -68,7 +68,7 @@ const courseInfoSection = {
                     <span class="mr-4">
                         <i class="far fa-question fa-lg" title="ed"></i>
                     </span>
-                    <span id="piazza-info">
+                    <span id="ed-info">
                         <a href="https://edstem.org/us/courses/12570/discussion/" target="_blank">Ed Platform</a>
                     </span>
                 </div>

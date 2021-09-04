@@ -193,12 +193,8 @@ Vue.component('page-content', {
                   class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
-                    <p>All assignments must be typeset using LateX and must be submitted on Gradescope (course code: D5G63D0)</p>
-                    <p>Each student is given 4 late day passes to extend the submission deadlines of homeworks and midterms.
-                    However, no more than 2 passes may be applied to a given deadline.
-                    </p>
-                    <p>Additional late day passes may be granted by the instructors in consideration of extenuating circumstances (e.g., illness).
-                     Requests should be submitted to the instructors at least 24 hours before a deadline via <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTu8aaxkdJI5DDSwwff9DM_upC06V16dur1u6QgqswwxPwA/viewform" target="_blank">this</a> Google form</p>
+                    <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a> (course code: D5G63D0)</p>
+                    <p>Please refer to the syllabus for the collaboration policy and late submission policy of the class.</p>
                     <page-table
                       :tableheads="tableheads"
                       tableheadBackground="rgba(111, 82, 142, 0.2)"
