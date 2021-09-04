@@ -37,17 +37,18 @@ const courseDocumentsSection = {
             >
                 <course-resource title="course syllabus">
                     <p>
-                      Please find the course syllabus <page-link title="course syllabus" href="content/resources/syllabus.pdf" text="here"></page-link>
-                    </p>
-                </course-resource>
-                <course-resource title="collaboration policy">
-                    <p>
-                      The collaboration policy can be found in the syllabus under the "Collaboration" section.
+                      Please find the course syllabus <page-link title="course syllabus" href="content/resources/syllabus.pdf" text="here"></page-link>.
+                      The collaboration policy and the late day policy for all assignments of the class (Homework and Midterms) are presented in detail in the syllabus.
                     </p>
                 </course-resource>
                 <course-resource title="gradescope">
                     <p>
                       Instructions on how to set up Gradescope can be found <page-link title="gradescope" href="content/resources/gradescopeGuide.pdf" text="here"></page-link>
+                    </p>
+                </course-resource>
+                <course-resource title="anonymous-id-form">
+                    <p>
+                      If you would like to be graded under an anonymous id, please fill out the following form <page-link title="anonymous-id-form" href="https://forms.gle/QXKXBuzJZASGjH3T8" text="here"></page-link>
                     </p>
                 </course-resource>
                 <course-resource title="ed">
