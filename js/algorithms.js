@@ -48,20 +48,20 @@ const courseInfoSection = {
               class="flex-fill d-flex flex-column ml-4 ml-sm-5"
               :style="{ color: curPageThemeColor, 'font-size': 'larger' }"
             >
-                <div id="anonymous-feedback-container" class="mb-4">
+                <div id="course-syllabus-container" class="mb-4">
                     <span class="mr-4">
-                        <i class="far fa-comment fa-lg" title="feedback form"></i>
+                        <i class="far fa-comment fa-lg" title="course syllabus"></i>
                     </span>
-                    <span id="anoynmous-feedback-form-info">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKHMRTsAwfGcSTrbGEFco27WQS0OWQvHxCzWVAmEyCsrTK_w/viewform?usp=sf_link" target="_blank">Anonymous Feedback Form</a>
+                    <span id="course-syllabus">
+                        <a href="content/resources/syllabus.pdf" target="_blank">Syllabus</a>
                     </span>
                 </div>
-                <div id="extension-container" class="mb-4">
+                <div id="gradescope-container" class="mb-4">
                     <span class="mr-4">
-                        <i class="far fa-exclamation fa-lg" title="extension form"></i>
+                        <i class="far fa-comment fa-lg" title="gradescope"></i>
                     </span>
-                    <span id="extension-info">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTu8aaxkdJI5DDSwwff9DM_upC06V16dur1u6QgqswwxPwA/viewform?usp=sf_link" target="_blank">Extension Request Form</a>
+                    <span id="gradescope">
+                        <a href="https://www.gradescope.com/" target="_blank">Gradescope</a>
                     </span>
                 </div>
                 <div id="ed-container" class="mb-4">
@@ -70,6 +70,14 @@ const courseInfoSection = {
                     </span>
                     <span id="piazza-info">
                         <a href="https://edstem.org/us/courses/12570/discussion/" target="_blank">Ed Platform</a>
+                    </span>
+                </div>
+                <div id="anonymous-feedback-container" class="mb-4">
+                    <span class="mr-4">
+                        <i class="far fa-comment fa-lg" title="feedback form"></i>
+                    </span>
+                    <span id="anoynmous-feedback-form-info">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKHMRTsAwfGcSTrbGEFco27WQS0OWQvHxCzWVAmEyCsrTK_w/viewform?usp=sf_link" target="_blank">Anonymous Feedback Form</a>
                     </span>
                 </div>
                 <div id="time-container" class="d-flex flex-row mb-4">
@@ -94,39 +102,8 @@ const courseInfoSection = {
                           <i class="far fa-building fa-lg" title="location"></i>
                       </span>
                       <span id="class-location">
-                          Zoom
+                          85 Waterman Street Room 130
                       </span>
-                  </div>
-                  <div id="prereqs-container" class="d-flex flex-row">
-                      <span class="mr-4">
-                          <i class="fas fa-clipboard-list fa-lg" title="prerequisites"></i>
-                      </span>
-                      <div class="d-flex flex-column">
-                            <div class="d-flex flex-row">
-                                <span class="text-nowrap">
-                                    One of
-                                </span>
-                                <div>
-                                    <cs-prereq course-num="0160" :background-color="curPageThemeColor"></cs-prereq>
-                                    <cs-prereq course-num="0180" :background-color="curPageThemeColor"></cs-prereq>
-                                    <cs-prereq course-num="0190" :background-color="curPageThemeColor"></cs-prereq>
-                                </div>
-                            </div>
-                            <i class="fas fa-plus fa-lg align-self-center my-2"></i>
-                            <div class="d-flex flex-row">
-                                <span class="text-nowrap">
-                                    One of
-                                </span>
-                                <div>
-                                    <cs-prereq course-num="0220" :background-color="curPageThemeColor"></cs-prereq>
-                                    <cs-prereq course-num="1010" :background-color="curPageThemeColor"></cs-prereq>
-                                    <cs-prereq course-num="1450" :background-color="curPageThemeColor"></cs-prereq>
-                                    <a id="prereq-math0750" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 0750</a>
-                                    <a id="prereq-math1010" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/next-semester">MATH 1010</a>
-                                    <a id="prereq-math1530" class="px-4 mx-2 second-prereq badge badge-info" rel="noreferrer" target="_blank" href="https://www.brown.edu/academics/math/courses">MATH 1530</a>
-                                </div>
-                            </div>
-                        </div>
                   </div>
             </div>
         </section>
@@ -153,60 +130,12 @@ const courseTopic = {
     `,
 };
 
-const courseTopics = {
-    props: {
-        curPageThemeColor: String,
-    },
-    components: {
-        'course-topic': courseTopic,
-    },
-    data: function () {
-        return {
-            topics: [
-                ['1', 'Methodologies for Algorithms Analysis'],
-                ['2', 'Data Structures'],
-                ['3', 'Sorting and Searching'],
-                ['4', 'Greedy Algorithms'],
-                ['5', 'Dynamic Programming'],
-                ['6', 'Divide & Conquer'],
-                ['7', 'Graph Algorithms'],
-                ['8', 'Text Analysis and Pattern Matching'],
-                ['9', 'Geometric Algorithms'],
-                ['10', 'Algorithms for External Memory'],
-                ['11', 'Online Algorithms'],
-            ],
-        };
-    },
-    template: `
-        <div id="topics-container">
-            <p class="badge text-white text-uppercase px-4" :style="{'background-color': curPageThemeColor}">
-                topics
-            </p>
-            <ul
-              id="topics-list"
-              class="list-group list-group-flush ml-4 ml-sm-5"
-              style="border-left: solid 0.2rem"
-            >
-                <course-topic
-                  v-for="(topic, index) of topics"
-                  :week="topic[0]"
-                  :name="topic[1]"
-                  :key="index"
-                  :cur-page-theme-color="curPageThemeColor"
-                >
-                </course-topic>
-            </ul>
-        </div>
-    `,
-};
-
 const courseMaterialSection = {
     props: {
         curPageThemeColor: String,
         curPageIconClasses: Array,
     },
     components: {
-        'course-topics': courseTopics,
         'page-section-title': pageSectionTitle,
     },
     template: `
@@ -265,10 +194,6 @@ const courseMaterialSection = {
                         </div>
                     </span>
                 </div>
-                <course-topics
-                  :cur-page-theme-color="curPageThemeColor"
-                >
-                </course-topics>
             </div>
         </section>
     `,
