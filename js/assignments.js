@@ -142,7 +142,7 @@ Vue.component('page-content', {
             assignments: [
                 {
                     name: 'Homework 0',
-                    handoutURL: 'content/homeworks/hw0-2021.pdf',
+                    handoutURL: '../content/homeworks/hw0-2021.pdf',
                     out: '09/12',
                     due: '09/23 2:30pm',
                     solutionURL: '',
