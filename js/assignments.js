@@ -140,13 +140,13 @@ Vue.component('page-content', {
     data: function () {
         return {
             assignments: [
-                // {
-                //     name: 'Collaboration Policy',
-                //     handoutURL: 'https://forms.gle/tp6gJN2E12HUyAuu5',
-                //     out: '09/9',
-                //     due: '09/22 2:30pm',
-                //     solutionURL: '',
-                // },
+                {
+                    name: 'Collaboration Policy',
+                    handoutURL: 'https://forms.gle/tp6gJN2E12HUyAuu5',
+                    out: '09/9',
+                    due: '09/23 2:30pm',
+                    solutionURL: '',
+                },
                 // {
                 //     name: 'Homework 1',
                 //     handoutURL: 'content/homeworks/hw1.pdf',
@@ -193,7 +193,7 @@ Vue.component('page-content', {
                   class="mx-4 mx-sm-5 px-0 px-lg-5"
                   :style="{ color: curPageThemeColor}"
                 >
-                    <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a> (course code: D5G63D0)</p>
+                    <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a> (course code: D5G63D)</p>
                     <p>Please refer to the syllabus for the collaboration policy and late submission policy of the class.</p>
                     <page-table
                       :tableheads="tableheads"
