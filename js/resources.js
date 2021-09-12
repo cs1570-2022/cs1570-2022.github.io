@@ -46,7 +46,7 @@ const courseDocumentsSection = {
                       Instructions on how to set up Gradescope can be found <page-link title="gradescope" href="content/resources/gradescopeGuide.pdf" text="here"></page-link>
                     </p>
                 </course-resource>
-                <course-resource title="anonymous-id-form">
+                <course-resource title="anonymous id form">
                     <p>
                       If you would like to be graded under an anonymous id, please fill out the following form <page-link title="anonymous-id-form" href="https://forms.gle/QXKXBuzJZASGjH3T8" text="here"></page-link>
                     </p>
