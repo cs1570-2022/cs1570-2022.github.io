@@ -147,6 +147,13 @@ Vue.component('page-content', {
                     due: '09/23 2:30pm',
                     solutionURL: '',
                 },
+                {
+                    name: 'Homework 1',
+                    handoutURL: '../content/homeworks/hw1-2021.pdf',
+                    out: '09/14 2:30pm',
+                    due: '09/21 2:30pm',
+                    solutionURL: '',
+                },
                 // {
                 //     name: 'Homework 1',
                 //     handoutURL: 'content/homeworks/hw1.pdf',
