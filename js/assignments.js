@@ -157,7 +157,7 @@ Vue.component('page-content', {
                     out: '09/12 12:00pm',
                     due: '09/23 2:30pm',
                     latexTemplate: '',
-                    latexTemplateURL: '',
+                    latexTemplateURL: '../content/homeworks/hw0-2021.tex',
                     solutionURL: '',
                 },
                 {
@@ -166,7 +166,7 @@ Vue.component('page-content', {
                     out: '09/14 2:30pm',
                     due: '09/21 2:30pm',
                     latexTemplate: '',
-                    latexTemplateURL: '',
+                    latexTemplateURL: '../content/homeworks/hw1-2021.tex',
                     solutionURL: '',
                 },
                 {
