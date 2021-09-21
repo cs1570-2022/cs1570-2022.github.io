@@ -58,6 +58,7 @@ const courseAssignment = {
         due: String,
         solutionURL: String,
         latexTemplate: String,
+        latexTemplateURL: String,
         now: Object,
     },
     components: {
@@ -119,7 +120,7 @@ const courseAssignment = {
             </td>
             <td>
                 <hidden-link
-                  :name="latex"
+                  :name="latexTemplate"
                   :href="latexTemplateURL"
                   :hide-until="outMoment"
                   :now="now"
@@ -155,7 +156,7 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw0-2021.pdf',
                     out: '09/12 12:00pm',
                     due: '09/23 2:30pm',
-                    latex: '',
+                    latexTemplate: '',
                     latexTemplateURL: '',
                     solutionURL: '',
                 },
@@ -164,7 +165,7 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw1-2021.pdf',
                     out: '09/14 2:30pm',
                     due: '09/21 2:30pm',
-                    latex: '',
+                    latexTemplate: '',
                     latexTemplateURL: '',
                     solutionURL: '',
                 },
@@ -173,7 +174,7 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw2-2021.pdf',
                     out: '09/21 2:30pm',
                     due: '09/28 2:30pm',
-                    latex: 'HW 2 Latex',
+                    latexTemplate: 'HW 2 Latex',
                     latexTemplateURL: '../content/homeworks/hw2-2021.tex',
                     solutionURL: '',
                 },
