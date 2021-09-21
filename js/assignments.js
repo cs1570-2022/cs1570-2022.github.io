@@ -57,6 +57,7 @@ const courseAssignment = {
         out: String,
         due: String,
         solutionURL: String,
+        latexTemplate: String,
         now: Object,
     },
     components: {
@@ -117,6 +118,15 @@ const courseAssignment = {
                 </page-countdown-time>
             </td>
             <td>
+                <hidden-link
+                  :name="latex"
+                  :href="latexTemplateURL"
+                  :hide-until="outMoment"
+                  :now="now"
+                >
+                </hidden-link>
+            </td>
+            <td>
                 <page-link
                   v-if="solutionURL"
                   text="Solution">
@@ -145,6 +155,8 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw0-2021.pdf',
                     out: '09/12 12:00pm',
                     due: '09/23 2:30pm',
+                    latex: '',
+                    latexTemplateURL: '',
                     solutionURL: '',
                 },
                 {
@@ -152,6 +164,8 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw1-2021.pdf',
                     out: '09/14 2:30pm',
                     due: '09/21 2:30pm',
+                    latex: '',
+                    latexTemplateURL: '',
                     solutionURL: '',
                 },
                 {
@@ -159,6 +173,8 @@ Vue.component('page-content', {
                     handoutURL: '../content/homeworks/hw2-2021.pdf',
                     out: '09/21 2:30pm',
                     due: '09/28 2:30pm',
+                    latex: 'HW 2 Latex',
+                    latexTemplateURL: '../content/homeworks/hw2-2021.tex',
                     solutionURL: '',
                 },
                 // {
@@ -177,7 +193,7 @@ Vue.component('page-content', {
                 // },
             ],
             now: moment(),
-            tableheads: ['assignment #', 'out', 'due', 'solution'],
+            tableheads: ['assignment #', 'out', 'due', 'latex', 'solution'],
         };
     },
     created: function () {

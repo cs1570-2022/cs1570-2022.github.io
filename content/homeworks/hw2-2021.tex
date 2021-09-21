@@ -1,0 +1,66 @@
+\documentclass{common/cs157}
+\usepackage{hyperref}
+% \usepackage{clrscode}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage[shortlabels]{enumitem}
+
+
+
+% comment this in if you want to compile the solution key:
+% \sol
+
+
+\hwk{2}
+\due{September 28, 2021 - 14:30 ET}
+
+
+\begin{document}
+
+\homeworkhandin % this is in common/cs157.cls if you need to edit it
+
+\begin{problem}{1}
+3-Mergesort is a variation of Mergesort, such that:
+\begin{itemize}
+    \item In the divide phase: the input is split into 3 sub-sequences on which 3-Mergesort is recursively invoked;
+    \item In the conquer -merge- phase: the three sorted lists are merged in a single sorted list, using a variation of the Merging algorithm called 3-Merge. 
+\end{itemize}
+For the sake of simplicity, assume that the size of the sequence of elements to be sorted is a perfect power of 3.
+\begin{enumerate}
+    \item Provide a detailed, but concise, presentation of 3-Mergesort.
+    \item Consider a k-way mergesort. Provide a generalization of the number of comparisons executed in the worst case. Please count the \emph{actual} number of comparisons.  
+    \item Is 3-Mergesort faster than standard Mergesort? Is it asymptotically faster? (\textbf{Hint:} you may want to think about the actual constant terms vs the asymptotic notation).
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{2}
+\begin{enumerate}
+    \item Assume that we want to sort sequences such that each element is placed in the input at most $k$ locations-away from its placement in the ordered sequence. Design a modification of Selection sort which runs in time O(nk).
+    \item Under the same assumption, what can we say about the worst-case runtime of Insertion Sort?
+    \item For input sequences exhibiting this property, which among Mergesort, Insertion Sort and Standard Selection sort offered better performance? Motivate your answer. 
+    \item Assume now that we are looking to sort input sequences in which there is a subsequence of size $k$ which is already sorted. Show that using one among Selection, Insertion, or Bubble sort it is possible to sort such inputs in O(n(n-k)) steps.
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{3}
+\begin{enumerate}
+    \item Say we are given sorted list S with n items, i.e. n entries of the form (key, value) whose keys are strictly increasing with the indexing. Consider a “scrambled” version of it $S’$ in which elements may have been moved by at most two locations: that is, elements previously in index $i$ may be indexed within the range $[i-2, i+2]$. Provide a searching algorithm that still provides the functionality of the searching algorithm discussed in class with runtime O(log n). Provide proof for the correctness and the runtime.
+\end{enumerate}
+\end{problem}
+
+\end{document}
