@@ -60,6 +60,8 @@ const courseDocumentsSection = {
                     <ul>
                         <li><page-link href="content/resources/CS157LatexLinks.pdf" text="Getting Started with LaTeX" title="getting started with latex"></page-link></li>
                         <li><page-link href="content/resources/template.tex" text="LaTeX Template" title="latex template"></page-link></li>
+                        <li><page-link href="content/resources/cs.cls" text="cs.cls file" title="latex template"></page-link></li>
+                        <li><page-link href="content/resources/cs157.cls" text="cs157.cls file" title="latex template"></page-link></li>
                     </ul>
                 </course-resource>
             </div>
