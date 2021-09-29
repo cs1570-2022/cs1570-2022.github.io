@@ -172,7 +172,7 @@ Vue.component('page-content', {
                     latexTemplate: 'HW1 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw1-2021.tex',
                     solutionName: 'Solution',
-                    solutionURL: '../content/homeworks/hw1-2021-solution.pdf',
+                    solutionURL: '../content/homeworks/hw1-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 2',
