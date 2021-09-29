@@ -167,7 +167,7 @@ Vue.component('page-content', {
                     due: '09/21 2:30pm',
                     latexTemplate: 'HW1 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw1-2021.tex',
-                    solutionURL: '../content/homeworks/hw1-2021-sol.pdf',
+                    solutionURL: '../content/homeworks/hw1-2021-solution.pdf',
                 },
                 {
                     name: 'Homework 2',
