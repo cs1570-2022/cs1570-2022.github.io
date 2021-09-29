@@ -56,6 +56,7 @@ const courseAssignment = {
         handoutURL: String,
         out: String,
         due: String,
+        solutionName: String,
         solutionURL: String,
         latexTemplate: String,
         latexTemplateURL: String,
@@ -128,11 +129,13 @@ const courseAssignment = {
                 </hidden-link>
             </td>
             <td>
-                <page-link
-                  v-if="solutionURL"
-                  text="Solution">
+                <hidden-link
+                  :name="solutionName"
                   :href="solutionURL"
-                </page-link>
+                  :hide-until="outMoment"
+                  :now="now"
+                >
+                </hidden-link>
             </td>
         </tr>
     `,
@@ -158,6 +161,7 @@ Vue.component('page-content', {
                     due: '09/23 2:30pm',
                     latexTemplate: 'HW0 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw0-2021.tex',
+                    solutionName: '',
                     solutionURL: '',
                 },
                 {
@@ -167,6 +171,7 @@ Vue.component('page-content', {
                     due: '09/21 2:30pm',
                     latexTemplate: 'HW1 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw1-2021.tex',
+                    solutionName: 'Solution',
                     solutionURL: '../content/homeworks/hw1-2021-solution.pdf',
                 },
                 {
@@ -176,6 +181,7 @@ Vue.component('page-content', {
                     due: '09/28 2:30pm',
                     latexTemplate: 'HW2 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw2-2021.tex',
+                    solutionName: '',
                     solutionURL: '',
                 },
                 {
@@ -185,6 +191,7 @@ Vue.component('page-content', {
                     due: '09/28 2:30pm',
                     latexTemplate: 'HW3 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw3-2021.tex',
+                    solutionName: '',
                     solutionURL: '',
                 },
                 // {
