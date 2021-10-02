@@ -61,9 +61,9 @@ Suppose you are given a set $S=\{a_1, a_2, ..., a_n\}$ of tasks, where task $a_i
 Consider a variation of the Fractional Knapsack discussed in class, for which each item in $S$ is assigned to a single \emph{class} $\{1,2,\ldots, k\}$.  That is each item in $S$ is a triple of values $(b_i,w_i,c_i)$ where $b_i$ is the benefit of the $i$-th item, $w_i$ is its weight, and $c_i$ is its class.
 
 
-The goal of the problem is still to select items for our knapsack in a way that maximizes the overall benefit without exceeding a given allowable weight $W>0$. However, only one item may be chosen among those assigned to the same subclass. Recall, that in this \emph{fractional} variant, it is possible to select an arbitrary fraction of each item.
+The goal of the problem is still to select items for our knapsack in a way that maximizes the overall benefit without exceeding a given allowable weight $W>0$. However, only one item may be chosen among those assigned to the same subclass. Recall, that in this \emph{fractional} variant, it is possible to select an arbitrary fraction of each item. 
 
-Consider the following algorithm:
+Consider the following algorithm (note that the algorithm returns a list of (element, fraction of element taken) tuples):
 
 \begin{itemize}
     \item For each item in $S$ compute its value as $v_i =b_i/w_i$.
@@ -73,7 +73,7 @@ Consider the following algorithm:
     \begin{enumerate}
         \item If $W=0$, return $\emptyset$.
         \item Otherwise, pick the item with highest value among those in $\{S_1,S_2,\ldots,S_k\}$. Let $e$ denote such element, let $w_e$ denote its weight, and let $j$ denote its class. 
-        \item return $\{(e, \min 1, W/w_e)\}\cup \textsc{MCFknapsack}(\{S_1,S_2,\ldots,S_k\}\setminus S_j, \max\{0,W-w_e\})$
+        \item return $\{(e, \min (1, W/w_e))\}\cup \textsc{MCFknapsack}(\{S_1,S_2,\ldots,S_k\}\setminus S_j, \max\{0,W-w_e\})$
     \end{enumerate}
 \end{itemize}
 
