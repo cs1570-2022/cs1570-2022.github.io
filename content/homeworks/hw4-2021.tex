@@ -1,0 +1,55 @@
+\documentclass{common/cs157}
+\usepackage{hyperref}
+% \usepackage{clrscode}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage[shortlabels]{enumitem}
+
+\newenvironment{problem}[1]{
+  \subsubsection*{Problem #1}
+}
+
+
+
+% comment this in if you want to compile the solution key:
+% \sol
+
+
+\hwk{4}
+\due{October 12, 2021 - 14:30 ET}
+
+
+\begin{document}
+
+\homeworkhandin % this is in common/cs157.cls if you need to edit it
+
+\begin{problem}{1}
+A palindrome is a string such that by reversing the order of its letters, one again obtains the starting string (e.g. aba, abba, ababa). The length of a palindrome is the number of characters in the string (e.g. $|$aba$|$=3, $|$abba$|$=4, $|$ababa$|$=5). 
+\begin{enumerate}[(a)]
+    \item Given a string with $n$ characters from the English alphabet, design an efficient dynamic program that finds the longest palindrome substring (a subsequence of consecutive characters from the input string).
+    \item Provide proof of the correctness of the algorithm and analyze its time complexity and memory utilization.
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{2}
+The \textbf{euclidean traveling-salesman problem} is the problem of determining the shortest closed tour that connects a given set of $n$ points in the plane. The general problem is NP-complete, and the solution is therefore believed to require more than polynomial time.
+
+J.L. Bentley has suggested that we simplify the problem by restricting our attention to \textbf{bitonic tours}, that is, tours that start at the leftmost point, go strictly left to right to the rightmost point, and then go strictly right to left back to the starting point. In this case, a polynomial-time algorithm is possible.
+
+Describe an $O(n^2)$-time algorithm for determining an optimal bitonic tour. You may assume that no two points have the same $x$-coordinate. (\textit{Hint:} Scan left to right, maintaining optimal possibilities for the two parts of the tour.)
+\end{problem}
+
+\end{document}
