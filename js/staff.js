@@ -214,6 +214,7 @@ Vue.component('page-content', {
                     },
                     {
                         name: 'Zichuan Wang',
+                        note: 'Grad TA',
                         personalPhotoURL: 'content/staff/Zichuan-Wang.jpg',
                         themePhotoURL: 'content/staff/Zichuan-Wang-food.jpg',
                         theme: undefined,
