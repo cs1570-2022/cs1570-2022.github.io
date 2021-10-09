@@ -212,6 +212,12 @@ Vue.component('page-content', {
                         themePhotoURL: 'content/staff/Joe-Hlavinka-Utensil.jpg',
                         theme: undefined
                     },
+                    {
+                        name: 'Zichuan Wang',
+                        personalPhotoURL: 'content/staff/Zichuan-Wang.jpg',
+                        themePhotoURL: 'content/staff/Zichuan-Wang-food.jpg',
+                        theme: undefined,
+                    },
                 ],
             ],
         };
