@@ -181,8 +181,8 @@ Vue.component('page-content', {
                     due: '09/28 2:30pm',
                     latexTemplate: 'HW2 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw2-2021.tex',
-                    solutionName: '',
-                    solutionURL: '',
+                    solutionName: 'Solution',
+                    solutionURL: '../content/homeworks/hw2-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 3',
@@ -191,8 +191,8 @@ Vue.component('page-content', {
                     due: '10/05 2:30pm',
                     latexTemplate: 'HW3 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw3-2021.tex',
-                    solutionName: '',
-                    solutionURL: '',
+                    solutionName: 'Solution',
+                    solutionURL: '../content/homeworks/hw3-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 4',
@@ -201,8 +201,8 @@ Vue.component('page-content', {
                     due: '10/13 2:30pm',
                     latexTemplate: 'HW4 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw4-2021.tex',
-                    solutionName: '',
-                    solutionURL: '',
+                    solutionName: 'Solution',
+                    solutionURL: '../content/homeworks/hw4-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 5',
