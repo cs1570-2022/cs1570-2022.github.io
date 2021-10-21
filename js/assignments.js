@@ -214,6 +214,16 @@ Vue.component('page-content', {
                     solutionName: '',
                     solutionURL: '',
                 },
+                {
+                    name: 'Midterm 1',
+                    handoutURL: '../content/homeworks/midterm1-2021.pdf',
+                    out: '10/21 2:30pm',
+                    due: '10/28 2:30pm',
+                    latexTemplate: 'HW5 LaTeX',
+                    latexTemplateURL: '../content/homeworks/midterm1-2021.tex',
+                    solutionName: '',
+                    solutionURL: '',
+                },
                 // {
                 //     name: 'Homework 1',
                 //     handoutURL: 'content/homeworks/hw1.pdf',
