@@ -55,7 +55,7 @@ Let $X[1,\ldots,n]$ and $Y[1,\ldots,n]$ be two arrays, each containing $n$ numbe
 Provide an efficient greedy algorithm that given a set $\{x_1,x_2,\ldots,x_n\}$ of points on the real line, determines the smallest set of  closed intervals of length 3 that contains all of the given points.
 \begin{enumerate}
     \item[(a)] Provide a succinct (but clear) description of your algorithm. You may provide a pseudocode.
-    \item[(b)] Prove the correctness of your algorithm.
+    \item[(b)] Prove the correctness (optimality) of your algorithm.
     \item[(c)] Provide an analysis of the running time (asymptotic analysis is correct) and memory utilization of the algorithm.
 \end{enumerate}
 \end{problem}
@@ -77,7 +77,7 @@ You have been hired by a top 500 corporation...Congratulations (I guess)!!!You f
     \item[(b)] Analyze the running time of your algorithm. Assume that is possible to multiply two decimal integer numbers with $n$ digits in $O(n^{log_2 3})$ time. 
 \end{enumerate}
 
-\emph{Hint:} Recall that a given a $n$-digits integer $x$ is expressed in binary as $x=(x{n-1},x_{x_2},\ldots, x_1,x_0)_2$
+\emph{Hint:} Recall that a given a $n$-digits integer $x$ is expressed in binary as $x=(x_{n-1},x_{x_2},\ldots, x_1,x_0)_2$
 where $x_0$ is its least significant digit and $x_{n-1}$ is its most significant digit. Further, let $x_l=(x_{n/2-1},x_{n/2-2},\ldots,x_1,x_0)_2$ be the $n/2$-digit integer in binary which corresponds to the $n/2$ least significant digits of $x$, and let $x_m=(x_{n-1},x_{n-2},\ldots,x_{n/2+1},x_{n/2})_2$ be the $n/2$-digit integer in binary which corresponds to the $n/2$ most significant digits of $x$. We have $x=x_l+2^{n/2}*x_m$. This should suggest us a way to set up a divide and conquer strategy...:) Careful about the number of subproblems!
 \end{problem}
 
