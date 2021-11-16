@@ -244,6 +244,16 @@ Vue.component('page-content', {
                     solutionName: '',
                     solutionURL: '',
                 },
+                {
+                    name: 'Homework 9',
+                    handoutURL: '../content/homeworks/hw8-2021.pdf',
+                    out: '11/16 2:30pm',
+                    due: '11/23 2:30pm',
+                    latexTemplate: 'HW8 LaTeX',
+                    latexTemplateURL: '../content/homeworks/hw8-2021.tex',
+                    solutionName: '',
+                    solutionURL: '',
+                },
                 // {
                 //     name: 'Homework 1',
                 //     handoutURL: 'content/homeworks/hw1.pdf',
