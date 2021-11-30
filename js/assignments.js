@@ -221,8 +221,8 @@ Vue.component('page-content', {
                     due: '10/28 2:30pm',
                     latexTemplate: 'Midterm 1 LaTeX',
                     latexTemplateURL: '../content/homeworks/midterm1-2021.tex',
-                    solutionName: '',
-                    solutionURL: '',
+                    solutionName: 'Solution',
+                    solutionURL: '../content/homeworks/midterm1-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 6',
@@ -232,7 +232,7 @@ Vue.component('page-content', {
                     latexTemplate: 'HW6 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw6-2021.tex',
                     solutionName: 'Solution',
-                    solutionURL: '',
+                    solutionURL: '../content/homeworks/hw6-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 7',
@@ -242,7 +242,7 @@ Vue.component('page-content', {
                     latexTemplate: 'HW7 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw7-2021.tex',
                     solutionName: 'Solution',
-                    solutionURL: '',
+                    solutionURL: '../content/homeworks/hw7-2021-sol.pdf',
                 },
                 {
                     name: 'Homework 8',
