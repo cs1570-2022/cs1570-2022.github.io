@@ -266,9 +266,9 @@ Vue.component('page-content', {
                 },
                 {
                     name: 'Midterm 2',
-                    handoutURL: '',
+                    handoutURL: '../content/homeworks/midterm2-2021.pdf',
                     out: '12/08 2:30 pm',
-                    due: '12/15 2:30pm',
+                    due: '12/15 11:59pm',
                     solutionURL: '',
                 },
             ],
