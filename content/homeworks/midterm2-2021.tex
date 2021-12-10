@@ -60,7 +60,7 @@ By construction, all of the edges in $R$ are assigned a positive integer value.
 Let $P$ be a set of $n$ points in the plane. Assume that no two points of $P$ are coincident (i.e. they have both the same $x$-coordinate and the same $y$-coordinate). However, it is possible that two or more points have the same $x$-coordinate or $y$-coordinate. Also, it is possible that three or more points are collinear (i.e. there exists a straight line that contains them).
 
 \begin{enumerate}
-    \item Modify the convex hull algorithm presented in class to compute for every point $p$ in $P$ that is not a vertex of the convex hull, either a triangle with vertices in $P$ or a segment with endpoints in $P$ that contains $p$. Justify the correctness, running time, and memory utilization of your algorithm (which should run in $O(n\log n)$ time).
+    \item Modify the convex hull algorithm presented in class to compute for every point $p$ in $P$ that is not a vertex of the convex hull, either a triangle with vertices in $P$ or a segment with endpoints in $P$ that contains $p$. Note that the only restriction on the points you use to construct your triangles / line segments is that you cannot use point $p$ itself (however, you may find it easier to use a specific subset of points to make your triangles / line segments as opposed to searching through all points in the set-- try drawing a picture!). Justify the correctness, running time, and memory utilization of your algorithm (which should run in $O(n\log n)$ time).
 \end{enumerate}
 \end{problem}
 
@@ -69,14 +69,14 @@ Let $P$ be a set of $n$ points in the plane. Assume that no two points of $P$ ar
 \begin{problem}{3 - 10 points}
 Let $P$ be an array with $n$ integer values.
 \begin{enumerate}
-    \item Design an algorithm that finds all of the elements of $P$ that are repeated at least 3 times. Your algorithm should have worst case running time $O(n)$, and may use some additional memory. Provide analysis of correctness, worst case running time, and memory utilization.
-    \item Assume that the values in $P$ are non-negative integers which are multiples of $5$ and such that any element $x\in P$ is such that $0\leq x\leq 5(n-1)$. Show that you can improve on the algorithm in part 1 while not using any additional memory space. 
+    \item Design an algorithm that finds all of the elements of $P$ that are repeated at least 3 times. Your algorithm should have expected running time $O(n)$, and may use some additional memory (i.e. your algorithm can have a non constant space complexity). Provide analysis of correctness, worst case running time, and memory utilization.
+    \item Assume that the values in $P$ are non-negative integers which are multiples of $5$ and such that any element $x\in P$ is such that $0\leq x\leq 5(n-1)$. Show that you can improve on the algorithm in part 1 without using any additional memory space (relative to part 1).
 \end{enumerate}
 \end{problem}
 \newpage
 
 \begin{problem}{4 -10 points}
-Recall that a \emph{literal} in a Boolean formula is either a Boolean variable (e.g., $x_i$) or its negated form (e.g., $\neg x_i$) appearing in the formula. Let $\phi$ be a 3cnf formula. An $\neq$-assignment to the variables of $\phi$ is one in where each clause contains two literals with unequal truth values. In other words, an $\neq$-assignment three true of false literals in any clause.
+Recall that a \emph{literal} in a Boolean formula is either a Boolean variable (e.g., $x_i$) or its negated form (e.g., $\neg x_i$) appearing in the formula. Let $\phi$ be a 3cnf formula. An $\neq$-assignment to the variables of $\phi$ is one in where each clause contains two literals with unequal truth values. In other words, a given clause cannot be assigned all true or all false in a $\neq$-assignment.
 \begin{enumerate}
     \item Show that the negation of any $\neq$-assignment to $\phi$ is also a $\neq$-assignment of $\phi$.
     \item Let $\neq SAT$ denote the problem of deciding whether a Boolean Formula has a $\neq$-assignment. Show that we can obtain a valid and polynomial time reduction $f()$ from $3SAT$ to  $\neq SAT$ as follows: Given a 3cnf formula $\phi'$ we add to each of its clause an additional $\vee u$ term, where $u$ is a new Boolean variable which did not appear in $\phi'$. For example 
