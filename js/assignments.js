@@ -261,8 +261,8 @@ Vue.component('page-content', {
                     due: '12/07 2:30pm',
                     latexTemplate: 'HW9 LaTeX',
                     latexTemplateURL: '../content/homeworks/hw9-2021.tex',
-                    solutionName: '',
-                    solutionURL: '',
+                    solutionName: 'Solution',
+                    solutionURL: '../content/homeworks/hw9-2021-sol.pdf',
                 },
                 {
                     name: 'Midterm 2',
