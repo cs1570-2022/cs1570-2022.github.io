@@ -7,100 +7,96 @@ import { PageTable } from "../components/PageTable";
 const LectureList = [
   {
       name: 'Introduction',
-      date: '09/09'
+      date: '09/08'
   },
   {
       name: 'Preliminary Concepts',
-      date: '09/14'
+      date: '09/13'
   },
   {
       name: 'Comparison-Based Sorting',
-      date: '09/16'
+      date: '09/15'
   },
   {
       name: 'Searching, Selection, and Non-Comparison Sorting',
-      date: '09/21'
+      date: '09/20'
   },
   {
       name: 'Greedy Algorithms 1',
-      date: '09/23'
+      date: '09/22'
   },
   {
       name: 'Greedy Algorithms 2',
-      date: '09/28'
+      date: '09/27'
   },
   {
       name: 'Dynamic Programming 1',
-      date: '09/30'
+      date: '09/29'
   },
   {
       name: 'Dynamic Programming 2',
-      date: '10/05'
+      date: '10/04'
   },
   {
       name: 'Divide & Conquer 1',
-      date: '10/07'
+      date: '10/06'
   },
   {
       name: 'Divide & Conquer 2',
-      date: '10/12'
+      date: '10/11'
   },
   {
       name: 'Data Structures 1 - Basic Data Structures',
-      date: '10/14'
+      date: '10/13'
   },
   {
       name: 'Data Structures 2 - Trees',
-      date: '10/19'
+      date: '10/18'
   },
   {
       name: 'Data Structures 3 - Hashing',
-      date: '10/21'
+      date: '10/20'
   },
   {
       name: 'Graph Algorithms 1',
-      date: '10/26'
+      date: '10/25'
   },
   {
       name: 'Graph Algorithms 2',
-      date: '10/28'
+      date: '10/27'
   },
   {
       name: 'Text Processing and Pattern Matching, Search',
-      date: '11/02'
+      date: '11/01'
   },
   {
       name: 'Computational Geometry 1',
-      date: '11/04'
+      date: '11/03'
   },
   {
       name: 'Computational Geometry 2',
-      date: '11/09'
+      date: '11/10'
   },
   {
       name: 'Limits of Computation 1',
-      date: '11/11'
+      date: '11/15'
   },
   {
       name: 'Limits of Computation 2',
-      date: '11/16'
+      date: '11/17'
   },
   {
       name: 'Limits of Computation 3',
-      date: '11/18',
+      date: '11/29',
   },
   {
       name: 'External Memory Algorithmics 1',
-      date: '11/30',
+      date: '12/01',
   },
   {
       name: 'External Memory Algorithmics 2',
-      date: '12/02',
-  },
-  {
-      name: 'TBD',
-      date: '12/07',
-  },
+      date: '12/06',
+  }
 ]
 
 const CourseLecture = (props) => {

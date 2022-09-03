@@ -1,11 +1,15 @@
 import clsx from "clsx";
-import React from "react"
+import React from "react";
+import { Links } from "../Configuration";
+import formatDistance from "date-fns/formatDistance";
 
 export const PageCountdownTime = (props) => {
     const { date } = props;
-    const numberDate = Date.parse(date);
-    const dateDifference = Date.now() - numberDate;
-    console.log(dateDifference, numberDate, date)
+    const properDate = new Date(date);
+    properDate.setFullYear(Links.year);
+
+    const differenceDisplay = formatDistance(properDate, Date.now(), { addSuffix: true });
+    const dateDifference = Date.now() - properDate.valueOf();
 
     function computeIcon() {
         if (dateDifference < 0) {
@@ -27,20 +31,11 @@ export const PageCountdownTime = (props) => {
         return 'fa-calendar';
     }
 
-    function computeDisplay(){
-        if(dateDifference < 7200000){
-            return dateDifference / (1000 * 3600);
-        }
-        else {
-            return dateDifference / (1000 * 3600 * 24)
-        }
-    }
-
     return <span>
         <span>{date}</span>
-        <span class="ml-1">(</span>
+        <span className="ml-1">(</span>
             <i className={clsx("fas fa-lg", computeIcon())}></i>
-            <span class="ml-1 text-capitalize font-weight-light">{computeDisplay()}</span>
+            <span className="ml-1 text-capitalize font-weight-light">{differenceDisplay}</span>
         <span>)</span>
     </span>
 }
