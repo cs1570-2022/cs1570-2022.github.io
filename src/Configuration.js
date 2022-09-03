@@ -3,7 +3,7 @@
 export const PROFESSORS = [
     {
         name: 'Lorenzo De Stefani',
-        personalPhotoURL: 'content/staff/lorenzo_personal.png',
+        personalPhotoURL: 'content/staff/lorenzo-personal.png',
         themePhotoURL: 'content/staff/lorenzo-food.jpg',
         theme: '',
     }
@@ -12,14 +12,38 @@ export const PROFESSORS = [
 export const HTAS = [
     {
         name: "Robert Scheidegger",
-        personalPhotoURL: '',
-        themePhotoURL: '',
+        personalPhotoURL: 'content/staff/Robert.jpg',
+        themePhotoURL: 'content/staff/Robert-food.jpg',
         theme: ''
     }
 ]
 
 export const UTAS = [
-    
+    {
+        name: "Anna Dai",
+        personalPhotoURL: "content/staff/Anna.jpg",
+        themePhotoURL: "content/staff/Anna-food.jpg"
+    },
+    {
+        name: "Joanna Tasmin"
+    },
+    {
+        name: "James Cai",
+        personalPhotoURL: "content/staff/James.jpg",
+        themePhotoURL: "content/staff/James-food.jpg"
+    },
+    {
+        name: "Hammad Izhar"
+    },
+    {
+        name: "Tianren Dong"
+    },
+    {
+        name: "Rohit Mohanty"
+    },
+    {
+        name: "Hongyi Li"
+    }
 ]
 
 export const Links = {
