@@ -1,9 +1,6 @@
-# CS157Website
+# CSCI1570 Fall 2022 Course Website
 
-Vue Based Course Website
+This course website is a react-based version of the previous site from 2021 which was written in Vue.
 
-Course website for [Brown CSCI1570](https://cs.brown.edu/courses/csci1570/) Fall 2019.
+It is hosted via GitHub pages.
 
-Adapted for Fall 2020 version of the course.
-
-Run locally with `python -m http.server [portnum]`
