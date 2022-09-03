@@ -5,7 +5,7 @@ import { Colors, Sections } from "../Constants";
 export const LargeNavbarStopIcon = (props) => {
     const classArray =  [props.isCurrentStop ? 'visible' : 'invisible'];
     return <i
-        style={{ color: Colors.stopColor }}
+        style={{ color: Colors.primaryColor }}
         className={clsx("mb-2", classArray)}
         >
     </i>
@@ -19,19 +19,19 @@ const LargeNavbarStopCircle = (props) => {
         width: `${diameter}rem`,
         height: `${diameter}rem`,
         border: `solid thin ${Colors.primaryColor}`,
-        backgroundColor: props.isCurrentStop ? Colors.stopColor : 'white',
+        backgroundColor: 'white',
     }
     return <div
         className="navbar-stop-circle d-flex flex-row justify-content-center align-items-center rounded-circle"
         style={styleObject}>
             <i
-            style={{ backgroundColor: Colors.stopColor }}
+            style={{ color: Colors.stopColor }}
             className="fas fa-coffee fa-xs"></i>
     </div>
 }
 
 const LargeNavbarStopLabel = (props) => (
-    <span className="font-weight-bold text-capitalize text-bold text-decoration-none" style={{ color: Colors.primaryColor }}>{props.text}</span>
+    <span className="font-weight-bold text-capitalize text-bold text-decoration-none" style={{ color: Colors.primaryColor, fontWeight: "bolder" }}>{props.text}</span>
 )
 
 const LargeNavbarStop = (props) => {
@@ -44,7 +44,7 @@ const LargeNavbarStop = (props) => {
     }}
     onMouseEnter={() => setHovering(true)}
     onMouseLeave={() => setHovering(false)}
-    onClick={() => window.location.href = props.pageFilepath}>
+    onClick={() => props.setCurrentStop(props.label)}>
       <LargeNavbarStopIcon
         isCurrentStop={props.isCurrentStop}
         />
@@ -130,6 +130,11 @@ const CollapsedNavbar = () => {
 export const PageNavbar = (props) => {
     const [currentStop, setCurrentStop] = useState('Algorithms');
 
+    function setStop(name){
+        console.log("scrolling into view", name);
+        document.getElementById(name).scrollIntoView();
+    }
+
     return <nav
     className="navbar navbar-expand-md fixed-top"
     style={{backgroundColor: '#027800', height: '100px'}}
@@ -149,7 +154,7 @@ export const PageNavbar = (props) => {
                     onClick={() => {}}
                     label={labelText}
                     isCurrentStop={currentStop === labelText} 
-                    setCurrentStop={setCurrentStop}/>
+                    setCurrentStop={setStop}/>
               ))}
             </div>
       </div>

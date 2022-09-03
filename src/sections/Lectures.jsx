@@ -125,7 +125,7 @@ const CourseLecture = (props) => {
 }
 
 export const Lectures = () => {
-    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
+    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5" id="Lectures">
     <PageSectionTitle text="course lectures" />
     <div
       className="mx-4 mx-sm-5 mb-4 mb-sm-5"

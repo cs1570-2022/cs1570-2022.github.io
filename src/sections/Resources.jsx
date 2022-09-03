@@ -6,7 +6,7 @@ import { Links } from "../Configuration";
 import { Colors } from "../Constants";
 
 const CourseDocuments = () => {
-    return <section className="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
+    return <section className="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5" id="Resources">
         <PageSectionTitle
             text="course documents"
         />

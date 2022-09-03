@@ -3,7 +3,7 @@ import { PageSectionTitle } from "../components/PageSectionTitle";
 import { Links } from "../Configuration";
 
 export const Hours = () => {
-    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
+    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5" id="Hours">
         <PageSectionTitle text="Hours" />
     <div
       className="mx-4 mx-sm-5 px-0 px-lg-5 flex-fill d-flex flex-column"

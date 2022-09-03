@@ -111,7 +111,7 @@ export const CourseAssignment = (props) => {
 }
 
 export const Assignments = () => {
-    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5">
+    return <section className="container-fluid d-flex flex-wrap flex-column my-5 px-0 px-sm-5" id="Assignments">
             <PageSectionTitle
                 text="course assignments"
             />

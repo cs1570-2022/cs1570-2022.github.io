@@ -18,7 +18,7 @@ const CSPrereq = (props) => {
 export const Algorithms = () => {
 
     return <> 
-        <section className="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5">
+        <section className="container-fluid d-flex flex-wrap flex-row my-5 px-0 px-sm-5" id="Algorithms">
             <PageSectionTitle
               text="course info"
             />
