@@ -131,7 +131,6 @@ export const PageNavbar = (props) => {
     const [currentStop, setCurrentStop] = useState('Algorithms');
 
     function setStop(name){
-        console.log("scrolling into view", name);
         document.getElementById(name).scrollIntoView();
     }
 
