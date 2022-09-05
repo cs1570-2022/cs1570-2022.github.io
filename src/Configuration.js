@@ -21,8 +21,8 @@ export const HTAS = [
 export const UTAS = [
     {
         name: "Anna Dai",
-        personalPhotoURL: "content/staff/Anna.jpg",
-        themePhotoURL: "content/staff/Anna-food.jpg"
+        personalPhotoURL: "content/staff/anna.jpg",
+        themePhotoURL: "content/staff/anna-food.jpg"
     },
     {
         name: "Joanna Tasmin"
@@ -33,10 +33,13 @@ export const UTAS = [
         themePhotoURL: "content/staff/James-food.jpg"
     },
     {
-        name: "Hammad Izhar"
+        name: "Hammad Izhar",
+        personalPhotoURL: "content/staff/hammad.jpg",
+        themePhotoURL: "content/staff/hammad-food.jpg"
     },
     {
-        name: "Tianren Dong"
+        name: "Tianren Dong",
+        personalPhotoURL: "content/staff/tianren.jpg",
     },
     {
         name: "Rohit Mohanty"
@@ -49,7 +52,7 @@ export const UTAS = [
 export const Links = {
     gradescope: "https://www.gradescope.com/",
     edstem: "https://edstem.org/us/courses/28209/",
-    anonymousFeedback: "",
+    anonymousFeedback: "https://forms.gle/haH34HKrADaq3Zdw9",
     HTAEmail: "cs1570headtas@lists.brown.edu",
     TAEmail: "cs1570tas@lists.brown.edu",
     externalCalendar: "https://calendar.google.com/calendar/embed?src=c_mc1h2855a5u4suio41mg2e3ojo%40group.calendar.google.com&ctz=America%2FNew_York",
