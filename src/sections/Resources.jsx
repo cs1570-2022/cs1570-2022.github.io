@@ -27,7 +27,7 @@ const CourseDocuments = () => {
             </CourseResource>
             <CourseResource title="anonymous id form">
                 <p>
-                If you would like to be graded under an anonymous id, please fill out the following form <PageLink title="anonymous-id-form" href={Links.disambugation} text="here" />
+                If you would like to be graded under an anonymous id, please fill out the following form <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />
                 </p>
             </CourseResource>
             <CourseResource title="ed">

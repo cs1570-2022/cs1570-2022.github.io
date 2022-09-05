@@ -33,9 +33,13 @@ export const PageCountdownTime = (props) => {
 
     return <span>
         <span>{date}</span>
-        <span className="ml-1">(</span>
-            <i className={clsx("fas fa-lg", computeIcon())}></i>
-            <span className="ml-1 text-capitalize font-weight-light">{differenceDisplay}</span>
-        <span>)</span>
+        {dateDifference < 0 && (
+            <>
+                <span className="ml-1">(</span>
+                    <i className={clsx("fas fa-lg", computeIcon())}></i>
+                    <span className="ml-1 text-capitalize font-weight-light">{differenceDisplay}</span>
+                <span>)</span>
+            </>
+        )}
     </span>
 }

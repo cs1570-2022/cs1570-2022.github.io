@@ -1,13 +1,15 @@
 import React from "react";
 import { PageLink } from "./PageLink";
+import { Links } from "../Configuration";
 
 export const HiddenLink = (props) => {
     const { name, href, time, hide } = props;
 
-    // Time is a string
-    const date = Date.parse(time);
+    // Time is a string;
+    const properDate = new Date(time);
+    properDate.setFullYear(Links.year);
 
-    return (date <= Date.now()) ?
+    return (properDate.valueOf() >= Date.now()) ?
         (hide ? <></> : <span>{name}</span>) 
         : 
         <PageLink

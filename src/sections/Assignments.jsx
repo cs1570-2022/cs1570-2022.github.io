@@ -4,15 +4,14 @@ import { PageCountdownTime } from "../components/PageCountdownTime";
 import { PageSectionTitle } from "../components/PageSectionTitle";
 import { PageTable } from "../components/PageTable";
 import { Colors } from "../Constants";
-import format from "date-fns/format";
 
 const AssignmentsList = [
     {
         name: 'Homework 0',
         handoutURL: '../content/homeworks/hw0.pdf',
-        out: '09/8 12:00 pm',
+        out: '09/08 12:00 pm',
         due: '09/13 2:30 pm',
-        latexTemplateURL: '../content/homeworks/hw0.tex',
+        latexTemplateURL: '',
         solutionURL: '',
     },
     {
@@ -119,7 +118,7 @@ export const Assignments = () => {
             className="mx-4 mx-sm-5 px-0 px-lg-5"
             style={{ color: Colors.primaryColor }}
             >
-                <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a> (course code: D5G63D)</p>
+                <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a>.</p>
                 <p>Please refer to the syllabus for the collaboration policy and late submission policy of the class.</p>
                 <PageTable
                     tableheads={["Assignment #", "Out", "Due", "LaTeX", "Solution"]}
