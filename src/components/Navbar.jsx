@@ -136,7 +136,7 @@ export const PageNavbar = (props) => {
 
     return <nav
     className="navbar navbar-expand-md fixed-top"
-    style={{backgroundColor: '#027800', height: '100px'}}
+    style={{backgroundColor: '#027800', height: '80px'}}
   >
       <CollapsedNavbar />
       <div className="collapse navbar-collapse">

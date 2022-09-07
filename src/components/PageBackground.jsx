@@ -5,7 +5,7 @@ export const PageBackground = () => {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                marginTop: 100,
+                marginTop: 80,
                 height: 600,
                 backgroundImage: "url(assets/main.jpg)",
                 display: "flex",
