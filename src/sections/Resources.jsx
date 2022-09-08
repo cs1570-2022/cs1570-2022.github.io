@@ -25,9 +25,9 @@ const CourseDocuments = () => {
                 Instructions on how to set up Gradescope can be found <PageLink title="gradescope" href="content/resources/gradescopeGuide.pdf" text="here" />
                 </p>
             </CourseResource>
-            <CourseResource title="anonymous id form">
+            <CourseResource title="anonymous feedback form">
                 <p>
-                If you would like to be graded under an anonymous id, please fill out the following form <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />
+                If you would like to submit (anonymous) feedback to the course staff, you can do so <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />
                 </p>
             </CourseResource>
             <CourseResource title="ed">

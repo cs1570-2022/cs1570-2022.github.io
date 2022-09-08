@@ -33,8 +33,8 @@ export const Assignments = () => {
                 text="course assignments"
             />
             <div
-            className="mx-4 mx-sm-5 px-0 px-lg-5"
-            style={{ color: Colors.primaryColor }}
+                className="mx-4 mx-sm-5 px-0 px-lg-5"
+                style={{ color: Colors.primaryColor }}
             >
                 <p>All assignments must be typeset using LateX and submitted on <a href='https://www.gradescope.com'>Gradescope</a>.</p>
                 <p>Please refer to the syllabus for the collaboration policy and late submission policy of the class.</p>

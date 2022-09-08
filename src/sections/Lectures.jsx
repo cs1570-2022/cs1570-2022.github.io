@@ -114,12 +114,6 @@ const CourseLecture = (props) => {
           <td>
               
           </td>
-          <td>
-              
-          </td>
-          <td>
-              
-          </td>
       </tr>
   </>)
 }
@@ -137,8 +131,7 @@ export const Lectures = () => {
       style={{ color: Colors.themeColor }}
     >
         <PageTable
-          tableheads={['lecture #', 'date', 'slides', 'readings', 'recording']}
-          //tableheadBackground="rgba(111, 82, 142, 0.2)"
+          tableheads={['lecture #', 'date', 'readings']}
           style={{ color: Colors.themeColor }}
         >
           {LectureList.map((lecture, index) => (
