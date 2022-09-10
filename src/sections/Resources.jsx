@@ -20,11 +20,6 @@ const CourseDocuments = () => {
                 The collaboration policy and the late day policy for all assignments of the class (Homework and Midterms) are presented in detail in the syllabus.
                 </p>
             </CourseResource>
-            <CourseResource title="gradescope">
-                <p>
-                Instructions on how to set up Gradescope can be found <PageLink title="gradescope" href="content/resources/gradescopeGuide.pdf" text="here" />
-                </p>
-            </CourseResource>
             <CourseResource title="anonymous feedback form">
                 <p>
                 If you would like to submit (anonymous) feedback to the course staff, you can do so <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />
