@@ -3,8 +3,7 @@
 
 % updated for 2020 course (evelasq2)
 % Mon Aug 31 20:54 EST 2020
-% updated for Fall 2022 course (rscheide)
-
+% updated for 2022 course (rscheide)
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cs157}[2012/01/08 v1.0 (bniedzie)]
@@ -86,6 +85,7 @@ You may apply up to two late days to this assigment.
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{multicol}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -121,5 +121,12 @@ You may apply up to two late days to this assigment.
 \algtext*{EndIf} % Remove "end if" text
 \algtext*{EndFor} % Remove "end if" text
 \algtext*{EndProcedure} % Remove "end if" text
+\algtext*{EndWhile}
 \algrenewcommand\algorithmicrequire{\textbf{Input:}} % Input for Procedures
 \algrenewcommand\algorithmicensure{\textbf{Output:}} % Output for Procedures
+
+\makeatletter
+\newcommand{\algmargin}{\the\ALG@thistlm}
+\makeatother
+\algnewcommand{\parState}[1]{\State%
+  \parbox[t]{\dimexpr\linewidth-\algmargin}{\strut #1\strut}}
