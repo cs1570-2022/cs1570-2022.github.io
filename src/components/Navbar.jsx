@@ -95,36 +95,48 @@ const CollapsedNavbarStop = (props) => {
 
 const CollapsedNavbar = () => {
     const [expanded, setExpanded] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
     
-    return  <div className="navbar-toggler">
-    <div className="d-flex flex-row">
-        <CollapsedNavbarIcon
-          color={Colors.primaryColor}
-          is-expanded={expanded}
-        />
-        <div
-          className={expanded ? ['d-flex flex-column justify-content-between align-items-start'] : []}
-          style={{
-              backgroundColor:'#027800',
-              padding: '10px',
-              height: '600px',
-              width: '300px',
-              border: '5px solid black',
-              position: 'absolute',
-              top: '0px',
-              left: '75px'
-          }}
-          >
-            {Sections.map((labelText, index) => (
-                <CollapsedNavbarStop
-                    key={index}
-                    text={labelText}
-                    onClick={() => {}}
-               />
-            ))}
-        </div>
-    </div>
-</div>
+    return  (
+        <>
+            <div className="navbar-toggler ml-2 cursor-pointer" onClick={() => setShowMenu((prev) => !prev)}>
+                {showMenu ? "✕" : "☰"}
+                <CollapsedNavbarIcon    />
+            </div>
+            {showMenu && 
+            <div className="d-flex flex-row">
+                <CollapsedNavbarIcon
+                color={Colors.primaryColor}
+                is-expanded={expanded}
+                />
+                <div
+                className={expanded ? ['d-flex flex-column justify-content-between align-items-start'] : []}
+                style={{
+                    backgroundColor:'#027800',
+                    padding: '10px',
+                    height: '600px',
+                    width: '300px',
+                    border: '5px solid black',
+                    position: 'absolute',
+                    top: '0px',
+                    left: '75px'
+                }}
+                >
+                    {Sections.map((labelText, index) => (
+                        <CollapsedNavbarStop
+                            key={index}
+                            text={labelText}
+                            onClick={() => {
+                                    document.getElementById(labelText).scrollIntoView();
+                                    setShowMenu(false);
+                                }
+                            }
+                    />
+                    ))}
+                </div>
+            </div>}
+        </>
+    )
 }
 
 export const PageNavbar = (props) => {
