@@ -25,7 +25,9 @@ export const UTAS = [
         themePhotoURL: "content/staff/anna-food.jpg"
     },
     {
-        name: "Joanna Tasmin"
+        name: "Joanna Tasmin",
+        personalPhotoURL: "content/staff/joanna.jpg",
+        themePhotoURL: "content/staff/joanna-food.jpg"
     },
     {
         name: "James Cai",
@@ -47,7 +49,9 @@ export const UTAS = [
         themePhotoURL: "content/staff/rohit-food.jpg"
     },
     {
-        name: "Hongyi Li"
+        name: "Hongyi Li",
+        personalPhotoURL: "content/staff/hongyi.jpg",
+        themePhotoURL: "content/staff/hongyi-food.jpg"
     }
 ]
 
