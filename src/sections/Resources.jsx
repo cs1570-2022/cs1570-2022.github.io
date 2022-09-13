@@ -36,6 +36,7 @@ const CourseDocuments = () => {
                     <li><PageLink href="content/resources/CS157LatexLinks.pdf" text="Getting Started with LaTeX" title="getting started with latex" /></li>
                     <li><PageLink href="content/resources/cs.cls" text="cs.cls file" title="latex template" /></li>
                     <li><PageLink href="content/resources/cs157.cls" text="cs157.cls file" title="latex template" /></li>
+                    <li><PageLink href="content/resources/template.tex" text="Blank LaTeX Template" title="latex template" /></li>
                 </ul>
             </CourseResource>
         </div>
