@@ -22,21 +22,23 @@ const CourseDocuments = () => {
             </CourseResource>
             <CourseResource title="anonymous feedback form">
                 <p>
-                If you would like to submit (anonymous) feedback to the course staff, you can do so <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />
+                If you would like to submit (anonymous) feedback to the course staff, you can do so <PageLink title="anonymous-id-form" href={Links.anonymousFeedback} text="here" />.
                 </p>
             </CourseResource>
             <CourseResource title="ed">
                 <p>
-                Our course Ed page can be found <PageLink title="ed" href={Links.edstem} text="here" />
+                Our course Ed page can be found <PageLink title="ed" href={Links.edstem} text="here" />.
                 </p>
             </CourseResource>
             <CourseResource title="LaTeX">
+                <p>For this course, your solutions <b>must be typeset</b>, and so we <i>highly</i> recommend that you use LaTeX! Below are some resources for LaTeX that you may find useful:</p>
                 <ul>
-                    <li><PageLink href="content/resources/PseudocodeGuide.pdf" text="Pseudocode Guide" /></li>
-                    <li><PageLink href="content/resources/CS157LatexLinks.pdf" text="Getting Started with LaTeX" title="getting started with latex" /></li>
-                    <li><PageLink href="content/resources/cs.cls" text="cs.cls file" title="latex template" /></li>
-                    <li><PageLink href="content/resources/cs157.cls" text="cs157.cls file" title="latex template" /></li>
-                    <li><PageLink href="content/resources/template.tex" text="Blank LaTeX Template" title="latex template" /></li>
+                    <li><PageLink href="https://www.overleaf.com" text="Overleaf" /> - Overleaf is a collaborative web-based TeX environment that allows you to write and render LaTeX from the cloud.</li>
+                    <li><PageLink href="https://www.overleaf.com/learn" text="Overleaf LaTeX Documentation" /> - Overleaf's repository for everything LaTeX. </li>
+                    <li><PageLink href="content/resources/PseudocodeGuide.pdf" text="Pseudocode Guide" /> - A brief guide written by the TAs to help you get started with pseudocode.</li>
+                    <li><PageLink href="content/resources/cs.cls" text="cs.cls file" title="latex template" /> - File required by our LaTeX templates (contains important macros/styles). </li>
+                    <li><PageLink href="content/resources/cs157.cls" text="cs157.cls file" title="latex template" /> - File required by our LaTeX templates (contains [more] important macros/styles). </li> 
+                    <li><PageLink href="content/resources/template.tex" text="Blank LaTeX Template" title="latex template" /> - Blank LaTeX template using the course theme.</li>
                 </ul>
             </CourseResource>
         </div>
