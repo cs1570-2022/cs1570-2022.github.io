@@ -21,8 +21,8 @@ export const HTAS = [
 export const UTAS = [
     {
         name: "Anna Dai",
-        personalPhotoURL: "content/staff/Anna.jpg",
-        themePhotoURL: "content/staff/Anna-food.jpg"
+        personalPhotoURL: "content/staff/anna.jpg",
+        themePhotoURL: "content/staff/anna-food.jpg"
     },
     {
         name: "Joanna Tasmin",
