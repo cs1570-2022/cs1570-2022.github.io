@@ -42,6 +42,7 @@ export const UTAS = [
     {
         name: "Tianren Dong",
         personalPhotoURL: "content/staff/tianren.jpg",
+        themePhotoURL: "content/staff/tianren-food.jpg"
     },
     {
         name: "Rohit Mohanty",
