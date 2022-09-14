@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Colors } from "../Constants";
 
 export const StaffCard = (props) => {
-    const {theme, personalPhotoURL, themePhotoURL, name, note} = props;
+    const { theme, personalPhotoURL, themePhotoURL, name, note } = props;
     const [hover, setHover] = useState(false);
     return <div
         className="card text-center m-4"
@@ -18,12 +18,8 @@ export const StaffCard = (props) => {
         </div>
         <div
             className="card-img-top"
-            style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '300px', height: '350px' }}
+            style={{ backgroundImage: `url(${hover && personalPhotoURL ? personalPhotoURL : themePhotoURL ?? "content/staff/default.png"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '300px', height: '350px' }}
         >
-            {hover && personalPhotoURL ? 
-                <img src={personalPhotoURL} width={300} height={350} />
-                :
-                <img src={themePhotoURL ?? "content/staff/default.png"} width={300} height={350} />}
         </div>
         <div className="card-body d-flex flex-column justify-content-center">
             <h5 className="card-title mb-0">
