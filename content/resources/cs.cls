@@ -5,7 +5,6 @@
 \RequirePackage{amsmath}
 %\RequirePackage{psfig}
 \RequirePackage{ifthen}
-\RequirePackage{common/printtim}
 \RequirePackage{verbatim} % has the "comment" environment
 \RequirePackage{import}
 \RequirePackage{hyperref}
