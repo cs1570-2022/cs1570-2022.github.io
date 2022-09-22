@@ -116,7 +116,7 @@ const CourseLecture = (props) => {
     <tr>
           <th scope="row">
               <span>
-                  {props.index}:&nbsp;
+                  {props.index + 1}:&nbsp;
               </span>
               {props.name}
           </th>
