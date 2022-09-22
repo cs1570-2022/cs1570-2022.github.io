@@ -19,51 +19,63 @@ const LectureList = [
   },
   {
       name: 'Searching, Selection, and Non-Comparison Sorting',
-      date: '09/20'
+      date: '09/20',
+      readings: "Chapter 9"
   },
   {
       name: 'Greedy Algorithms 1',
-      date: '09/22'
+      date: '09/22',
+      readings: "Chapter 10"
   },
   {
       name: 'Greedy Algorithms 2',
-      date: '09/27'
+      date: '09/27',
+      readings: "Chapter 10"
   },
   {
       name: 'Dynamic Programming 1',
-      date: '09/29'
+      date: '09/29',
+      readings: 'Chapter 12'
   },
   {
       name: 'Dynamic Programming 2',
-      date: '10/04'
+      date: '10/04',
+      readings: 'Chapter 12'
   },
   {
       name: 'Divide & Conquer 1',
-      date: '10/06'
+      date: '10/06',
+      readings: 'Chapter 11'
   },
   {
       name: 'Divide & Conquer 2',
-      date: '10/11'
+      date: '10/11',
+      readings: 'Chapter 11'
   },
   {
       name: 'Data Structures 1 - Basic Data Structures',
-      date: '10/13'
+      date: '10/13',
+      readings: 'Chapter 2 & Chapter 5'
   },
   {
       name: 'Data Structures 2 - Trees',
-      date: '10/18'
+      date: '10/18',
+      readings: 'Chapter 4'
   },
   {
       name: 'Data Structures 3 - Hashing',
-      date: '10/20'
+      date: '10/20',
+      readings: 'Chapter 6'
   },
   {
       name: 'Graph Algorithms 1',
-      date: '10/25'
+      date: '10/25',
+      readings: 'Chapter 13'
   },
   {
       name: 'Graph Algorithms 2',
-      date: '10/27'
+      date: '10/27',
+      readings: 'Chapter 13'
   },
   {
       name: 'Text Processing and Pattern Matching, Search',
@@ -112,7 +124,7 @@ const CourseLecture = (props) => {
               {props.date}
           </td>
           <td>
-              
+              {props.readings}
           </td>
       </tr>
   </>)
@@ -138,6 +150,7 @@ export const Lectures = () => {
             <CourseLecture 
               name={lecture.name}
               date={lecture.date} 
+              readings={lecture.readings}
               index={index}
               key={index}/>
           ))}
