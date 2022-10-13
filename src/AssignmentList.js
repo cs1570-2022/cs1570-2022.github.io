@@ -29,7 +29,7 @@ export const AssignmentsList = [
         out: '09/27 5:00 pm',
         due: '10/04 2:30 pm',
         latexTemplateURL: '../content/homeworks/hw3.tex',
-        solutionURL: '',
+        solutionURL: '../content/homeworks/hw3_solution.pdf',
     },
     {
         name: 'Homework 4',
