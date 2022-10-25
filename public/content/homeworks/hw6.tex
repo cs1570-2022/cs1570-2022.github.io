@@ -1,0 +1,42 @@
+\documentclass{common/cs157}
+
+\hwk{6}
+\due{Nov.\ 1, 2022}
+
+\begin{document}
+
+\homeworkhandin
+
+\begin{problem}{1}
+You're an announcer at the hottest rock-paper-scissors competition in North America. The biggest match of the evening is coming up, Rocky Rick vs. Paper Pete, and you need make sure the audience stays engaged during the event. For past announcers, the biggest obstacle is keeping the audience engaged during the halftime show (the players need time to rest their hands). 
+
+In order to step things up, you're planning to do something that has never been done before, and want to be able to say that this is the $n$th time that the score between Rocky Rick and and Paper Pete has been $i$ to $j$ at halftime. The main challenge that has prevented previous announcers from doing this is that you won't know what $i$ and $j$ are, as the game has not yet happened. You also cannot afford to scan through the entire list of previous halftime scores between Rick and Pete and count the number of $i$ vs $j$ appearances as the audience would surely revolt.
+
+\begin{enumerate}
+    \item Devise an efficient method of processing the list of previous Rick-Pete halftime scores before their match begins, so that you can quickly say, right at the start of half-time, how many times the pair $(i, j)$ has occurred at similar moments in the past. Your pre-match processing should take time proportional to the number of previous games and the querying task should take constant time. 
+    \item Justify the runtime and correctness of your scheme.
+\end{enumerate}
+\end{problem}
+
+\newpage
+\begin{problem}{2}
+You are given two integer lists sorted in ascending order representing the scores that Alice received on her tests and the scores that Bob received on his tests. You are also given an integer $m$. We want to find the $m$ pairs with the smallest sum of scores. A pair $(x,y)$ is defined as having one score from Alice and one score from Bob. For example, given the input Alice = [1,7,11], Bob = [2,4,6], $m = 3$, we want to return [[1,2],[1,4],[1,6]].
+
+\begin{enumerate}
+    \item Devise an efficient algorithm to find the $m$ smallest pairs of scores and give the pseudocode. 
+    \item Justify the runtime and correctness of your scheme.
+\end{enumerate}
+\end{problem}
+
+\newpage
+\begin{problem}{3}
+James is writing a some JSON data and wants to check that the parentheses are all matching correctly. He uses a filter that converts the JSON data into a string that only contains the parentheses $\{\}, (), [ ]$.
+
+\begin{enumerate}
+    \item Devise an algorithm that is able to validate the filtered parentheses. Your algorithm should have runtime $O(n)$.
+    \item Provide proof of the correctness of the algorithm and analyze its time complexity and memory utilization.
+\end{enumerate}
+\end{problem}
+
+\newpage
+\end{document}

@@ -48,6 +48,14 @@ export const AssignmentsList = [
         solutionURL: '',
     },
     {
+        name: 'Midterm 1',
+        handoutURL: '../content/homeworks/midterm1.pdf',
+        out: '10/18 1:00 pm',
+        due: '10/25 2:30 pm',
+        latexTemplateURL: '../content/homeworks/midterm1.tex',
+        solutionURL: '',
+    },
+    {
         name: 'Homework 6',
         handoutURL: '../content/homeworks/hw6.pdf',
         out: '10/25 3:50 pm',
