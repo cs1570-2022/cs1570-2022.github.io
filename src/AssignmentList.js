@@ -45,7 +45,7 @@ export const AssignmentsList = [
         out: '10/11 3:50 pm',
         due: '10/18 2:30 pm',
         latexTemplateURL: '../content/homeworks/hw5.tex',
-        solutionURL: '',
+        solutionURL: '../content/homeworks/hw5_solution.pdf',
     },
     {
         name: 'Midterm 1',
