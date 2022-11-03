@@ -1,0 +1,34 @@
+\documentclass{common/cs157}
+
+\hwk{7}
+\due{Nov.\ 10, 2022}
+
+\begin{document}
+
+\homeworkhandin
+
+\begin{problem}{1}
+DFS can be used to detect the separating edges and vertices of a tree in linear time.
+\begin{itemize}
+    \item[a] Show that the root vertex of a DFS tree is a separating vertex if and only if it has multiple children in the tree.
+    \item[b] Show that any non-root vertex $v$ of a DFS tree is a separating vertex if and only if it has a child $v'$ such that none of its descendants (vertices reachable from $v'$ with a directed  path in the DFS tree), including itself, has a back edge to any property ancestor of $v$ (vertices different from $v$ from which there is a directed path to $v$ in the DFS tree) in the DFS tree.
+\end{itemize}
+\end{problem}
+\newpage
+
+\begin{problem}{2}
+Given a flow network graph $G$ with $n$ nodes and $m$ edges, assume you are given a maximum flow assigment. Propose an algorithm that finds a minimum capacity cut in time $O(m)$.
+
+\end{problem}
+\newpage
+
+\begin{problem}{3}
+The city of Irvine, California, allows for residents to own a maximum of three
+dogs per household without a breeder’s license. Imagine you are running an
+online pet adoption website for the city for $n$ Irvine residents and $m$ puppies. 
+
+Describe an efficient algorithm for assigning puppies to residents that provides for the maximum number of puppy adoptions possible while satisfying the constraints that each resident will only adopt puppies that he or she likes and that no resident can adopt more than \textbf{three} puppies.
+\end{problem}
+
+
+\end{document}
