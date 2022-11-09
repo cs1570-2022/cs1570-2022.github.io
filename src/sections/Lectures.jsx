@@ -83,18 +83,14 @@ const LectureList = [
   },
   {
       name: 'Computational Geometry 1',
-      date: '11/03'
-  },
-  {
-      name: 'Computational Geometry 2',
       date: '11/10'
   },
   {
-      name: 'Limits of Computation 1',
+      name: 'Computational Geometry 2',
       date: '11/15'
   },
   {
-      name: 'Limits of Computation 2',
+      name: 'NP-Hardness 1',
       date: '11/17'
   },
   {
