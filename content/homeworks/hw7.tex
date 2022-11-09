@@ -8,11 +8,19 @@
 \homeworkhandin
 
 \begin{problem}{1}
-DFS can be used to detect the separating edges and vertices of a tree in linear time.
-\begin{itemize}
-    \item[a] Show that the root vertex of a DFS tree is a separating vertex if and only if it has multiple children in the tree.
-    \item[b] Show that any non-root vertex $v$ of a DFS tree is a separating vertex if and only if it has a child $v'$ such that none of its descendants (vertices reachable from $v'$ with a directed  path in the DFS tree), including itself, has a back edge to any property ancestor of $v$ (vertices different from $v$ from which there is a directed path to $v$ in the DFS tree) in the DFS tree.
-\end{itemize}
+Given an arbitrary undirected graph $G$, applying DFS on a given vertex will create a tree. The tree can be used to detect the separating edges and vertices of the graph in linear time.
+
+\begin{enumerate}[(a)]
+\item Show that the root vertex of a DFS tree is a separating vertex of $G$ if and only if the root vertex has multiple children in the DFS tree.
+
+\item Show that any non-root vertex $v$ of a DFS tree is a separating vertex of $G$ if and only the exists a child of $v$, $w$, such that none of $w$'s descendants in the DFS tree have a back-edge to a proper ancestor of $v$ in the DFS tree.
+\end{enumerate}
+
+A \textbf{descendant} of a vertex is any vertex reachable from $v$ in the DFS tree.
+
+A \textbf{proper ancestor} of a vertex $v$ is a vertex $v'$ such that $v$ is a descendant of $v'$ and $v \neq v'$.
+
+A \textbf{child} of a vertex $v$ is a direct descendent of $v$.
 \end{problem}
 \newpage
 
