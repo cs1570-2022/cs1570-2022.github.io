@@ -1,0 +1,56 @@
+\documentclass{common/cs157}
+
+\hwk{8}
+\due{November 16, 2022}
+
+\begin{document}
+
+\homeworkhandin
+
+\begin{problem}{1}
+\begin{enumerate}
+    \item Rob is building a fence for his farm to protect against the invading squirrels. To ensure he can always go to and from any place of his farm in the minimum distance possible, he constructed his fence in the shape of a convex polygon. Just as he finished constructing his fence he realizes he missed a post. Assume Rob's farm is on a grid and his current fence posts' positions are given by $Q = [q_0, q_1, \cdots, q_{n - 1}]$ sorted in counterclockwise order with respect to $q_0$. 
+    
+    Describe a linear time algorithm that Rob can use to fix his fence to ensure the missed pole is included in his fence (i.e. is either used as part of the fence or contained entirely within it). Show that your proposed algorithm is correct and analyze its running time.
+    
+    \item To expand his farm Rob blindfolds himself, walks around his farm and the surrounding area randomly and plants a post into the ground. If required, he then rebuilds part of his fence to include the new post. He repeats this process as many times as he chooses.
+    \begin{enumerate}
+        \item Propose an algorithm that uses the Graham scan so that after the addition of $n$ new posts the overall running time is $O(n^2\log n)$. Prove the correctness and analyze the running time of the proposed algorithm.
+        \item Show how to improve this slightly, by showing that Rob can construct his fence in $O(n^2)$. Prove the correctness and analyze the running time of the proposed algorithm.
+    \end{enumerate}
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{2}
+Show how to extend the Rabin-Karp method to handle the problem of looking for a given $m\times m$ pattern in an $n\times n$ array of characters. Describe the overall algorithm and how you would approach computing the hashcodes used in Rabin-Karp. Your algorithm should not use more than $O(m)$ additional memory and should require at most $O(n^2m)$ time. Prove the correctness of your solution, analyze its running time and memory space utilization.
+\end{problem}
+
+\newpage
+
+\begin{problem}{3} 
+Anna is mixing paint for her house. Since her favorite color is green she's mixing some blue paint and yellow paint together with some paint thinner. She's managed to create $n$ different shades of green with all the blue and yellow paint that she has.
+
+For example, suppose she made three different shades of green.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\multicolumn{2}{c}{}                         & \multicolumn{3}{c}{Samples} \\ \midrule
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\% Compound}} &               & $S_1$   & $S_2$   & $S_3$   \\ \cmidrule(l){2-5} 
+                             & Yellow        & 0.7     & 0.5     & 0.1     \\ \cmidrule(l){2-5} 
+                             & Blue          & 0.2     & 0.2     & 0.2     \\ \cmidrule(l){2-5} 
+                             & Paint Thinner & 0.1     & 0.3     & 0.7     \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Then it is possible to produce a shade of green that is $35\%$ yellow and $27.5\%$ blue by mixing the shades she currently has in a $1:2:1$ ratio ($25\%$ $S_1$, $50\%$ $S_2$, $25\%$ $S_3$). However, it is \textbf{impossible} to create the shade of green which is $20\%$ yellow and $10\%$ blue.
+
+Design an $O(n\log{n})$ algorithm that checks whether it's possible to create a liquid with the specified percentage of yellow and blue. Argue the correctness of your algorithm.
+
+\textbf{Example Input:} [(0.7, 0.2), (0.5, 0.2), (0.1, 0.2)], (0.35, 0.275)\\
+\textbf{Output:} True
+\end{problem}
+\end{document}
