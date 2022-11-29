@@ -1,7 +1,7 @@
 \documentclass{common/cs157}
 
 \hwk{8}
-\due{November 16, 2022}
+\due{November 29th, 2022}
 
 \begin{document}
 
@@ -38,11 +38,11 @@ For example, suppose she made three different shades of green.
 \centering
 \begin{tabular}{@{}ccccc@{}}
 \toprule
-\multicolumn{2}{c}{}                         & \multicolumn{3}{c}{Samples} \\ \midrule
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\% Compound}} &               & $S_1$   & $S_2$   & $S_3$   \\ \cmidrule(l){2-5} 
-                             & Yellow        & 0.7     & 0.5     & 0.1     \\ \cmidrule(l){2-5} 
-                             & Blue          & 0.2     & 0.2     & 0.2     \\ \cmidrule(l){2-5} 
-                             & Paint Thinner & 0.1     & 0.3     & 0.7     \\ \bottomrule
+\multicolumn{2}{c}{}                 & \multicolumn{3}{c}{Samples} \\ \midrule
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\% Compound}} &       & $S_1$   & $S_2$   & $S_3$   \\ \cmidrule(l){2-5} 
+                             & Yellow   & 0.7     & 0.3     & 0.1     \\ \cmidrule(l){2-5} 
+                             & Blue   & 0.2     & 0.1     & 0.7     \\ \cmidrule(l){2-5} 
+                             & Paint Thinner & 0.1     & 0.6     & 0.2     \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -50,7 +50,7 @@ Then it is possible to produce a shade of green that is $35\%$ yellow and $27.5\
 
 Design an $O(n\log{n})$ algorithm that checks whether it's possible to create a liquid with the specified percentage of yellow and blue. Argue the correctness of your algorithm.
 
-\textbf{Example Input:} [(0.7, 0.2), (0.5, 0.2), (0.1, 0.2)], (0.35, 0.275)\\
+\textbf{Example Input:} [(0.7, 0.2), (0.3, 0.1), (0.1, 0.7)], (0.35, 0.275)\\
 \textbf{Output:} True
 \end{problem}
 \end{document}
