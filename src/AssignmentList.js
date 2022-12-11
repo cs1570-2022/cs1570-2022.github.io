@@ -85,6 +85,6 @@ export const AssignmentsList = [
         out: '11/29 3:50 pm',
         due: '12/08 2:30 pm',
         latexTemplateURL: '../content/homeworks/hw9.tex',
-        solutionURL: '',
+        solutionURL: '../content/homeworks/hw9_solution.pdf',
     },
 ];
